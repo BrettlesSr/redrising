@@ -1,0 +1,235 @@
+namespace = redrising
+
+#controls decadence mechanic
+
+country_event = {
+	id = redrising.301
+	is_triggered_only = yes
+	hide_window = yes
+	fire_only_once = no
+	trigger = {
+		has_valid_civic = civic_redrising_noble_lie
+	}
+
+	#yeah, i tried, but i couldn't find a way to do this with either a proper scaling modifier, or even a switch statement. if you have any clue
+	# how to do that, send me a msg on reddit, I'll be forever grateful :)
+
+	immediate = {
+
+		#edict update fires
+		if = {
+			limit = {
+				has_edict = redrising_reduce_decadence
+				NOT = {
+					has_country_flag = redrising_reduce_decadence_edict_activated
+				}
+			}
+			set_country_flag = redrising_reduce_decadence_edict_activated
+			subtract_variable = {
+				which = redrising_decadence_rate_of_change_monthly
+				value = 0.2
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = redrising_reduce_decadence_edict_activated
+				NOT = {					
+					has_edict = redrising_reduce_decadence
+				}
+			}
+			remove_country_flag = redrising_reduce_decadence_edict_activated
+			change_variable = {
+				which = redrising_decadence_rate_of_change_monthly
+				value = 0.2
+			}
+		}
+		
+		#decadence fires
+		change_variable = {
+			which = redrising_decadence
+			value = redrising_decadence_rate_of_change_monthly
+		}
+
+		#never negative
+		if = {
+			limit = {
+				check_variable = {
+					which = redrising_decadence
+					value < 0
+				}
+			}
+			set_variable = {
+				which = redrising_decadence
+				value = 0
+			}
+		}
+		
+		#remove old modifier
+		remove_modifier = redrising_10_decadence
+		remove_modifier = redrising_9_decadence
+		remove_modifier = redrising_8_decadence
+		remove_modifier = redrising_7_decadence
+		remove_modifier = redrising_6_decadence
+		remove_modifier = redrising_5_decadence
+		remove_modifier = redrising_4_decadence
+		remove_modifier = redrising_3_decadence
+		remove_modifier = redrising_2_decadence
+		remove_modifier = redrising_1_decadence
+		remove_modifier = redrising_0_decadence
+
+		#add new modifier
+		if = {
+			limit ={
+				check_variable = {
+					which = redrising_decadence
+					value > 99
+				}
+			}
+			add_modifier = { modifier = redrising_10_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 89
+				}
+			}
+			add_modifier = { modifier = redrising_9_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 79
+				}
+			}
+			add_modifier = { modifier = redrising_8_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 69
+				}
+			}
+			add_modifier = { modifier = redrising_7_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 59
+				}
+			}
+			add_modifier = { modifier = redrising_6_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 49
+				}
+			}
+			add_modifier = { modifier = redrising_5_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 39
+				}
+			}
+			add_modifier = { modifier = redrising_4_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 29
+				}
+			}
+			add_modifier = { modifier = redrising_3_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 19
+				}
+			}
+			add_modifier = { modifier = redrising_2_decadence days = -1}
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = redrising_decadence
+					value > 9
+				}
+			}
+			add_modifier = { modifier = redrising_1_decadence days = -1}
+		}
+		else = {
+			add_modifier = { modifier = redrising_0_decadence days = -1}
+		}		
+	}
+}
+
+#lowers decadence in a war
+country_event = {
+	id = redrising.302
+	is_triggered_only = yes
+	title = "redrising.302.name"
+	desc = "redrising.302.desc"
+	picture = GFX_evt_victorious_army
+	fire_only_once = no
+	
+	trigger = {
+		has_valid_civic = civic_redrising_noble_lie
+	}
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = "redrising.302.a"
+		hidden_effect = {
+			subtract_variable = {
+				which = redrising_decadence
+				value = 20
+			}
+		}
+    }
+}
+
+#finishing discovery includes a decadence reduction bonus
+country_event = {
+	id = redrising.303
+	title = "redrising.303.name"
+	desc = "redrising.303.desc"
+	picture = GFX_evt_ancient_records
+
+	trigger = {
+		has_valid_civic = civic_redrising_noble_lie
+		has_tradition = tr_discovery_finish
+		NOT = {
+			has_country_flag = redrising_discovery_reduces_decadence_set
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = EXCELLENT
+		add_modifier = {
+			modifier = redrising_discovery_reduces_decadence
+			days = -1
+		}
+		hidden_effect = {
+			set_country_flag = redrising_discovery_reduces_decadence_set
+			subtract_variable = { 
+				which = redrising_decadence_rate_of_change_monthly
+				value = 0.05
+			}
+		}
+    }
+}

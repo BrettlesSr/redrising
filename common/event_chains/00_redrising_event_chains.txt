@@ -1,0 +1,9 @@
+redrising_decadence_tracker_chain = {
+	picture = GFX_evt_throne_room
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+}
+
+redrising_board_control_chain = {
+	picture = GFX_evt_cybernetics
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+}

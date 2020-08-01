@@ -1,0 +1,83 @@
+thesocietyofman = {
+	name = "Society of Man"
+	adjective = "redrising_adjective_society"
+	spawn_enabled = yes
+
+	ship_prefix = "redrising_ship_prefix_society"
+
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	flags = { redrising_society custom_start_screen }
+	
+	species = {
+		class = "HUM"
+		portrait = "human"
+		name = "redrising_species_name_society"
+		plural = "redrising_species_plural_society"
+		adjective = "redrising_species_adjective_society"
+		name_list = "SOCIETY1"
+		trait = "trait_decadent"
+		trait = "trait_wasteful"
+		trait = "trait_talented"
+		trait = "trait_very_strong"
+	}
+
+	secondary_species = {
+		class = "HUM"
+		portrait = "human"
+		name = "redrising_secondary_species_name_society"
+		plural = "redrising_secondary_species_plural_society"
+		adjective = "redrising_secondary_species_adjective_society"
+		name_list = "HUMAN1"
+		trait = "trait_communal"
+		trait = "trait_industrious"
+		trait = "trait_fleeting"
+	}
+		
+	planet_name = "redrising_planet_name_luna"
+	planet_class = "pc_continental"
+	system_name = "redrising_system_name_sol"
+	initializer = "redrising_sol_system_initializer"
+	
+	room = "personality_democratic_crusaders_room"
+
+	authority = "auth_dictatorial"
+	government = gov_martial_dictatorship
+	origin = origin_redrising_society
+	ethic = "ethic_fanatic_authoritarian"
+	ethic = "ethic_militarist"
+	civics = { "civic_redrising_noble_lie" "civic_warrior_culture" }
+	
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+	
+	empire_flag={
+		icon={
+			category="pointy"
+			file="flag_pointy_11.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"yellow"
+			"dark_blue"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "redrising_ruler_name_society"
+		gender = female
+		portrait = "human_female_04"
+		texture = 0
+		hair = 4
+		clothes = 0
+		ruler_title = "redrising_ruler_title_sovereign"
+		ruler_title_female= "redrising_ruler_title_sovereign"
+		heir_title = "N/A"
+		heir_title_female = "N/A"
+	}
+}

@@ -1,0 +1,558 @@
+# controls the Board of Quality Control event chain
+namespace = redrising
+
+#starts the event chain
+country_event = {
+	id = redrising.401
+	title = "redrising.401.name"
+	desc = "redrising.401.desc"
+	picture = GFX_evt_analyzing_artifacts
+
+	trigger = {
+		has_valid_civic = civic_redrising_noble_lie
+		is_ai = no
+		NOR = {
+			has_event_chain = redrising_board_control_chain
+			has_country_flag = redrising_board_control_chain_started
+		}
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "redrising.401.a"
+		begin_event_chain = {
+			event_chain = "redrising_board_control_chain"
+			target = root
+		}
+		hidden_effect = {
+			set_country_flag = redrising_board_control_chain_started
+		}
+	}
+}
+
+#starts the colony required stage
+country_event = {
+	id = redrising.403
+	title = "redrising.403.name"
+	desc = "redrising.403.desc"
+	picture = GFX_evt_continental
+
+	trigger = {
+		has_event_chain = "redrising_board_control_chain"
+		NOR = {
+		 has_country_flag = redrising_board_colony_quest_0
+		 has_country_flag = redrising_board_colony_quest_1
+		 has_country_flag = redrising_board_colony_quest_2
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 360
+	}
+
+	option = {
+		name = UNDERSTOOD
+		set_country_flag = redrising_board_colony_quest_0
+	}
+}
+
+#called on action when a colony is finished
+planet_event = {
+	id = redrising.404
+	title = "redrising.404.name"
+	desc = "redrising.404.desc"
+	picture = GFX_evt_colony_settlement
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_event_chain = "redrising_board_control_chain"
+			has_country_flag = redrising_board_colony_quest_0
+			NOT = { has_country_flag = redrising_board_colony_quest_1 }
+		}		
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = redrising_board_colony_quest_1
+		}	
+	}
+
+	option = {
+		name = EXCELLENT			
+		enable_special_project = {
+			name = "REDRISING_BOARD_COLONY_STUDY"
+			location = this
+			owner = root
+		}
+	}
+}
+
+#greens or silvers choice, called by finishing colony study
+ship_event = {
+	id = redrising.402
+	title = "redrising.402.name"
+	desc = "redrising.402.desc"
+	picture = GFX_evt_colony_settlement
+
+	trigger = {
+		owner = {
+			has_country_flag = redrising_board_colony_quest_1 
+			NOT = { has_country_flag = redrising_board_colony_quest_2 }
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			set_country_flag = redrising_board_colony_quest_2
+			capital_scope = { save_event_target_as = capital_location }			
+		}
+	}
+
+	option = {
+		name = INTRIGUING
+		enable_special_project = {
+			name = "REDRISING_GREENS"
+			location = event_target:capital_location
+			owner = root
+		}
+		enable_special_project = {
+			name = "REDRISING_SILVERS"
+			location = event_target:capital_location
+			owner = root
+		}
+	}
+}
+
+#greens
+country_event = {
+	id = redrising.405
+	title = "redrising.405.name"
+	desc = "redrising.405.desc"
+	picture = GFX_evt_cybernetics
+
+	is_triggered_only = yes
+
+	option = {
+		name = SPLENDID
+		add_modifier = { 
+			modifier = redrising_board_greens_deployed
+			days = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = redrising.407
+				days = 400
+				random = 60
+			}
+		}		
+	}
+}
+
+#silvers
+country_event = {
+	id = redrising.406
+	title = "redrising.406.name"
+	desc = "redrising.406.desc"
+	picture = GFX_evt_cybernetics
+
+	is_triggered_only = yes
+
+	option = {
+		name = SPLENDID
+		add_modifier = { 
+			modifier = redrising_board_silvers_deployed
+			days = -1
+		}
+		hidden_effect = {
+			country_event = {
+			id = redrising.407
+			days = 400
+			random = 60
+			}
+		}		
+	}
+}
+
+#fleet exercises
+country_event = {
+	id = redrising.407
+	title = "redrising.407.name"
+	desc = "redrising.407.desc"
+	picture = GFX_evt_fleet_neutral
+
+	is_triggered_only = yes
+
+	immediate = {
+		capital_scope = {
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_capital = no
+					}
+					save_event_target_as = redrising_fleet_study_location
+				}
+			}
+		}
+	}
+
+	option = {
+		name = UNDERSTOOD
+		enable_special_project = {
+			name = "REDRISING_BOARD_FLEET_STUDY"
+			location = event_target:redrising_fleet_study_location
+			owner = root
+		}
+	}
+}
+
+#orange or blues, called by completing fleet exercises
+ship_event = {
+	id = redrising.408
+	title = "redrising.408.name"
+	desc = "redrising.408.desc"
+	picture = GFX_evt_colony_settlement
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			capital_scope = { save_event_target_as = capital_location }			
+		}
+	}
+
+	option = {
+		name = INTERESTING	
+		enable_special_project = {
+			name = "REDRISING_ORANGES"
+			location = event_target:capital_location
+			owner = root
+		}
+		enable_special_project = {
+			name = "REDRISING_BLUES"
+			location = event_target:capital_location
+			owner = root
+		}			
+	}
+}
+
+#orange, called by project
+country_event = {
+	id = redrising.409
+	title = "redrising.409.name"
+	desc = "redrising.409.desc"
+	picture = GFX_evt_cybernetics
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_modifier = { 
+			modifier = redrising_board_orange_deployed
+			days = -1
+		}
+		hidden_effect = {
+			country_event = {
+			id = redrising.411
+			days = 400
+			random = 60
+			}
+		}		
+	}
+}
+
+#blues, called by project
+country_event = {
+	id = redrising.410
+	title = "redrising.410.name"
+	desc = "redrising.410.desc"
+	picture = GFX_evt_cybernetics
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_modifier = { 
+			modifier = redrising_board_blue_deployed
+			days = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = redrising.411
+				days = 400
+				random = 60
+			}
+		}		
+	}
+}
+
+#handles if there is already a large planet
+country_event = {
+	id = redrising.411
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_owned_planet = {
+					count_owned_pop = {
+						count > 40
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					count_owned_pop = {
+						count > 40
+					}
+				}
+				planet_event = {
+					id = redrising.413
+				}
+			}
+		}
+		else = {
+			country_event = {
+				id = redrising.412
+			}
+		}
+	}
+}
+
+#build a large planet
+country_event = {
+	id = redrising.412
+	title = "redrising.412.name"
+	desc = "redrising.412.desc"
+	picture = GFX_evt_metropolis
+
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = redrising.414
+			days = 30
+		}
+	}
+
+	option = {
+		name = UNDERSTOOD
+	}
+}
+
+#await planet
+country_event = {
+	id = redrising.414
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_owned_planet = {
+					count_owned_pop = {
+						count > 40
+					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					count_owned_pop = {
+						count > 40
+					}
+				}
+				planet_event = {
+					id = redrising.413
+				}
+			}
+		}
+		else = {
+			country_event = {
+				id = redrising.414
+				days = 30
+			}
+		}
+	}
+}
+
+#puts large planet project on large planet
+planet_event = {
+	id = redrising.413
+	title = "redrising.413.name"
+	desc = "redrising.413.desc"
+	picture = GFX_evt_metropolis
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = redrising_has_large_planet }
+		}		
+	}
+
+	immediate = {
+		save_event_target_as = redrising_large_planet
+		owner = {
+			set_country_flag = redrising_has_large_planet
+		}
+	}
+
+	option = {
+		name = UNDERSTOOD
+		enable_special_project = {
+			name = "REDRISING_BOARD_LARGE_STUDY"
+			location = event_target:redrising_large_planet
+			owner = root
+		}
+	}
+}
+
+#pinks or whites, called by completing large planet study
+ship_event = {
+	id = redrising.415
+	title = "redrising.415.name"
+	desc = "redrising.415.desc"
+	picture = GFX_evt_metropolis
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			capital_scope = { save_event_target_as = capital_location }							
+		}
+	}
+
+	option = {
+		name = INTERESTING		
+		enable_special_project = {
+			name = "REDRISING_PINKS"
+			location = event_target:capital_location
+			owner = root
+		}
+		enable_special_project = {
+			name = "REDRISING_WHITES"
+			location = event_target:capital_location
+			owner = root
+		}	
+	}
+}
+
+#pinks, called by project
+country_event = {
+	id = redrising.416
+	title = "redrising.416.name"
+	desc = "redrising.416.desc"
+	picture = GFX_evt_cybernetics
+
+	is_triggered_only = yes
+
+	option = {
+		name = AMAZING
+		add_modifier = { 
+			modifier = redrising_board_pink_deployed
+			days = -1
+		}
+		hidden_effect = {
+			country_event = {
+			id = redrising.418
+			days = 40
+			}
+			change_variable = {
+				which = redrising_decadence_rate_of_change_monthly
+				value = 0.1
+			}
+		}
+	}
+}
+
+#whites, called by project
+country_event = {
+	id = redrising.417
+	title = "redrising.417.name"
+	desc = "redrising.417.desc"
+	picture = GFX_evt_cybernetics
+
+	is_triggered_only = yes
+
+	option = {
+		name = AMAZING
+		add_modifier = { 
+			modifier = redrising_board_white_deployed
+			days = -1
+		}
+		hidden_effect = {
+			subtract_variable = {
+			which = redrising_decadence_rate_of_change_monthly
+			value = 0.05
+			}
+			country_event = {
+				id = redrising.418
+				days = 40
+			}
+		}		
+	}
+}
+
+#complete board of quality control
+country_event = {
+	id = redrising.418
+	title = "redrising.418.name"
+	desc = "redrising.418.desc"
+	picture = GFX_evt_unity_symbol
+
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			has_technology = tech_gene_tailoring
+		}
+		custom_tooltip = "redrising.418.a.tooltip"
+		end_event_chain = redrising_board_control_chain
+		hidden_effect = {
+			change_variable = {
+				which = redrising_decadence_rate_of_change_monthly
+				value = 0.05
+			}
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 60
+			min = 120
+			max = 9999
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = @tier3researchreward
+			min = @tier3researchmin
+			max = @tier3researchmax
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			NOT = { has_technology = tech_gene_tailoring }
+		}
+		custom_tooltip = "redrising.418.a.tooltip"
+		end_event_chain = redrising_board_control_chain
+		hidden_effect = {
+			change_variable = {
+				which = redrising_decadence_rate_of_change_monthly
+				value = 0.05
+			}
+		}		
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 60
+			min = 120
+			max = 9999
+		}
+		give_technology = { tech = tech_gene_tailoring }
+	}
+}

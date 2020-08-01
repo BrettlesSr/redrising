@@ -1,0 +1,36 @@
+@EdictPerpetual = -1
+
+redrising_reduce_decadence = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+		
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = redrising_reduce_decadence }			
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = redrising_reduce_decadence
+			}
+			influence = 100
+		}
+	}
+
+	modifier = {
+		custom_tooltip = edict_redrising_reduce_decadence_tooltip
+		show_only_custom_tooltip = yes		
+	}
+	
+	potential = {
+		has_civic = civic_redrising_noble_lie
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

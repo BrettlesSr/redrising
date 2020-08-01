@@ -1,0 +1,20 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_evt_redrising_ares_face"
+		texturefile = "gfx/event_pictures/redrising_ares_face.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_redrising_phobos_address"
+		texturefile = "gfx/event_pictures/redrising_phobos_address.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_redrising_domes"
+		texturefile = "gfx/event_pictures/redrising_domes.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+}

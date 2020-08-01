@@ -1,0 +1,202 @@
+#board of quality control chain projects
+
+special_project = {
+	key = "REDRISING_BOARD_COLONY_STUDY"
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	picture = GFX_evt_colony_settlement
+	event_chain = "redrising_board_control_chain"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		ship_event = { id = redrising.402 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_BOARD_FLEET_STUDY"
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	picture = GFX_evt_unknown_ships
+	event_chain = "redrising_board_control_chain"
+
+	event_scope = ship_event
+
+	requirements = {
+		fleet_power = 500
+		leader = admiral
+	}
+
+	on_success = {
+		ship_event = { id = redrising.408 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_BOARD_LARGE_STUDY"
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	picture = GFX_evt_metropolis
+	event_chain = "redrising_board_control_chain"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		ship_event = { id = redrising.415 }
+	}
+	
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_GREENS"
+	cost = 1000
+	tech_department = society_technology
+	picture = GFX_evt_genetic_modification
+	event_chain = "redrising_board_control_chain"
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.405 }
+		}		
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_SILVERS"
+	cost = 1000
+	tech_department = society_technology
+	picture = GFX_evt_genetic_modification
+	event_chain = "redrising_board_control_chain"
+	event_scope = planet_event
+
+	same_option_group_as = { REDRISING_GREENS }
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.406 }
+		}		
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_ORANGES"
+	cost = 1000
+	tech_department = society_technology
+	picture = GFX_evt_genetic_modification
+	event_chain = "redrising_board_control_chain"
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.409 }
+		}		
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_BLUES"
+	cost = 1000
+	tech_department = society_technology
+	picture = GFX_evt_genetic_modification
+	event_chain = "redrising_board_control_chain"
+	event_scope = planet_event
+
+	same_option_group_as = { REDRISING_ORANGES }
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.410 }
+		}		
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_PINKS"
+	cost = 1000
+	tech_department = society_technology
+	picture = GFX_evt_genetic_modification
+	event_chain = "redrising_board_control_chain"
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.416 }
+		}		
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_WHITES"
+	cost = 1000
+	tech_department = society_technology
+	picture = GFX_evt_genetic_modification
+	event_chain = "redrising_board_control_chain"
+	event_scope = planet_event
+
+	same_option_group_as = { REDRISING_PINKS }
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.417 }
+		}		
+	}
+
+	on_fail = {
+	}
+}

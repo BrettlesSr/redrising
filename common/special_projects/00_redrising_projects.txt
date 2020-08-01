@@ -1,0 +1,86 @@
+special_project = {
+	key = "REDRISING_INSTITUTE_1"
+	picture = GFX_evt_board_meeting
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	cost = 900
+	sound = no
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.5 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_OBSIDIAN_1"
+	picture = GFX_evt_genetic_modification
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	cost = 850
+	sound = no
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.12 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "REDRISING_GREY_1"
+	picture = GFX_evt_colony_settlement
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	cost = 550
+	sound = no
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = redrising.13 }
+		}
+	}
+
+	on_fail = {
+	}
+}

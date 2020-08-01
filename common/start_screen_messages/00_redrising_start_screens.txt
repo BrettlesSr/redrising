@@ -1,0 +1,8 @@
+part = {
+	location = 0
+	localization = "REDRISING_START_SCREEN_SOCIETY"
+	
+	trigger = {
+		has_country_flag = redrising_society
+	}
+}

@@ -1,0 +1,57 @@
+civic_redrising_noble_lie = {
+	icon = "gfx/interface/icons/governments/civics/redrising_civic_racial_stratocracy.dds"
+	modification = no
+	potential = { ethics = {NOT = { value = ethic_gestalt_consciousness } 
+							OR = {
+									value = ethic_fanatic_authoritarian
+									value = ethic_authoritarian
+								}
+							}
+				}
+	pickable_at_start = yes
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_agrarian_idyll
+			}
+		}
+		ethics = {
+			OR = {
+				value = ethic_fanatic_authoritarian
+				value = ethic_authoritarian
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+
+	description = civic_redrising_noble_lie_effects
+	modifier = {
+		pop_cat_slave_political_power = -0.25
+	}
+}
+
+origin_redrising_society = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_redrising_society.dds"
+	picture = GFX_origin_redrising_society
+
+	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		civics = { NOT = { value = civic_fanatic_purifiers } }
+	}
+
+	description = civic_tooltip_syncretic_evolution_effects
+
+	has_secondary_species = {	# see game_start.11
+		title = civic_redrising_society_secondary_species
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}

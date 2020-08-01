@@ -1,0 +1,131 @@
+namespace = redrising
+
+@boardtimetotriggerdays = 5 #00
+@institutetimetotriggerdays = 72 #00
+@obsidiantimetotriggerdays = 144 #00
+@arestimetotriggerdays = 288 #00
+
+#game start code, sets up racial stratocracy
+planet_event = {
+	id = redrising.128
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { owner = { has_origin =  origin_redrising_society } }
+			
+			owner = {
+				set_country_flag = starting_event
+			}
+			
+			while = {
+				count = 13
+				create_pop = {
+					species = last_created_species
+					ethos = random
+				}
+			}
+			
+			every_owned_pop = {
+				limit = {
+					is_same_species = last_created_species
+				}
+				set_pop_flag = redrising_red_pop
+			}
+
+			while = {
+				count = 15
+				random_pop = {
+					limit = {
+						is_pop_category = worker
+						is_same_species = root.owner_species
+					}
+					kill_pop = yes
+				}
+			}	
+			
+			planet_event = {
+				id = redrising.129
+				days = 1 
+			}		
+    	}
+	}	
+}
+
+#sets proper slavery on day one of the setup
+planet_event = {
+	id = redrising.129
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {		
+		random_pop = {
+			limit = {
+				has_pop_flag = redrising_red_pop			
+			}
+			species = {
+				set_citizenship_type = {
+					country = root.owner
+					type = citizenship_slavery 
+					cooldown = no
+				}
+				set_military_service_type = {
+					country = root.owner
+					type = military_service_none  
+					cooldown = no              
+				}
+			}			
+		}
+	}
+}
+
+#sets decadence on game start
+country_event = {
+	id = redrising.150
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_valid_civic = civic_redrising_noble_lie
+	}
+
+	immediate = {
+		set_variable = {
+			which = redrising_decadence
+			value = 25
+		}
+		set_variable = {
+			which = redrising_decadence_rate_of_change_monthly
+			value = 0.1
+		}
+
+		begin_event_chain = {
+			event_chain = "redrising_decadence_tracker_chain"
+			target = root.owner
+		}
+
+		country_event = {
+			id = redrising.301
+		}
+		country_event = {
+			id =  redrising.1
+			days = @institutetimetotriggerdays
+			random = 360
+		}
+		country_event = {
+			id = redrising.8
+			days = @obsidiantimetotriggerdays
+			random = 360
+		}
+		country_event = {
+			id = redrising.401
+			days = @boardtimetotriggerdays
+			random = 360
+		}
+		country_event = {
+			id = redrising.21
+			days = @arestimetotriggerdays
+			random = 360
+		}
+	}
+}

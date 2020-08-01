@@ -1,0 +1,37 @@
+#modifiers for board of quality control event chain
+
+redrising_board_greens_deployed = {
+	country_admin_cap_mult = 0.05
+	icon = "gfx/interface/icons/modifiers/mod_country_admin_cap_mult.dds"
+}
+
+redrising_board_silvers_deployed = {
+	trade_value_mult = 0.05
+	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
+}
+
+redrising_board_orange_deployed = {
+	ship_hull_regen_add_perc = 0.25
+	icon = "gfx/interface/icons/modifiers/mod_ship_hull_regen_add_perc.dds"
+}
+
+redrising_board_blue_deployed = {
+	icon = "gfx/interface/icons/modifiers/mod_ship_speed_mult.dds"
+	ship_speed_mult = 0.05
+	ship_disengage_chance_mult = 0.05
+}
+
+redrising_board_pink_deployed = {
+	pop_cat_ruler_happiness = 0.10
+	country_influence_produces_mult = 0.10
+	icon = "gfx/interface/icons/modifiers/mod_pop_happiness.dds"
+	custom_tooltip = redrising_pinks_increase_decadence
+	show_only_custom_tooltip = no
+}
+
+redrising_board_white_deployed = {
+	planet_crime_add = -3
+	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
+	custom_tooltip = redrising_whites_decrease_decadence
+	show_only_custom_tooltip = no
+}
