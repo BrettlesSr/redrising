@@ -1,9 +1,9 @@
 namespace = redrising
 
-@boardtimetotriggerdays = 5 #00
-@institutetimetotriggerdays = 72 #00
-@obsidiantimetotriggerdays = 144 #00
-@arestimetotriggerdays = 288 #00
+@boardtimetotriggerdays = 500
+@institutetimetotriggerdays = 7200
+@obsidiantimetotriggerdays = 14400
+@arestimetotriggerdays = 28800
 
 #game start code, sets up racial stratocracy
 planet_event = {
@@ -90,6 +90,8 @@ country_event = {
 	}
 
 	immediate = {
+		set_country_flag = redrising_society
+		set_country_flag = custom_start_screen
 		set_variable = {
 			which = redrising_decadence
 			value = 25
