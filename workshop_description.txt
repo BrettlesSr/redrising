@@ -1,0 +1,14 @@
+Play as the Society of Man from Pierce Brown's Red Rising novels. This mod lets you either play as the Society of Man as it achieves FTL travel and leaves its solar system, or encounter them played by the AI in your game.
+
+Includes the following features:
+
+> Play as the Society of Man with their own custom origin and civic. Start with both Gold and Red pops.
+> Unique event chains allow you to expand the Hierarchy of Colors, adding new pops to your empire.
+> Found the Institute, employ Peerless Scarred leaders and battle the Sons of Ares.
+> A new mechanic, Decadence, represents the balance between Pixies and Iron Gold in your empire.
+> Other event chains depict the Society's history as we know it from the books, including the Dark Revolt and the Rising.
+> You can also use the origin and civic in your own custom empires, and the quest-lines should adapt to your species and country. 
+
+If you don't choose to play as the Society yourself, they should spawn somewhere in the galaxy under the control of an AI. This mod should work in multiplayer, and in theory should work even if several players play as the Society, but this feature is under-tested, so be cautious.
+
+Let me know any suggestions you have or bugs you find on the discussion pages.
