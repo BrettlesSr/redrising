@@ -23,8 +23,8 @@ thesocietyofman = {
 	}
 
 	secondary_species = {
-		class = "HUM"
-		portrait = "human"
+		class = "REDRISING_RED"
+		portrait = "redrising_red"
 		name = "redrising_secondary_species_name_society"
 		plural = "redrising_secondary_species_plural_society"
 		adjective = "redrising_secondary_species_adjective_society"
@@ -75,6 +75,7 @@ thesocietyofman = {
 		texture = 0
 		hair = 4
 		clothes = 0
+		leader_class = ruler
 		ruler_title = "redrising_ruler_title_sovereign"
 		ruler_title_female= "redrising_ruler_title_sovereign"
 		heir_title = "N/A"

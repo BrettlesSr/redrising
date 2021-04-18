@@ -1,8 +1,8 @@
-version="2.1.0"
+version="2.2.0"
 tags={
 	"Events"
 	"Species"
 }
 name="Red Rising: The Society"
-supported_version="2.8.*"
+supported_version="3.0.*"
 remote_file_id="2190380182"

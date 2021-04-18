@@ -36,7 +36,7 @@ planet_event = {
 
 			while = {
 				count = 15
-				random_pop = {
+				random_owned_pop = {
 					limit = {
 						is_pop_category = worker
 						is_same_species = root.owner_species
@@ -60,7 +60,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {		
-		random_pop = {
+		random_owned_pop = {
 			limit = {
 				has_pop_flag = redrising_red_pop			
 			}
@@ -76,7 +76,17 @@ planet_event = {
 					cooldown = no              
 				}
 			}			
-		}
+		}	
+		
+		if = {
+			limit = {
+				has_planet_flag = redrising_moon_luna
+			}
+			add_modifier = {
+				modifier = low_gravity
+				days = -1
+			}
+		}	
 	}
 }
 

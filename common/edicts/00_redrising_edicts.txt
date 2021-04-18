@@ -23,7 +23,6 @@ redrising_reduce_decadence = {
 
 	modifier = {
 		custom_tooltip = edict_redrising_reduce_decadence_tooltip
-		show_only_custom_tooltip = yes		
 	}
 	
 	potential = {

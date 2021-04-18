@@ -261,7 +261,7 @@ country_event = {
 		if = { limit = {	NOT = {
 								any_owned_planet = {
 									is_colony = yes
-									count_pops = {
+									count_owned_pop = {
 										count > 2
 									}	
 								}
@@ -273,7 +273,7 @@ country_event = {
 		}
 		if = { limit = {	any_owned_planet = {
 								is_colony = yes
-								count_pops = {
+								count_owned_pop = {
 									count > 2
 								}
 							}
@@ -281,7 +281,7 @@ country_event = {
 			random_owned_planet = {
 				limit = {
 					is_colony = yes
-					count_pops = {
+					count_owned_pop = {
 						count > 2
 					}
 				}
@@ -291,6 +291,7 @@ country_event = {
 				name = "NAME_obsidian_redrising"
 				plural = "NAME_obsidians_redrising"
 				adjective = "NAME_obsidian_redrising"
+				namelist = HUM1
 				class = HUM
 				portrait = human
 				traits = {
@@ -451,7 +452,7 @@ country_event = {
 		if = { limit = { NOT = {
 										any_owned_planet = {
 											is_colony = yes
-											count_pops = {
+											count_owned_pop = {
 												count > 2
 											}							
 										}
@@ -461,7 +462,7 @@ country_event = {
 		}
 		if = { limit = {	any_owned_planet = {
 								is_colony = yes
-								count_pops = {
+								count_owned_pop = {
 									count > 2
 								}					
 							}
@@ -469,7 +470,7 @@ country_event = {
 			random_owned_planet = {
 				limit = {
 					is_colony = yes
-					count_pops = {
+					count_owned_pop = {
 						count > 2
 					}
 				}
@@ -860,13 +861,11 @@ country_event = {
 		hidden_effect = {
 			while = {
 				count = 3
-				random_owned_planet = {
-					random_pop = {
-						limit = {
-							is_enslaved = yes
-						}
-						kill_pop = yes
+				random_owned_pop = {
+					limit = {
+						is_enslaved = yes
 					}
+					kill_pop = yes
 				}				
 			}
 		}		
@@ -878,8 +877,7 @@ country_event = {
 		hidden_effect = {
 			while = {
 				count = 3
-				random_owned_planet = {
-					random_pop = {
+				random_owned_pop = {
 					limit = {
 						is_enslaved = yes
 						NOT ={
@@ -890,7 +888,6 @@ country_event = {
 							modifier = redrising_enlightened
 							days = 3600				
 						}
-					}	
 				}		
 			}
 		}		
@@ -1459,7 +1456,7 @@ planet_event = { #rising
 			portrait = "human"
 			name = "redrising_species_name_society"
 			plural = "redrising_species_plural_society"
-			name_list = "HUMAN1"
+			namelist = "HUMAN1"
 			traits = {
 				trait = "trait_decadent"
 				trait = "trait_wasteful"
@@ -1647,6 +1644,7 @@ country_event = {
 					create_army = {
 						owner = root
 						type = "assault_army"
+						species = event_target:obsidian_redrising
 					}
 				}
 			}
@@ -1656,6 +1654,7 @@ country_event = {
 						count = 4
 						create_army = {
 							owner = root
+							species = owner_main_species
 							type = "assault_army"
 						}
 					}
@@ -1718,6 +1717,7 @@ country_event = {
 					create_army = {
 						owner = root
 						type = "assault_army"
+						species = event_target:obsidian_redrising
 					}
 				}
 			}
@@ -1727,6 +1727,7 @@ country_event = {
 						count = 4
 						create_army = {
 							owner = root
+							species = owner_main_species
 							type = "assault_army"
 						}
 					}
@@ -1751,15 +1752,15 @@ country_event = {
 		}
 
 		# survey host's surveyed planets
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				is_surveyed = {
 					who = event_target:redrising_current_rising_originator
 					status = yes
 				}
 			}
-			surveyed = {
-				set_surveyed = yes
+			set_surveyed = {
+				surveyed = yes
 				surveyor = root
 			}
 		}
@@ -2318,7 +2319,7 @@ country_event = {
 	}
 }
 
-event = {
+country_event = {
 	id = redrising.43
 	hide_window = yes
 	fire_only_once = no
