@@ -53,8 +53,8 @@ thesocietyofman = {
 	
 	empire_flag={
 		icon={
-			category="pointy"
-			file="flag_pointy_11.dds"
+			category="redrising"
+			file="redrising_society.dds"
 		}
 		background={
 			category="backgrounds"
