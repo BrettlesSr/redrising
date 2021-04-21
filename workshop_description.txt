@@ -2,7 +2,7 @@ Play as the Society of Man from Pierce Brown's Red Rising novels. This mod lets 
 
 Includes the following features:
 
-> Play as the Society of Man with their own custom origin and civic. Start with both Gold and Red pops.
+> Play as the Society of Man with their own custom origin, civic and flag. Start with both Gold and Red pops.
 > Unique event chains allow you to expand the Hierarchy of Colors, adding new pops to your empire.
 > Found the Institute, employ Peerless Scarred leaders and battle the Sons of Ares.
 > A new mechanic, Decadence, represents the balance between Pixies and Iron Gold in your empire.
