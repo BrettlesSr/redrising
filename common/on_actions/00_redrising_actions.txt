@@ -72,7 +72,6 @@ on_ruler_set = {
 on_game_start_country = {
 	events = {
 		redrising.150
-		redrising.170
 	}
 }
 
