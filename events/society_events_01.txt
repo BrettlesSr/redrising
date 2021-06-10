@@ -76,17 +76,7 @@ planet_event = {
 					cooldown = no              
 				}
 			}			
-		}	
-		
-		if = {
-			limit = {
-				has_planet_flag = redrising_moon_luna
-			}
-			add_modifier = {
-				modifier = low_gravity
-				days = -1
-			}
-		}	
+		}
 	}
 }
 
@@ -138,6 +128,33 @@ country_event = {
 			id = redrising.21
 			days = @arestimetotriggerdays
 			random = 360
+		}
+	}
+}
+
+#triggers low gravity on luna
+country_event = {
+	id = redrising.170
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_planet = {
+			has_planet_flag = redrising_moon_luna
+			NOT = { has_modifier = low_gravity }
+		}		
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				has_planet_flag = redrising_moon_luna
+				NOT = { has_modifier = low_gravity }
+			}
+			add_modifier = {
+				modifier = low_gravity
+				days = -1
+			}
 		}
 	}
 }
