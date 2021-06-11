@@ -283,7 +283,7 @@
  redrising.52:0 "Darrow au Andromedus"
  redrising.52.desc:0 "For decades, the Rising has been building secret networks of support inside our hated foe. Mid Color hackers, low Color revolutionaries, even high Color backers. Our most valuable asset however, was a sleeper agent without compare: the general Darrow au Andromedus. Darrow was once a low Color, and was carved by the most sophisticated medical science available into one of the hated tyrants. For years, he has worked for us from within our great enemy. Now, as the struggle begins openly, he returns to us, bringing with him troops, warships and valuable intel. His defection will aid us immeasurably."
 
-REDRISING_RED:0 "Red Rising Humanoid"
+REDRISING_RED:0 "Humanoid"
  REDRISING_RED_desc:1 "Species Class has no effect on your Empire, but Humanoid-class Species may consider other Humanoids to be less alien than other Species Classes."
  REDRISING_RED_plural:0 "Humanoids"
  REDRISING_RED_insult_01:0 "beast"
