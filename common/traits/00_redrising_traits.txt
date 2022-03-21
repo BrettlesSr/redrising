@@ -1,19 +1,25 @@
 trait_redrising_warlike = {
 	cost = 0
 	initial = no
-	sapient = no
-	modification = no
+	species_potential_add = {
+		always = no
+	}
+	randomized = no
+	potential_crossbreeding_chance = 1.0
 	icon = "gfx/interface/icons/traits/trait_survivor.dds"
-	allowed_archetypes = { BIOLOGICAL }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		army_damage_mult = 0.10
 		planet_jobs_worker_produces_mult = -0.05
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
 
 trait_redrising_pscarred_admiral = {
 	cost = 0
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/redrising_leader_trait_pscarred.dds"
 	modifier = {
 		ship_speed_mult = 0.05
@@ -27,7 +33,6 @@ trait_redrising_pscarred_admiral = {
 
 trait_redrising_pscarred_scientist = {
 	cost = 0
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/redrising_leader_trait_pscarred.dds"
 	modifier = {
 		all_technology_research_speed = 0.04
@@ -52,7 +57,6 @@ trait_redrising_pscarred_scientist = {
 
 trait_redrising_pscarred_general = {
 	cost = 0
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/redrising_leader_trait_pscarred.dds"
 	modifier = {
 		army_morale = 0.05
@@ -66,7 +70,6 @@ trait_redrising_pscarred_general = {
 
 trait_redrising_pscarred_governor = {
 	cost = 0
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/redrising_leader_trait_pscarred.dds"
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.04
@@ -80,7 +83,6 @@ trait_redrising_pscarred_governor = {
 
 trait_redrising_pscarred_ruler = {
 	cost = 0
-	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/redrising_leader_trait_pscarred.dds"
 	modifier = {
 		pop_government_ethic_attraction = 0.05

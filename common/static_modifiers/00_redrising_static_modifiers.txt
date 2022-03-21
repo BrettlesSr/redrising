@@ -1,5 +1,5 @@
 redrising_institute_pscarred_built = {
-	leaders_energy_cost_mult = 0.25
+	leaders_cost_mult = 0.25
 	icon = "gfx/interface/icons/modifiers/mod_leader_cost.dds"
 }
 
@@ -62,8 +62,8 @@ redrising_unrest_crash = {
 }
 
 redrising_unrest_crackdown = {
-	country_influence_produces_mult =  -0.05
-	icon = "gfx/interface/icons/modifiers/mod_country_influence_gain_mult.dds"
+	country_unity_produces_mult =  -0.05
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
 }
 
 redrising_unrest_patience = {

@@ -1,8 +1,8 @@
 namespace = redrising
 
-@tier2influencereward = 12
-@tier2influencemin = 80
-@tier2influencemax = 175
+@tier2unityreward = 12
+@tier2unitymin = 150
+@tier2unitymax = 1000
 @timetodarrowafteraresdays = 7200
 @timebetweenunresteventsdays = 1500
 @timetodarkrevoltdays = 7800
@@ -95,10 +95,10 @@ option = {
 option = {
 		name = "redrising.4.b"
 		add_monthly_resource_mult = {
-			resource = influence
-			value = @tier2influencereward
-			min = @tier2influencemin
-			max = @tier2influencemax
+			resource = unity
+			value = @tier2unityreward
+			min = @tier2unitymin
+			max = @tier2unitymax
 		}
 	}
 }
@@ -937,7 +937,7 @@ country_event = {
 	option = {
 		name = "redrising.27.a"
 		add_resource = {
-			influence = -50
+			unity = -1000
 		}
 		set_country_flag = redrising_conspiracy_grows
 		custom_tooltip = redrising.27.a.tooltip
@@ -1118,7 +1118,7 @@ country_event = {
 	
 	option = {
 		name = "redrising.32.a.2"
-		custom_tooltip = "redrising.32.a.2.tooltip"
+		custom_tooltip = "redrising.32.a.2.tooltip.no_scars"
 		trigger = {
 			NOT = { has_country_flag = redrising_institute_pscarred_built }
 			has_country_flag = redrising_society
@@ -1199,7 +1199,7 @@ country_event = {
 				limit = {
 					has_leader_flag = redrising_darrow
 				}
-				kill_leader = { type = general } 
+				exile_leader_as = redrising_darrow
 			}
 			country_event = { id = redrising.34 days = 180 }
 		}
@@ -1397,14 +1397,6 @@ planet_event = { #rising
 	option = {
 		name = "redrising.36.a"
 		custom_tooltip = redrising.36.a.tooltip
-		hidden_effect = {
-			event_target:redrising_current_pre_rising_society = {
-				country_event = {
-					id = redrising.51
-					days = 5
-				}	
-			}			
-		}
 		#stay
 	}
 
@@ -1421,6 +1413,12 @@ planet_event = { #rising
 	immediate = {
 		event_target:redrising_current_pre_rising_society = {
 			redrising_grab_red_species = yes
+		}
+		event_target:redrising_current_pre_rising_society = {
+			country_event = {
+				id = redrising.51
+				days = 5
+			}	
 		}		
 		owner = { save_event_target_as = redrising_the_rising_originator }
 		set_planet_flag = redrising_rising_capital@root.owner
@@ -2061,7 +2059,9 @@ country_event = {
 
 	option = {
 		name = "redrising.39.a"
-		kill_leader = { type = ruler }
+		ruler = {
+			exile_leader_as = redrising_darrow
+		}		
 		hidden_effect = {	
 			set_country_flag = redrising_overthrown_darrow		
 			country_event = { id = redrising.46 }
@@ -2594,8 +2594,7 @@ country_event = {
 				has_leader_flag = redrising_darrow
 			}
 			set_leader_flag = redrising_darrow_defected
-			kill_leader = { type = general}
-			kill_leader = { type = ruler}
+			exile_leader_as = redrising_darrow
 		}
 	}
 
@@ -2622,23 +2621,41 @@ country_event = {
 	}
 
 	immediate = {
-		create_leader = {
-			class = general
-			species = owner_main_species
-			name = "NAME_darrow_au_andromedus"
-			skill = 3
-			set_age = 32
-			gender = male
-			traits = {
-				trait = leader_trait_charismatic
+		#credit to walshicus#7684 on discord for this code
+		create_fleet = {
+			name = "gone"
+			effect = {
+				set_owner = root
+				create_ship = { name = random random_existing_design = science }
+				set_leader = redrising_darrow
+				save_event_target_as = removeFleet
 			}
+		}        
+		destroy_fleet = {
+			target = event_target:removeFleet
+			kill_leader = no
+			destroy_template = yes
 		}
 		last_created_leader = {
 			set_leader_flag = redrising_darrow
+		}
+		create_fleet_from_naval_cap = 0.1
+		random_country = {
+			limit = {
+				has_relation_flag = {
+					who = ROOT
+					flag = redrising_host_to_rising_flag
+				}
+			}
+			save_event_target_as = redrising_intel_host_rising_society
 		}
 	}
 
 	option = {
 		name = EXCELLENT
+		add_intel = {
+			who = event_target:redrising_intel_host_rising_society
+			amount = 50
+		}
 	}
 }

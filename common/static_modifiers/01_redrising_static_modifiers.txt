@@ -1,7 +1,7 @@
 #modifiers for board of quality control event chain
 
 redrising_board_greens_deployed = {
-	country_admin_cap_mult = 0.05
+	empire_size_pops_mult = -0.1
 	icon = "gfx/interface/icons/modifiers/mod_country_admin_cap_mult.dds"
 }
 
