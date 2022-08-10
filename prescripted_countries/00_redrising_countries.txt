@@ -78,7 +78,5 @@ thesocietyofman = {
 		leader_class = ruler
 		ruler_title = "redrising_ruler_title_sovereign"
 		ruler_title_female= "redrising_ruler_title_sovereign"
-		heir_title = "N/A"
-		heir_title_female = "N/A"
 	}
 }

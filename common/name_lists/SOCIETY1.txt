@@ -2,103 +2,151 @@
 ### Mostly cribbed from work by by Henrik Eklund
 
 SOCIETY1 = {
+	category = "Humanoid"
 	randomized = no
 	alias = "Society1"
 
 	ship_names = {
 
 		corvette = {
-			Lartius Flavus Aulus Postumius Albus Regillensis Manius Valerius Volusus Maximus Gaius Aemilius Mamercus Lucius Quinctius Cincinnatus Quintus Servilius Priscus Structus Fidenas Tubertus Publius Cornelius Rutilus Cossus Marcus Furius Camillus Capitolinus Manlius Appius Pennus Crispinus Ahala Sulpicius Peticus Marcius Imperiosus Torquatus Julius Iulus Ambustus Poplicola Corvus Crassus Philo Privernas Rufinus Papirius Varus Gnaeus Marcellus Cursor Arvina Lentulus Rullianus Poetilius Visolus Longus Junius Bubulcus Brutus Hortensius Caecus Barbula Calvinus Domitius Fulvius Centumalus Ogulnius Glicia Atilius Calatinus Coruncanius Duilius Caecilius Metullus Verrucosus Veturius Pera Fabius Buteo Centho Flaccus Livius Scaeva Salinator Geminus Drusus Spurius Cassius Viscellinus Aebutius Elva Sempronius Atratinus Mamercinus Scapula Natta Servius Maluginensis Plautius Proculus Scipio Denter Hortator Potitus Antonius Albinus Paetus Foslius Flaccinator Cerretanus Decius Titinius Paullus Philippus Laetorius Plancianus Cotta Numerius Flaminius Minucius Pomponius Gracchus Metellus Pulex Velox Acutus Ensatus Erosus Excelsus Ingratus Lancea Magnus Nitidus Ophis Sanctus Verrucosus Virosus Ferox Merus Pulcher Currus Malleus Spina Accipiter Anguis Apis Aquila Corvus Leo Lupus Papilio Passer Strix Ursus Vespa Viverra Vulpes Sagittarii Scutum Parma Cetra Dolabra Tribulus
+			HUMAN3_SHIP_Lartius HUMAN3_SHIP_Flavus HUMAN3_SHIP_Aulus HUMAN3_SHIP_Postumius HUMAN3_SHIP_Albus HUMAN3_SHIP_Regillensis HUMAN3_SHIP_Manius HUMAN3_SHIP_Valerius HUMAN3_SHIP_Volusus HUMAN3_SHIP_Maximus HUMAN3_SHIP_Gaius HUMAN3_SHIP_Aemilius HUMAN3_SHIP_Mamercus HUMAN3_SHIP_Lucius HUMAN3_SHIP_Quinctius HUMAN3_SHIP_Cincinnatus HUMAN3_SHIP_Quintus HUMAN3_SHIP_Servilius HUMAN3_SHIP_Priscus HUMAN3_SHIP_Structus HUMAN3_SHIP_Fidenas HUMAN3_SHIP_Tubertus HUMAN3_SHIP_Publius HUMAN3_SHIP_Cornelius HUMAN3_SHIP_Rutilus HUMAN3_SHIP_Cossus HUMAN3_SHIP_Marcus HUMAN3_SHIP_Furius HUMAN3_SHIP_Camillus HUMAN3_SHIP_Capitalinus HUMAN3_SHIP_Manlius HUMAN3_SHIP_Appius HUMAN3_SHIP_Pennus HUMAN3_SHIP_Crispinus HUMAN3_SHIP_Ahala HUMAN3_SHIP_Sulpicius HUMAN3_SHIP_Peticus HUMAN3_SHIP_Marcius HUMAN3_SHIP_Imperiosus HUMAN3_SHIP_Torquatus HUMAN3_SHIP_Julius HUMAN3_SHIP_Iulus HUMAN3_SHIP_Ambustus HUMAN3_SHIP_Poplicola HUMAN3_SHIP_Corvus HUMAN3_SHIP_Crassus HUMAN3_SHIP_Philo HUMAN3_SHIP_Privernas HUMAN3_SHIP_Rufinus HUMAN3_SHIP_Papirius HUMAN3_SHIP_Varus HUMAN3_SHIP_Gnaeus HUMAN3_SHIP_Marcellus HUMAN3_SHIP_Cursor HUMAN3_SHIP_Arvina HUMAN3_SHIP_Lentulus HUMAN3_SHIP_Rullianus HUMAN3_SHIP_Poetilius HUMAN3_SHIP_Visolus HUMAN3_SHIP_Longus HUMAN3_SHIP_Junius HUMAN3_SHIP_Bubulcus HUMAN3_SHIP_Brutus HUMAN3_SHIP_Hortensius HUMAN3_SHIP_Caecus HUMAN3_SHIP_Barbula HUMAN3_SHIP_Calvinus HUMAN3_SHIP_Domitius HUMAN3_SHIP_Fulvius HUMAN3_SHIP_Centumalus HUMAN3_SHIP_Ogulnius HUMAN3_SHIP_Glicia HUMAN3_SHIP_Atilius HUMAN3_SHIP_Calatinus HUMAN3_SHIP_Coruncanius HUMAN3_SHIP_Duilius HUMAN3_SHIP_Caecilius HUMAN3_SHIP_Metullus HUMAN3_SHIP_Verrucosus HUMAN3_SHIP_Veturius HUMAN3_SHIP_Pera HUMAN3_SHIP_Fabius HUMAN3_SHIP_Buteo HUMAN3_SHIP_Centho HUMAN3_SHIP_Flaccus HUMAN3_SHIP_Livius HUMAN3_SHIP_Scaeva HUMAN3_SHIP_Salinator HUMAN3_SHIP_Geminus HUMAN3_SHIP_Drusus HUMAN3_SHIP_Spurius HUMAN3_SHIP_Cassius HUMAN3_SHIP_Viscellinus HUMAN3_SHIP_Aebutius HUMAN3_SHIP_Elva HUMAN3_SHIP_Sempronius HUMAN3_SHIP_Atratinus HUMAN3_SHIP_Mamercinus HUMAN3_SHIP_Scapula HUMAN3_SHIP_Natta HUMAN3_SHIP_Servius HUMAN3_SHIP_Maluginensis HUMAN3_SHIP_Plautius HUMAN3_SHIP_Proculus HUMAN3_SHIP_Scipio HUMAN3_SHIP_Denter HUMAN3_SHIP_Hortator HUMAN3_SHIP_Potitus HUMAN3_SHIP_Antonius HUMAN3_SHIP_Albinus HUMAN3_SHIP_Paetus HUMAN3_SHIP_Foslius HUMAN3_SHIP_Flaccinator HUMAN3_SHIP_Cerretanus HUMAN3_SHIP_Decius HUMAN3_SHIP_Titinius HUMAN3_SHIP_Paullus HUMAN3_SHIP_Philippus HUMAN3_SHIP_Laetorius HUMAN3_SHIP_Plancianus HUMAN3_SHIP_Cotta HUMAN3_SHIP_Numerius HUMAN3_SHIP_Flaminius HUMAN3_SHIP_Minucius HUMAN3_SHIP_Pomponius HUMAN3_SHIP_Gracchus HUMAN3_SHIP_Metellus HUMAN3_SHIP_Pulex HUMAN3_SHIP_Velox HUMAN3_SHIP_Acutus HUMAN3_SHIP_Ensatus HUMAN3_SHIP_Erosus HUMAN3_SHIP_Excelsus HUMAN3_SHIP_Ingratus HUMAN3_SHIP_Lancea HUMAN3_SHIP_Magnus HUMAN3_SHIP_Nitidus HUMAN3_SHIP_Ophis HUMAN3_SHIP_Sanctus HUMAN3_SHIP_Verrucosus HUMAN3_SHIP_Virosus HUMAN3_SHIP_Ferox HUMAN3_SHIP_Merus HUMAN3_SHIP_Pulcher HUMAN3_SHIP_Currus HUMAN3_SHIP_Malleus HUMAN3_SHIP_Spina HUMAN3_SHIP_Accipiter HUMAN3_SHIP_Anguis HUMAN3_SHIP_Apis HUMAN3_SHIP_Aquila HUMAN3_SHIP_Corvus HUMAN3_SHIP_Leo HUMAN3_SHIP_Lupus HUMAN3_SHIP_Papilio HUMAN3_SHIP_Passer HUMAN3_SHIP_Strix HUMAN3_SHIP_Ursus HUMAN3_SHIP_Vespa HUMAN3_SHIP_Viverra HUMAN3_SHIP_Vulpes HUMAN3_SHIP_Sagittarii HUMAN3_SHIP_Scutum HUMAN3_SHIP_Parma HUMAN3_SHIP_Cetra HUMAN3_SHIP_Dolabra HUMAN3_SHIP_Tribulus
 		}
-		
+
 		destroyer = {
-			Abundantia "Acca Larentia" Acis Aerecura Aequitas Aesculapius Aeternitas Aeon "Aius Locutius" Alernus Angerona Angitia "Anna Perenna" Annona Antevorta "Arkeus Ultor" Arimanius Aura Averruncus "Bona Dea" "Bonus Eventus" Bubona Caca Cacus Caelus Camenae Cardea Carmenta Carna Clementia Cloacina Consus Cupid Cura Cybele "Dea Dia" "Dea Tacita" Decima Devera "Dius Fidius" Disciplina Egeria Empanda Epona Falacer Fama Fascinus Fauna Faunus Faustitas Februus Febris Fecunditas Felicitas Ferentina Feronia Fornax Fufluns Fulgora Furrina Gratiae Hermaphroditus Honos Hora Indiges Intercidona Inuus Invidia Justitia Juturna Juventas Laverna Latona Lemures Levana Letum Libertas Libitina Lua Lucifer Lupercus Lympha "Mana Genita" Manes Mantus "Mater Matuta" Meditrina Mephitis Mellonia Moneta Mors Murcia "Mutunus Tutunus" Naenia Nascio Necessitas Neverita Nona Nox Palatua Pax Picumnus Picus Pilumnus Poena Pomona Porrima Portunes Postverta Priapus Pudicitia Quirtis Robigus Rumina Silvanus Somnus Soranus Sors Spes "Stata Mater" Sterquilinus Suedala Summanus Tiberinus Tibertus Tranquillitas Trivia Ubertas Unxia Vacuna Vediovus Venelia Verminus Vertumnus Viduus Virbius Volturnus Voluptas
+			HUMAN3_SHIP_Abundantia HUMAN3_SHIP_AccaLarentia HUMAN3_SHIP_Acis HUMAN3_SHIP_Aerecura HUMAN3_SHIP_Aequitas HUMAN3_SHIP_Aesculapius HUMAN3_SHIP_Aeternitas HUMAN3_SHIP_Aeon HUMAN3_SHIP_AiusLocutius HUMAN3_SHIP_Alernus HUMAN3_SHIP_Angerona HUMAN3_SHIP_Angitia HUMAN3_SHIP_AnnaPerenna HUMAN3_SHIP_Annona HUMAN3_SHIP_Antevorta HUMAN3_SHIP_ArkeusUltor HUMAN3_SHIP_Arimanius HUMAN3_SHIP_Aura HUMAN3_SHIP_Averruncus HUMAN3_SHIP_BonaDea HUMAN3_SHIP_BonusEventus HUMAN3_SHIP_Bubona HUMAN3_SHIP_Caca HUMAN3_SHIP_Cacus HUMAN3_SHIP_Caelus HUMAN3_SHIP_Camenae HUMAN3_SHIP_Cardea HUMAN3_SHIP_Carmenta HUMAN3_SHIP_Carna HUMAN3_SHIP_Clementia HUMAN3_SHIP_Cloacina HUMAN3_SHIP_Consus HUMAN3_SHIP_Cupid HUMAN3_SHIP_Cura HUMAN3_SHIP_Cybele HUMAN3_SHIP_DeaDia HUMAN3_SHIP_DeaTacita HUMAN3_SHIP_Decima HUMAN3_SHIP_Devera HUMAN3_SHIP_DiusFidius HUMAN3_SHIP_Disciplina HUMAN3_SHIP_Egeria HUMAN3_SHIP_Empanda HUMAN3_SHIP_Epona HUMAN3_SHIP_Falacer HUMAN3_SHIP_Fama HUMAN3_SHIP_Fascinus HUMAN3_SHIP_Fauna HUMAN3_SHIP_Faunus HUMAN3_SHIP_Faustitas HUMAN3_SHIP_Februus HUMAN3_SHIP_Febris HUMAN3_SHIP_Fecunditas HUMAN3_SHIP_Felicitas HUMAN3_SHIP_Ferentina HUMAN3_SHIP_Feronia HUMAN3_SHIP_Fornax HUMAN3_SHIP_Fufluns HUMAN3_SHIP_Fulgora HUMAN3_SHIP_Furrina HUMAN3_SHIP_Gratiae HUMAN3_SHIP_Hermaphroditus HUMAN3_SHIP_Honos HUMAN3_SHIP_Hora HUMAN3_SHIP_Indiges HUMAN3_SHIP_Intercidona HUMAN3_SHIP_Inuus HUMAN3_SHIP_Invidia HUMAN3_SHIP_Justitia HUMAN3_SHIP_Juturna HUMAN3_SHIP_Juventas HUMAN3_SHIP_Laverna HUMAN3_SHIP_Latona HUMAN3_SHIP_Lemures HUMAN3_SHIP_Levana HUMAN3_SHIP_Letum HUMAN3_SHIP_Libertas HUMAN3_SHIP_Libitina HUMAN3_SHIP_Lua HUMAN3_SHIP_Lucifer HUMAN3_SHIP_Lupercus HUMAN3_SHIP_Lympha HUMAN3_SHIP_ManaGenita HUMAN3_SHIP_Manes HUMAN3_SHIP_Mantus HUMAN3_SHIP_MaterMatuta HUMAN3_SHIP_Meditrina HUMAN3_SHIP_Mephitis HUMAN3_SHIP_Mellonia HUMAN3_SHIP_Moneta HUMAN3_SHIP_Mors HUMAN3_SHIP_Murcia HUMAN3_SHIP_MutunusTutunus HUMAN3_SHIP_Naenia HUMAN3_SHIP_Nascio HUMAN3_SHIP_Necessitas HUMAN3_SHIP_Neverita HUMAN3_SHIP_Nona HUMAN3_SHIP_Nox HUMAN3_SHIP_Palatua HUMAN3_SHIP_Pax HUMAN3_SHIP_Picumnus HUMAN3_SHIP_Picus HUMAN3_SHIP_Pilumnus HUMAN3_SHIP_Poena HUMAN3_SHIP_Pomona HUMAN3_SHIP_Porrima HUMAN3_SHIP_Portunes HUMAN3_SHIP_Postverta HUMAN3_SHIP_Priapus HUMAN3_SHIP_Pudicitia HUMAN3_SHIP_Quirtis HUMAN3_SHIP_Robigus HUMAN3_SHIP_Rumina HUMAN3_SHIP_Silvanus HUMAN3_SHIP_Somnus HUMAN3_SHIP_Soranus HUMAN3_SHIP_Sors HUMAN3_SHIP_Spes HUMAN3_SHIP_StataMater HUMAN3_SHIP_Sterquilinus HUMAN3_SHIP_Suedala HUMAN3_SHIP_Summanus HUMAN3_SHIP_Tiberinus HUMAN3_SHIP_Tibertus HUMAN3_SHIP_Tranquillitas HUMAN3_SHIP_Trivia HUMAN3_SHIP_Ubertas HUMAN3_SHIP_Unxia HUMAN3_SHIP_Vacuna HUMAN3_SHIP_Vediovus HUMAN3_SHIP_Venelia HUMAN3_SHIP_Verminus HUMAN3_SHIP_Vertumnus HUMAN3_SHIP_Viduus HUMAN3_SHIP_Virbius HUMAN3_SHIP_Volturnus HUMAN3_SHIP_Voluptas
 		}
-		
+
 		cruiser = {
-			Jupiter Juno Mars Venus Bellona Minerva Janus Vesta Saturn Genius Mercury Apollo Vulcan Neptune Victoria Virtus Tellus Ceres Luna Diana Feronia Novensides Pales Salus Fortuna Fons Fides Opis Flora Vediovis Summanus Larunda Terminus Quirinus Vortumnus Lares Lucina Aurora Bacchus Concordia Hercules Mithras Nemesis Nerio Pietas Pluto Proserpina Providentia Salacia Sancus Securitas Orcus Liber Tempestas "Vica Pota" Victrix Ferrata Fidelis Triumphalis Fulminata Liberatrix Fortis Venator Felix Firma Rapax Constantia Salutis Virtutis Caper Taurus Centaurus Aper Pegasus Ops Dacicus Olivus Asclepius Perseus Satyra Particus Tibur Pollux Salvia Sol Isis Castor Armata Salamina Rhenus Tigris Oceanus Eufrates Danubius Nilus Athenonix
+			HUMAN3_SHIP_Jupiter HUMAN3_SHIP_Juno HUMAN3_SHIP_Mars HUMAN3_SHIP_Venus HUMAN3_SHIP_Bellona HUMAN3_SHIP_Minerva HUMAN3_SHIP_Janus HUMAN3_SHIP_Vesta HUMAN3_SHIP_Saturn HUMAN3_SHIP_Genius HUMAN3_SHIP_Mercury HUMAN3_SHIP_Apollo HUMAN3_SHIP_Vulcan HUMAN3_SHIP_Neptune HUMAN3_SHIP_Victoria HUMAN3_SHIP_Virtus HUMAN3_SHIP_Tellus HUMAN3_SHIP_Ceres HUMAN3_SHIP_Luna HUMAN3_SHIP_Diana HUMAN3_SHIP_Feronia HUMAN3_SHIP_Novensides HUMAN3_SHIP_Pales HUMAN3_SHIP_Salus HUMAN3_SHIP_Fortuna HUMAN3_SHIP_Fons HUMAN3_SHIP_Fides HUMAN3_SHIP_Opis HUMAN3_SHIP_Flora HUMAN3_SHIP_Vediovis HUMAN3_SHIP_Summanus HUMAN3_SHIP_Larunda HUMAN3_SHIP_Terminus HUMAN3_SHIP_Quirinus HUMAN3_SHIP_Vortumnus HUMAN3_SHIP_Lares HUMAN3_SHIP_Lucina HUMAN3_SHIP_Aurora HUMAN3_SHIP_Bacchus HUMAN3_SHIP_Concordia HUMAN3_SHIP_Hercules HUMAN3_SHIP_Mithras HUMAN3_SHIP_Nemesis HUMAN3_SHIP_Nerio HUMAN3_SHIP_Pietas HUMAN3_SHIP_Pluto HUMAN3_SHIP_Proserpina HUMAN3_SHIP_Providentia HUMAN3_SHIP_Salacia HUMAN3_SHIP_Sancus HUMAN3_SHIP_Securitas HUMAN3_SHIP_Orcus HUMAN3_SHIP_Liber HUMAN3_SHIP_Tempestas HUMAN3_SHIP_VicaPota HUMAN3_SHIP_Victrix HUMAN3_SHIP_Ferrata HUMAN3_SHIP_Fidelis HUMAN3_SHIP_Triumphalis HUMAN3_SHIP_Fulminata HUMAN3_SHIP_Liberatrix HUMAN3_SHIP_Fortis HUMAN3_SHIP_Venator HUMAN3_SHIP_Felix HUMAN3_SHIP_Firma HUMAN3_SHIP_Rapax HUMAN3_SHIP_Constantia HUMAN3_SHIP_Salutis HUMAN3_SHIP_Virtutis HUMAN3_SHIP_Caper HUMAN3_SHIP_Taurus HUMAN3_SHIP_Centaurus HUMAN3_SHIP_Aper HUMAN3_SHIP_Pegasus HUMAN3_SHIP_Ops HUMAN3_SHIP_Dacicus HUMAN3_SHIP_Olivus HUMAN3_SHIP_Asclepius HUMAN3_SHIP_Perseus HUMAN3_SHIP_Satyra HUMAN3_SHIP_Particus HUMAN3_SHIP_Tibur HUMAN3_SHIP_Pollux HUMAN3_SHIP_Salvia HUMAN3_SHIP_Sol HUMAN3_SHIP_Isis HUMAN3_SHIP_Castor HUMAN3_SHIP_Armata HUMAN3_SHIP_Salamina HUMAN3_SHIP_Rhenus HUMAN3_SHIP_Tigris HUMAN3_SHIP_Oceanus HUMAN3_SHIP_Eufrates HUMAN3_SHIP_Danubius HUMAN3_SHIP_Nilus HUMAN3_SHIP_Athenonix
 		}
 
 		battleship = {
-			Augustus Tiberius Caligula Claudius Nero Galba Otho Vitellius Vespasian Titus Domitian Nerva Hadrian "Antoninus Pius" "Marcus Aurelius" "Lucius Verus" Commodus Pertinax "Didius Julianus" "Septimus Severus" Caracalla Geta Macrinus Elagabalus "Severus Alexander" Maximinus Gordian Pupienus Balbinus Philip "Trajan Decius" Hostilian "Trebonianus Gallus" Aemilian Valerian Gallienus "Claudius Gothicus" Quintillus Aurelian Tacitus Florian Probus Carus Numerian Carinus Diocletian Maximian Constantius Galerius Severus Constantine Maxentius Licinius Constans Vetranio Julian Jovian Valentinian Valens Gratian Theodosius Sulla "Gaius Marius" Agrippa
+			HUMAN3_SHIP_Augustus HUMAN3_SHIP_Tiberius HUMAN3_SHIP_Caligula HUMAN3_SHIP_Claudius HUMAN3_SHIP_Nero HUMAN3_SHIP_Galba HUMAN3_SHIP_Otho HUMAN3_SHIP_Vitellius HUMAN3_SHIP_Vespasian HUMAN3_SHIP_Titus HUMAN3_SHIP_Domitian HUMAN3_SHIP_Nerva HUMAN3_SHIP_Hadrian HUMAN3_SHIP_AntoninusPius HUMAN3_SHIP_MarcusAurelius HUMAN3_SHIP_LuciusVerus HUMAN3_SHIP_Commodus HUMAN3_SHIP_Pertinax HUMAN3_SHIP_DidiusJulianus HUMAN3_SHIP_SeptimusSeverus HUMAN3_SHIP_Caracalla HUMAN3_SHIP_Geta HUMAN3_SHIP_Macrinus HUMAN3_SHIP_Elagabalus HUMAN3_SHIP_SeverusAlexander HUMAN3_SHIP_Maximinus HUMAN3_SHIP_Gordian HUMAN3_SHIP_Pupienus HUMAN3_SHIP_Balbinus HUMAN3_SHIP_Philip HUMAN3_SHIP_TrajanDecius HUMAN3_SHIP_Hostilian HUMAN3_SHIP_TrebonianusGallus HUMAN3_SHIP_Aemilian HUMAN3_SHIP_Valerian HUMAN3_SHIP_Gallienus HUMAN3_SHIP_ClaudiusGothicus HUMAN3_SHIP_Quintillus HUMAN3_SHIP_Aurelian HUMAN3_SHIP_Tacitus HUMAN3_SHIP_Florian HUMAN3_SHIP_Probus HUMAN3_SHIP_Carus HUMAN3_SHIP_Numerian HUMAN3_SHIP_Carinus HUMAN3_SHIP_Diocletian HUMAN3_SHIP_Maximian HUMAN3_SHIP_Constantius HUMAN3_SHIP_Galerius HUMAN3_SHIP_Severus HUMAN3_SHIP_Constantine HUMAN3_SHIP_Maxentius HUMAN3_SHIP_Licinius HUMAN3_SHIP_Constans HUMAN3_SHIP_Vetranio HUMAN3_SHIP_Julian HUMAN3_SHIP_Jovian HUMAN3_SHIP_Valentinian HUMAN3_SHIP_Valens HUMAN3_SHIP_Gratian HUMAN3_SHIP_Theodosius HUMAN3_SHIP_Sulla HUMAN3_SHIP_GaiusMarius HUMAN3_SHIP_Agrippa
 		}
 
 		titan = {
-			"Julius Caesar" "Imperator Augustus" Romulus Remus Trajan
+			HUMAN3_SHIP_JuliusCaesar HUMAN3_SHIP_ImperatorAugustus HUMAN3_SHIP_Romulus HUMAN3_SHIP_Remus HUMAN3_SHIP_Trajan
 		}
 
 		colossus = {
-			"Pax Social" "Sol Invictus"
+			HUMAN3_SHIP_PaxRomana HUMAN3_SHIP_SolInvictus HUMAN3_SHIP_DisPater
 		}
-		
+
+		juggernaut = {
+			HUMAN3_SHIP_AccaLarentia HUMAN3_SHIP_Emperor HUMAN3_SHIP_Faustulus HUMAN3_SHIP_Lupa HUMAN3_SHIP_MagisterMilitum HUMAN3_SHIP_OptimusPrinceps
+		}
+
 		science = {
-			Plinius Acoreus Adrastus Hyginus Gallus Pytheas Diodorus Posidonius Anaximander Callippus Hephaestio Ptolemy Alypius Mucianus Isidore Strabo "Pomponius Mela" Marinus Pausanias Agathodaemon Dionysius Agathemerus Marcian "Julius Honorius" "Polemius Silvius"
+			HUMAN3_SHIP_Plinius HUMAN3_SHIP_Acoreus HUMAN3_SHIP_Adrastus HUMAN3_SHIP_Hyginus HUMAN3_SHIP_Gallus HUMAN3_SHIP_Pytheas HUMAN3_SHIP_Diodorus HUMAN3_SHIP_Posidonius HUMAN3_SHIP_Anaximander HUMAN3_SHIP_Callippus HUMAN3_SHIP_Hephaestio HUMAN3_SHIP_Ptolemy HUMAN3_SHIP_Alypius HUMAN3_SHIP_Mucianus HUMAN3_SHIP_Isidore HUMAN3_SHIP_Strabo HUMAN3_SHIP_PomponiusMela HUMAN3_SHIP_Marinus HUMAN3_SHIP_Pausanias HUMAN3_SHIP_Agathodaemon HUMAN3_SHIP_Dionysius HUMAN3_SHIP_Agathemerus HUMAN3_SHIP_Marcian HUMAN3_SHIP_JuliusHonorius HUMAN3_SHIP_PolemiusSilvius
 		}
-		
+
 		colonizer = {
-			Achaea Belgica Germania Africa Aegyptus Anatolia Arabia Ariana Asia Britannia Caledonia Cilicia Gallia Dacia Cyrenaica Cambria Graecia Hispania Illyria Italia Libya Lusitania
+			HUMAN3_SHIP_Achaea HUMAN3_SHIP_Belgica HUMAN3_SHIP_Germania HUMAN3_SHIP_Africa HUMAN3_SHIP_Aegyptus HUMAN3_SHIP_Anatolia HUMAN3_SHIP_Arabia HUMAN3_SHIP_Ariana HUMAN3_SHIP_Asia HUMAN3_SHIP_Britannia HUMAN3_SHIP_Caledonia HUMAN3_SHIP_Cilicia HUMAN3_SHIP_Gallia HUMAN3_SHIP_Dacia HUMAN3_SHIP_Cyrenaica HUMAN3_SHIP_Cambria HUMAN3_SHIP_Graecia HUMAN3_SHIP_Hispania HUMAN3_SHIP_Illyria HUMAN3_SHIP_Italia HUMAN3_SHIP_Libya HUMAN3_SHIP_Lusitania
 		}
-		
+
+		sponsored_colonizer = { # needed when there are no generic names
+			HUMAN3_SHIP_Achaea HUMAN3_SHIP_Belgica HUMAN3_SHIP_Germania HUMAN3_SHIP_Africa HUMAN3_SHIP_Aegyptus HUMAN3_SHIP_Anatolia HUMAN3_SHIP_Arabia HUMAN3_SHIP_Ariana HUMAN3_SHIP_Asia HUMAN3_SHIP_Britannia HUMAN3_SHIP_Caledonia HUMAN3_SHIP_Cilicia HUMAN3_SHIP_Gallia HUMAN3_SHIP_Dacia HUMAN3_SHIP_Cyrenaica HUMAN3_SHIP_Cambria HUMAN3_SHIP_Graecia HUMAN3_SHIP_Hispania HUMAN3_SHIP_Illyria HUMAN3_SHIP_Italia HUMAN3_SHIP_Libya HUMAN3_SHIP_Lusitania
+		}
+
 		constructor = {
-			Macedonia Mauretania Noricum Numidia Palaestina Parthia Phoenicia Ruthenia Scythia Serica Syria Thracia Hibernia
+			HUMAN3_SHIP_Macedonia HUMAN3_SHIP_Mauretania HUMAN3_SHIP_Noricum HUMAN3_SHIP_Numidia HUMAN3_SHIP_Palaestina HUMAN3_SHIP_Parthia HUMAN3_SHIP_Phoenicia HUMAN3_SHIP_Ruthenia HUMAN3_SHIP_Scythia HUMAN3_SHIP_Serica HUMAN3_SHIP_Syria HUMAN3_SHIP_Thracia HUMAN3_SHIP_Hibernia
 		}
-		
+
 		transport = {
-			Legionarius Aeneator Aquilifer Bucinator Cornicen Draconarius Signifer Tablifer Tubicen Vexillarius
+			HUMAN3_SHIP_Legionarius HUMAN3_SHIP_Aeneator HUMAN3_SHIP_Aquilifer HUMAN3_SHIP_Bucinator HUMAN3_SHIP_Cornicen HUMAN3_SHIP_Draconarius HUMAN3_SHIP_Signifer HUMAN3_SHIP_Tablifer HUMAN3_SHIP_Tubicen HUMAN3_SHIP_Vexillarius
 		}
-		
-		military_station_small = { 
-			Gladius Spiculum Verutum Lancea Pugio Spatha Hasta Plumbata
+
+		military_station_small = {
+			HUMAN3_SHIP_Gladius HUMAN3_SHIP_Spiculum HUMAN3_SHIP_Verutum HUMAN3_SHIP_Lancea HUMAN3_SHIP_Pugio HUMAN3_SHIP_Spatha HUMAN3_SHIP_Hasta HUMAN3_SHIP_Plumbata
 		}
 
 		ion_cannon = {
-			Ballista Scorpio Javelin Pilum
+			HUMAN3_SHIP_Ballista HUMAN3_SHIP_Scorpio HUMAN3_SHIP_Javelin HUMAN3_SHIP_Pilum
 		}
-		
+
 	}
 
 	fleet_names = {
 		random_names = {
-			
+
 		}
-		sequential_name = "Classis %R%"
+		sequential_name = HUMAN3_CLASSISxx_ROM
 	}
-	
+
 	army_names = {
-		generic = { 
-			sequential_name = "Limitanei %R%"
+
+		generic = {
+			sequential_name = HUMAN3_LIMITANEIxx_ROM
+		}
+
+		machine_defense = {
+			sequential_name = HUMAN3_LIMITANEIxx_ROM
+		}
+
+		machine_assault_1 = {
+			sequential_name = HUMAN3_LEGIOxx_ROM
+		}
+
+		machine_assault_2 = {
+			sequential_name = HUMAN3_LEGIOxx_ROM
+		}
+
+		machine_assault_3 = {
+			sequential_name = HUMAN3_LEGIOxx_ROM
 		}
 
 		assault_army = {
-			sequential_name = "Legio %R%"
+			sequential_name = HUMAN3_LEGIOxx_ROM
 		}
-		
+
 		slave_army = {
-			sequential_name = "Auxilia %R%"
+			sequential_name = HUMAN3_AUXILIAxx_ROM
 		}
-		
+
 		clone_army = {
-			sequential_name = "Clonandi %R%"
+			sequential_name = HUMAN3_CLONANDIxx_ROM
 		}
-		
+
+		undead_army = {
+			sequential_name = HUMAN3_LEGIOHORRORIAExx_ROM
+		}
+
 		robotic_army = {
-			sequential_name = "Robotum %R%"
+			sequential_name = HUMAN3_ROBOTUMxx_ROM
 		}
 
 		robotic_defense_army = {
-			sequential_name = "Limitanei Robotum %R%"
+			sequential_name = HUMAN3_LIMITANEIROBOTUMxx_ROM
 		}
-		
-		psionic_army = { 
-			sequential_name = "Legio Psychica %R%"
+
+		psionic_army = {
+			sequential_name = HUMAN3_LEGIOPSYCHICAxx_ROM
 		}
-		
+
 		xenomorph_army = {
-			sequential_name = "Bestia Auxilia %R%"
+			sequential_name = HUMAN3_BESTIAAUXILIAxx_ROM
 		}
-		
+
 		gene_warrior_army = {
-			sequential_name = "Legio Praetoriae %R%"
+			sequential_name = HUMAN3_LEGIOPRAETORIAExx_ROM
+		}
+
+		occupation_army = {
+			sequential_name = HUMAN3_COHORTVIGILUMxx_ROM
+		}
+
+		robotic_occupation_army = {
+			sequential_name = HUMAN3_ROBOTUMVIGILUMxx_ROM
+		}
+
+		primitive_army = {
+			sequential_name = HUMAN3_PRIMITIVEARMYxx_SEQ
+		}
+		industrial_army = {
+			sequential_name = HUMAN3_INDUSTRIALARMYxx_SEQ
+		}
+		postatomic_army = {
+			sequential_name = HUMAN3_POSTATOMICARMYxx_SEQ
 		}
 	}
 
@@ -108,7 +156,7 @@ SOCIETY1 = {
 
 		generic = {
 			names = {
-				"Nova Roma" "Nova Serica" "Nova Parthia" "Nova Arabia" "Nova Aegyptus" Scandia Hibernia Thule Elysium Illyria Panchaea Neritum Nysa Pedasus Hesperides Hyperborea Ithaca Lyrnessus Telepylos Lyrcea Hades Olympia Aquilo Favonius Auster Eurus Caledonia Scythia Argyre Silpium Thrinacia Tritonis Phlegra Acherusia "Colonia Aurora" "Colonia Augusta" "Colonia Pacifica" "Colonia Traiana" "Colonia Emerita" Eboracum Ascrivium Brigantium Rhegium Spalatum Patavium Antiochia
+				HUMAN3_PLANET_NovaRoma HUMAN3_PLANET_NovaSerica HUMAN3_PLANET_NovaParthia HUMAN3_PLANET_NovaArabia HUMAN3_PLANET_NovaAegyptus HUMAN3_PLANET_Scandia HUMAN3_PLANET_Hibernia HUMAN3_PLANET_Thule HUMAN3_PLANET_Elysium HUMAN3_PLANET_Illyria HUMAN3_PLANET_Panchaea HUMAN3_PLANET_Neritum HUMAN3_PLANET_Nysa HUMAN3_PLANET_Pedasus HUMAN3_PLANET_Hesperides HUMAN3_PLANET_Hyperborea HUMAN3_PLANET_Ithaca HUMAN3_PLANET_Lyrnessus HUMAN3_PLANET_Telepylos HUMAN3_PLANET_Lyrcea HUMAN3_PLANET_Hades HUMAN3_PLANET_Olympia HUMAN3_PLANET_Aquilo HUMAN3_PLANET_Favonius HUMAN3_PLANET_Auster HUMAN3_PLANET_Eurus HUMAN3_PLANET_Caledonia HUMAN3_PLANET_Scythia HUMAN3_PLANET_Argyre HUMAN3_PLANET_Silpium HUMAN3_PLANET_Thrinacia HUMAN3_PLANET_Tritonis HUMAN3_PLANET_Phlegra HUMAN3_PLANET_Acherusia HUMAN3_PLANET_ColoniaAurora HUMAN3_PLANET_ColoniaAugusta HUMAN3_PLANET_ColoniaPacifica HUMAN3_PLANET_ColoniaTraiana HUMAN3_PLANET_ColoniaEmerita HUMAN3_PLANET_Eboracum HUMAN3_PLANET_Ascrivium HUMAN3_PLANET_Brigantium HUMAN3_PLANET_Rhegium HUMAN3_PLANET_Spalatum HUMAN3_PLANET_Patavium HUMAN3_PLANET_Antiochia
 			}
 		}
 		
@@ -179,24 +227,23 @@ SOCIETY1 = {
 		names1 = {
 			weight = 40
 			first_names_male = {
-				Agrippa Appius Aulus Caeso Decimus Drusus Faustus Gaius Gallus Gnaeus Hostus Lucius Mamercus Manius Marcellus Marcus Mettius Nonus Numerius Octavius Opiter Paullus Postumus Primus Proculus Publius Quintus Septimus Sertor Servius Sextus Spurius Statius Tiberius Titus Tullus Vibius Volesus Vopiscus
+				HUMAN3_CHR_Agrippa HUMAN3_CHR_Appius HUMAN3_CHR_Aulus HUMAN3_CHR_Caeso HUMAN3_CHR_Decimus HUMAN3_CHR_Drusus HUMAN3_CHR_Faustus HUMAN3_CHR_Gaius HUMAN3_CHR_Gallus HUMAN3_CHR_Gnaeus HUMAN3_CHR_Hostus HUMAN3_CHR_Lucius HUMAN3_CHR_Mamercus HUMAN3_CHR_Manius HUMAN3_CHR_Marcellus HUMAN3_CHR_Marcus HUMAN3_CHR_Mettius HUMAN3_CHR_Nonus HUMAN3_CHR_Numerius HUMAN3_CHR_Octavius HUMAN3_CHR_Opiter HUMAN3_CHR_Paullus HUMAN3_CHR_Postumus HUMAN3_CHR_Primus HUMAN3_CHR_Proculus HUMAN3_CHR_Publius HUMAN3_CHR_Quintus HUMAN3_CHR_Septimus HUMAN3_CHR_Sertor HUMAN3_CHR_Servius HUMAN3_CHR_Sextus HUMAN3_CHR_Spurius HUMAN3_CHR_Statius HUMAN3_CHR_Tiberius HUMAN3_CHR_Titus HUMAN3_CHR_Tullus HUMAN3_CHR_Vibius HUMAN3_CHR_Volesus HUMAN3_CHR_Vopiscus
 			}
 			first_names_female = {
-				Appia Aula Caesula Decima Fausta Gaia Gnaea Hosta Lucia Maio Mamerca Mania Marcia Maxima Mettia Mino Nona Numeria Octavia Paulla Postuma Prima Procula Publia Quarta Quinta Secunda Septima Servia Sexta Spuria Statia Tertia Titia Tiberia Tulla Vibia Volusa Vopisca
+				HUMAN3_CHR_Appia HUMAN3_CHR_Aula HUMAN3_CHR_Caesula HUMAN3_CHR_Decima HUMAN3_CHR_Fausta HUMAN3_CHR_Gaia HUMAN3_CHR_Gnaea HUMAN3_CHR_Hosta HUMAN3_CHR_Lucia HUMAN3_CHR_Maio HUMAN3_CHR_Mamerca HUMAN3_CHR_Mania HUMAN3_CHR_Marcia HUMAN3_CHR_Maxima HUMAN3_CHR_Mettia HUMAN3_CHR_Mino HUMAN3_CHR_Nona HUMAN3_CHR_Numeria HUMAN3_CHR_Octavia HUMAN3_CHR_Paulla HUMAN3_CHR_Postuma HUMAN3_CHR_Prima HUMAN3_CHR_Procula HUMAN3_CHR_Publia HUMAN3_CHR_Quarta HUMAN3_CHR_Quinta HUMAN3_CHR_Secunda HUMAN3_CHR_Septima HUMAN3_CHR_Servia HUMAN3_CHR_Sexta HUMAN3_CHR_Spuria HUMAN3_CHR_Statia HUMAN3_CHR_Tertia HUMAN3_CHR_Titia HUMAN3_CHR_Tiberia HUMAN3_CHR_Tulla HUMAN3_CHR_Vibia HUMAN3_CHR_Volusa HUMAN3_CHR_Vopisca
 			}
 			second_names = {
-				"au Aburius" "au Accius" "au Accoleius" "au Acilius" "au Aebutius" "au Aedinius" "au Aelius" "au Aemilius" "au Albanius" "au Albatius" "au Allectius" "au Amatius" "au Annius" "au Antistius" "au Antius" "au Antonius" "au Appuleius" "au Aquillius" "au Armenius" "au Arrius" "au Arsinius" "au Artorius" "au Asinius" "au Ateius" "au Atius" "au Atilius" "au Atrius" "au Attius" "au Aufidius" "au Aurelius" "au Aurius" "au Ausonius" "au Avidius" "au Avitus" "au Axius" "au Baebius" "au Balventius" "au Bantius" "au Barbatius" "au Barrius" "au Bellona" "au Betilienus" "au Betucius" "au Blandius" "au Blossius" "au Bruttius" "au Bucculeius" "au Burrienus" "au Caecilius" "au Caecina" "au Caecius" "au Caedicius" "au Caelius" "au Caeparius" "au Caepasius" "au Caerellius" "au Caesennius" "au Caesetius" "au Caesius" "au Caesonius" "au Caesulenus" "au Caetronius" "au Calavius" "au Calidius" "au Calpurnius" "au Calventius" "au Calvisius" "au Camillius" "au Camelius" "au Canidius" "au Caninius" "au Canius" "au Cantilius" "au Cantius" "au Canuleius" "au Canutius" "au Carfulenus" "au Carisius" "au Carius" "au Caristanius" "au Carpinatius" "au Carteius" "au Carvilius" "au Cassius" "au Castricius" "au Castrinius" "au Catius" "au Catienus" "au Catilius" "au Ceionius" "au Centenius" "au Cestius" "au Cicereius" "au Cilnius" "au Cincius" "au Cispius" "au Claudius" "au Clodius" "au Cloelius" "au Clovius" "au Cluilius" "au Cluentius" "au Cluvius" "au Cocceius" "au Cominius" "au Consentius" "au Considius" "au Coponius" "au Cordius" "au Corfidius" "au Cornelius" "au Cornificius" "au Coruncanius" "au Cosconius" "au Cossinius" "au Cossutius" "au Cotius" "au Cottius" "au Crassitius" "au Crepereius" "au Critonius" "au Cupiennius" "au Curiatius" "au Curius" "au Curtilia" "au Curtius" "au Cuspius" "au Decimius" "au Decius" "au Dellius" "au Desticius" "au Dexsius" "au Didius" "au Digitius" "au Dillius" "au Domitius" "au Duccius" "au Duilius" "au Durmius" "au Duronius" "au Egilius" "au Egnatius" "au Egnatuleius" "au Ennius" "au Epidius" "au Eppius" "au Equitius" "au Erucius" "au Fabii" "au Fabius" "au Fabricius" "au Fadius" "au Faenius" "au Falcidius" "au Falerius" "au Fannius" "au Farsuleius" "au Faucius" "au Favonius" "au Festinius" "au Fidiculanius" "au Flaminius" "au Flavius" "au Flavinius" "au Flavonius" "au Floridius" "au Florius" "au Floronius" "au Fonteius" "au Foslius" "au Fuficius" "au Fufidius" "au Fufius" "au Fulcinius" "au Fulvius" "au Fundanus" "au Furius" "au Furnia" "au Gabinius" "au Galerius" "au Gallius" "au Gargonius" "au Gavius" "au Geganius" "au Gellius" "au Geminius" "au Genucius" "au Gessius" "au Granius" "au Gratius" "au Gratidius" "au Haterius" "au Heius" "au Helvidius" "au Helvius" "au Herennius" "au Herminius" "au Hirrius" "au Hirtius" "au Hirtuleius" "au Horatius" "au Hortensius" "au Hosidius" "au Hostilius" "au Iccius" "au Icilius" "au Insteius" "au Julius" "au Junius" "au Juventius" "au Laberius" "au Labienus" "au Lacerius" "au Laelius" "au Laenius" "au Laetilius" "au Laetorius" "au Lafrenius" "au Lamponius" "au Laronius" "au Lartius" "au Latinius" "au Lavinius" "au Lecanius" "au Lentidius" "au Liburnius" "au Licinius" "au Ligarius" "au Livius" "au Lollius" "au Longinius" "au Loreius" "au Lucceius" "au Lucienus" "au Lucilius" "au Lucius" "au Lucretius" "au Lurius" "au Luscius" "au Lusius" "au Lutatius" "au Macrinius" "au Maecilius" "au Maecius" "au Maelius" "au Maenius" "au Maevius" "au Magius" "au Mallius" "au Mamilius" "au Manilia" "au Manlius" "au Manilius" "au Marcius" "au Marius" "au Matius" "au Matienus" "au Matinius" "au Matrinius" "au Maximius" "au Memmius" "au Menenius" "au Menius" "au Mescinius" "au Messienus" "au Messius" "au Metilius" "au Mettius" "au Milonius" "au Mimesius" "au Minatius" "au Minicius" "au Minidius" "au Minucius" "au Modius" "au Mucius" "au Mummius" "au Munatius" "au Munius" "au Murrius" "au Mussidius" "au Mustius" "au Mutius" "au Naevius" "au Nasennius" "au Nasidienus" "au Nasidius" "au Nautius" "au Neratius" "au Nerius" "au Nigidius" "au Ninnius" "au Nipius" "au Nonius" "au Norbanus" "au Novellius" "au Novius" "au Numerius" "au Numicius" "au Numisius" "au Numitorius" "au Nummius" "au Numonius" "au Nymphidius" "au Obellius" "au Obultronius" "au Occius" "au Oclatinius" "au Oclatius" "au Octavenus" "au Octavius" "au Ofanius" "au Ofilius" "au Ogulnius" "au Ollius" "au Opellius" "au Opetreia" "au Opimius" "au Opiternia" "au Oppidius" "au Oppius" "au Opsidius" "au Opsilius" "au Opsius" "au Oranius" "au Orbicius" "au Orbilius" "au Orchius" "au Orcivius" "au Orfidius" "au Orfius" "au Oscius" "au Ostorius" "au Otacilius" "au Ovidius" "au Ovinius" "au Paccius" "au Pacidius" "au Pacilius" "au Paconius" "au Pactumeius" "au Pacuvius" "au Palfurius" "au Palpellius" "au Pantuleius" "au Papinius" "au Papirius" "au Papius" "au Pasidienus" "au Pasidius" "au Passienus" "au Patulcius" "au Pedanius" "au Pedius" "au Peducaeus" "au Peltrasius" "au Percennius" "au Perperna" "au Persius" "au Pescennius" "au Petellius" "au Petillius" "au Petronius" "au Pinarius" "au Pisentius" "au Placidius" "au Plautius" "au Plinius" "au Plotius" "au Pollius" "au Pompeius" "au Pompilius" "au Pomponius" "au Pomptinus" "au Pontidius" "au Pontius" "au Popidius" "au Poppaeus" "au Porcius" "au Portius" "au Postumius" "au Potitius" "au Publicius" "au Pupius" "au Quinctilius" "au Quinctius" "au Quirinius" "au Rabirius" "au Rufius" "au Rufrius" "au Rusonius" "au Rutilius" "au Sabucius" "au Sallustius" "au Salonius" "au Salvius" "au Scribonius" "au Secundinius" "au Secundius" "au Seius" "au Sempronius" "au Sennius" "au Sentius" "au Septimius" "au Sepunius" "au Sergius" "au Sertorius" "au Servilius" "au Sestius" "au Sextilius" "au Sextius" "au Sidonius" "au Silius" "au Sittius" "au Socellius" "au Sornatius" "au Spurius" "au Statius" "au Statilius" "au Stertinius" "au Suedius" "au Sulpicius" "au Tadius" "au Tanicius" "au Tertinius" "au Tettidius" "au Tettienus" "au Tettius" "au Titiedius" "au Titius" "au Titinius" "au Trebatius" "au Trebellius" "au Treblanus" "au Tremellius" "au Tuccius" "au Tullius" "au Turullius" "au Ulpius" "au Umbrius" "au Ummidius" "au Urgulanius" "au Valerius" "au Varius" "au Vatinius" "au Vedius" "au Velius" "au Veranius" "au Verecundius" "au Vergilius" "au Verginius" "au Vesnius" "au Veturius" "au Vibenius" "au Vibidius" "au Vibius" "au Victricius" "au Viducius" "au Vinicius" "au Vipsanius" "au Vipstanus" "au Viridius" "au Virius" "au Visellius" "au Vitellius" "au Vitruvius" "au Volcatius" "au Volumnius" "au Volusenna" "au Volusenus" "au Volusius" "au Vulius"
-				
+				SOCIETY1_CHR_Aburius SOCIETY1_CHR_Accius SOCIETY1_CHR_Accoleius SOCIETY1_CHR_Acilius SOCIETY1_CHR_Aebutius SOCIETY1_CHR_Aedinius SOCIETY1_CHR_Aelius SOCIETY1_CHR_Aemilius SOCIETY1_CHR_Albanius SOCIETY1_CHR_Albatius SOCIETY1_CHR_Allectius SOCIETY1_CHR_Amatius SOCIETY1_CHR_Annius SOCIETY1_CHR_Antistius SOCIETY1_CHR_Antius SOCIETY1_CHR_Antonius SOCIETY1_CHR_Appuleius SOCIETY1_CHR_Aquillius SOCIETY1_CHR_Armenius SOCIETY1_CHR_Arrius SOCIETY1_CHR_Arsinius SOCIETY1_CHR_Artorius SOCIETY1_CHR_Asinius SOCIETY1_CHR_Ateius SOCIETY1_CHR_Atius SOCIETY1_CHR_Atilius SOCIETY1_CHR_Atrius SOCIETY1_CHR_Attius SOCIETY1_CHR_Aufidius SOCIETY1_CHR_Aurelius SOCIETY1_CHR_Aurius SOCIETY1_CHR_Ausonius SOCIETY1_CHR_Avidius SOCIETY1_CHR_Avitus SOCIETY1_CHR_Axius SOCIETY1_CHR_Baebius SOCIETY1_CHR_Balventius SOCIETY1_CHR_Bantius SOCIETY1_CHR_Barbatius SOCIETY1_CHR_Barrius SOCIETY1_CHR_Betilienus SOCIETY1_CHR_Betucius SOCIETY1_CHR_Blandius SOCIETY1_CHR_Blossius SOCIETY1_CHR_Bruttius SOCIETY1_CHR_Bucculeius SOCIETY1_CHR_Burrienus SOCIETY1_CHR_Caecilius SOCIETY1_CHR_Caecina SOCIETY1_CHR_Caecius SOCIETY1_CHR_Caedicius SOCIETY1_CHR_Caelius SOCIETY1_CHR_Caeparius SOCIETY1_CHR_Caepasius SOCIETY1_CHR_Caerellius SOCIETY1_CHR_Caesennius SOCIETY1_CHR_Caesetius SOCIETY1_CHR_Caesius SOCIETY1_CHR_Caesonius SOCIETY1_CHR_Caesulenus SOCIETY1_CHR_Caetronius SOCIETY1_CHR_Calavius SOCIETY1_CHR_Calidius SOCIETY1_CHR_Calpurnius SOCIETY1_CHR_Calventius SOCIETY1_CHR_Calvisius SOCIETY1_CHR_Camillius SOCIETY1_CHR_Camelius SOCIETY1_CHR_Canidius SOCIETY1_CHR_Caninius SOCIETY1_CHR_Canius SOCIETY1_CHR_Cantilius SOCIETY1_CHR_Cantius SOCIETY1_CHR_Canuleius SOCIETY1_CHR_Canutius SOCIETY1_CHR_Carfulenus SOCIETY1_CHR_Carisius SOCIETY1_CHR_Carius SOCIETY1_CHR_Caristanius SOCIETY1_CHR_Carpinatius SOCIETY1_CHR_Carteius SOCIETY1_CHR_Carvilius SOCIETY1_CHR_Cassius SOCIETY1_CHR_Castricius SOCIETY1_CHR_Castrinius SOCIETY1_CHR_Catius SOCIETY1_CHR_Catienus SOCIETY1_CHR_Catilius SOCIETY1_CHR_Ceionius SOCIETY1_CHR_Centenius SOCIETY1_CHR_Cestius SOCIETY1_CHR_Cicereius SOCIETY1_CHR_Cilnius SOCIETY1_CHR_Cincius SOCIETY1_CHR_Cispius SOCIETY1_CHR_Claudius SOCIETY1_CHR_Clodius SOCIETY1_CHR_Cloelius SOCIETY1_CHR_Clovius SOCIETY1_CHR_Cluilius SOCIETY1_CHR_Cluentius SOCIETY1_CHR_Cluvius SOCIETY1_CHR_Cocceius SOCIETY1_CHR_Cominius SOCIETY1_CHR_Consentius SOCIETY1_CHR_Considius SOCIETY1_CHR_Coponius SOCIETY1_CHR_Cordius SOCIETY1_CHR_Corfidius SOCIETY1_CHR_Cornelius SOCIETY1_CHR_Cornificius SOCIETY1_CHR_Coruncanius SOCIETY1_CHR_Cosconius SOCIETY1_CHR_Cossinius SOCIETY1_CHR_Cossutius SOCIETY1_CHR_Cotius SOCIETY1_CHR_Cottius SOCIETY1_CHR_Crassitius SOCIETY1_CHR_Crepereius SOCIETY1_CHR_Critonius SOCIETY1_CHR_Cupiennius SOCIETY1_CHR_Curiatius SOCIETY1_CHR_Curius SOCIETY1_CHR_Curtilia SOCIETY1_CHR_Curtius SOCIETY1_CHR_Cuspius SOCIETY1_CHR_Decimius SOCIETY1_CHR_Decius SOCIETY1_CHR_Dellius SOCIETY1_CHR_Desticius SOCIETY1_CHR_Dexsius SOCIETY1_CHR_Didius SOCIETY1_CHR_Digitius SOCIETY1_CHR_Dillius SOCIETY1_CHR_Domitius SOCIETY1_CHR_Duccius SOCIETY1_CHR_Duilius SOCIETY1_CHR_Durmius SOCIETY1_CHR_Duronius SOCIETY1_CHR_Egilius SOCIETY1_CHR_Egnatius SOCIETY1_CHR_Egnatuleius SOCIETY1_CHR_Ennius SOCIETY1_CHR_Epidius SOCIETY1_CHR_Eppius SOCIETY1_CHR_Equitius SOCIETY1_CHR_Erucius SOCIETY1_CHR_Fabius SOCIETY1_CHR_Fabricius SOCIETY1_CHR_Fadius SOCIETY1_CHR_Faenius SOCIETY1_CHR_Falcidius SOCIETY1_CHR_Falerius SOCIETY1_CHR_Fannius SOCIETY1_CHR_Farsuleius SOCIETY1_CHR_Faucius SOCIETY1_CHR_Favonius SOCIETY1_CHR_Festinius SOCIETY1_CHR_Fidiculanius SOCIETY1_CHR_Flaminius SOCIETY1_CHR_Flavius SOCIETY1_CHR_Flavinius SOCIETY1_CHR_Flavonius SOCIETY1_CHR_Floridius SOCIETY1_CHR_Florius SOCIETY1_CHR_Floronius SOCIETY1_CHR_Fonteius SOCIETY1_CHR_Foslius SOCIETY1_CHR_Fuficius SOCIETY1_CHR_Fufidius SOCIETY1_CHR_Fufius SOCIETY1_CHR_Fulcinius SOCIETY1_CHR_Fulvius SOCIETY1_CHR_Fundanus SOCIETY1_CHR_Furius SOCIETY1_CHR_Furnia SOCIETY1_CHR_Gabinius SOCIETY1_CHR_Galerius SOCIETY1_CHR_Gallius SOCIETY1_CHR_Gargonius SOCIETY1_CHR_Gavius SOCIETY1_CHR_Geganius SOCIETY1_CHR_Gellius SOCIETY1_CHR_Geminius SOCIETY1_CHR_Genucius SOCIETY1_CHR_Gessius SOCIETY1_CHR_Granius SOCIETY1_CHR_Gratius SOCIETY1_CHR_Gratidius SOCIETY1_CHR_Haterius SOCIETY1_CHR_Heius SOCIETY1_CHR_Helvidius SOCIETY1_CHR_Helvius SOCIETY1_CHR_Herennius SOCIETY1_CHR_Herminius SOCIETY1_CHR_Hirrius SOCIETY1_CHR_Hirtius SOCIETY1_CHR_Hirtuleius SOCIETY1_CHR_Horatius SOCIETY1_CHR_Hortensius SOCIETY1_CHR_Hosidius SOCIETY1_CHR_Hostilius SOCIETY1_CHR_Iccius SOCIETY1_CHR_Icilius SOCIETY1_CHR_Insteius SOCIETY1_CHR_Julius SOCIETY1_CHR_Junius SOCIETY1_CHR_Juventius SOCIETY1_CHR_Laberius SOCIETY1_CHR_Labienus SOCIETY1_CHR_Lacerius SOCIETY1_CHR_Laelius SOCIETY1_CHR_Laenius SOCIETY1_CHR_Laetilius SOCIETY1_CHR_Laetorius SOCIETY1_CHR_Lafrenius SOCIETY1_CHR_Lamponius SOCIETY1_CHR_Laronius SOCIETY1_CHR_Lartius SOCIETY1_CHR_Latinius SOCIETY1_CHR_Lavinius SOCIETY1_CHR_Lecanius SOCIETY1_CHR_Lentidius SOCIETY1_CHR_Liburnius SOCIETY1_CHR_Licinius SOCIETY1_CHR_Ligarius SOCIETY1_CHR_Livius SOCIETY1_CHR_Lollius SOCIETY1_CHR_Longinius SOCIETY1_CHR_Loreius SOCIETY1_CHR_Lucceius SOCIETY1_CHR_Lucienus SOCIETY1_CHR_Lucilius SOCIETY1_CHR_Lucius SOCIETY1_CHR_Lucretius SOCIETY1_CHR_Lurius SOCIETY1_CHR_Luscius SOCIETY1_CHR_Lusius SOCIETY1_CHR_Lutatius SOCIETY1_CHR_Macrinius SOCIETY1_CHR_Maecilius SOCIETY1_CHR_Maecius SOCIETY1_CHR_Maelius SOCIETY1_CHR_Maenius SOCIETY1_CHR_Maevius SOCIETY1_CHR_Magius SOCIETY1_CHR_Mallius SOCIETY1_CHR_Mamilius SOCIETY1_CHR_Manilia SOCIETY1_CHR_Manlius SOCIETY1_CHR_Manilius SOCIETY1_CHR_Marcius SOCIETY1_CHR_Marius SOCIETY1_CHR_Matius SOCIETY1_CHR_Matienus SOCIETY1_CHR_Matinius SOCIETY1_CHR_Matrinius SOCIETY1_CHR_Maximius SOCIETY1_CHR_Memmius SOCIETY1_CHR_Menenius SOCIETY1_CHR_Menius SOCIETY1_CHR_Mescinius SOCIETY1_CHR_Messienus SOCIETY1_CHR_Messius SOCIETY1_CHR_Metilius SOCIETY1_CHR_Mettius SOCIETY1_CHR_Milonius SOCIETY1_CHR_Mimesius SOCIETY1_CHR_Minatius SOCIETY1_CHR_Minicius SOCIETY1_CHR_Minidius SOCIETY1_CHR_Minucius SOCIETY1_CHR_Modius SOCIETY1_CHR_Mucius SOCIETY1_CHR_Mummius SOCIETY1_CHR_Munatius SOCIETY1_CHR_Munius SOCIETY1_CHR_Murrius SOCIETY1_CHR_Mussidius SOCIETY1_CHR_Mustius SOCIETY1_CHR_Mutius SOCIETY1_CHR_Naevius SOCIETY1_CHR_Nasennius SOCIETY1_CHR_Nasidienus SOCIETY1_CHR_Nasidius SOCIETY1_CHR_Nautius SOCIETY1_CHR_Neratius SOCIETY1_CHR_Nerius SOCIETY1_CHR_Nigidius SOCIETY1_CHR_Ninnius SOCIETY1_CHR_Nipius SOCIETY1_CHR_Nonius SOCIETY1_CHR_Norbanus SOCIETY1_CHR_Novellius SOCIETY1_CHR_Novius SOCIETY1_CHR_Numerius SOCIETY1_CHR_Numicius SOCIETY1_CHR_Numisius SOCIETY1_CHR_Numitorius SOCIETY1_CHR_Nummius SOCIETY1_CHR_Numonius SOCIETY1_CHR_Nymphidius SOCIETY1_CHR_Obellius SOCIETY1_CHR_Obultronius SOCIETY1_CHR_Occius SOCIETY1_CHR_Oclatinius SOCIETY1_CHR_Oclatius SOCIETY1_CHR_Octavenus SOCIETY1_CHR_Octavius SOCIETY1_CHR_Ofanius SOCIETY1_CHR_Ofilius SOCIETY1_CHR_Ogulnius SOCIETY1_CHR_Ollius SOCIETY1_CHR_Opellius SOCIETY1_CHR_Opetreia SOCIETY1_CHR_Opimius SOCIETY1_CHR_Opiternia SOCIETY1_CHR_Oppidius SOCIETY1_CHR_Oppius SOCIETY1_CHR_Opsidius SOCIETY1_CHR_Opsilius SOCIETY1_CHR_Opsius SOCIETY1_CHR_Oranius SOCIETY1_CHR_Orbicius SOCIETY1_CHR_Orbilius SOCIETY1_CHR_Orchius SOCIETY1_CHR_Orcivius SOCIETY1_CHR_Orfidius SOCIETY1_CHR_Orfius SOCIETY1_CHR_Oscius SOCIETY1_CHR_Ostorius SOCIETY1_CHR_Otacilius SOCIETY1_CHR_Ovidius SOCIETY1_CHR_Ovinius SOCIETY1_CHR_Paccius SOCIETY1_CHR_Pacidius SOCIETY1_CHR_Pacilius SOCIETY1_CHR_Paconius SOCIETY1_CHR_Pactumeius SOCIETY1_CHR_Pacuvius SOCIETY1_CHR_Palfurius SOCIETY1_CHR_Palpellius SOCIETY1_CHR_Pantuleius SOCIETY1_CHR_Papinius SOCIETY1_CHR_Papirius SOCIETY1_CHR_Papius SOCIETY1_CHR_Pasidienus SOCIETY1_CHR_Pasidius SOCIETY1_CHR_Passienus SOCIETY1_CHR_Patulcius SOCIETY1_CHR_Pedanius SOCIETY1_CHR_Pedius SOCIETY1_CHR_Peducaeus SOCIETY1_CHR_Peltrasius SOCIETY1_CHR_Percennius SOCIETY1_CHR_Perperna SOCIETY1_CHR_Persius SOCIETY1_CHR_Pescennius SOCIETY1_CHR_Petellius SOCIETY1_CHR_Petillius SOCIETY1_CHR_Petronius SOCIETY1_CHR_Pinarius SOCIETY1_CHR_Pisentius SOCIETY1_CHR_Placidius SOCIETY1_CHR_Plautius SOCIETY1_CHR_Plinius SOCIETY1_CHR_Plotius SOCIETY1_CHR_Pollius SOCIETY1_CHR_Pompeius SOCIETY1_CHR_Pompilius SOCIETY1_CHR_Pomponius SOCIETY1_CHR_Pomptinus SOCIETY1_CHR_Pontidius SOCIETY1_CHR_Pontius SOCIETY1_CHR_Popidius SOCIETY1_CHR_Poppaeus SOCIETY1_CHR_Porcius SOCIETY1_CHR_Portius SOCIETY1_CHR_Postumius SOCIETY1_CHR_Potitius SOCIETY1_CHR_Publicius SOCIETY1_CHR_Pupius SOCIETY1_CHR_Quinctilius SOCIETY1_CHR_Quinctius SOCIETY1_CHR_Quirinius SOCIETY1_CHR_Rabirius SOCIETY1_CHR_Rufius SOCIETY1_CHR_Rufrius SOCIETY1_CHR_Rusonius SOCIETY1_CHR_Rutilius SOCIETY1_CHR_Sabucius SOCIETY1_CHR_Sallustius SOCIETY1_CHR_Salonius SOCIETY1_CHR_Salvius SOCIETY1_CHR_Scribonius SOCIETY1_CHR_Secundinius SOCIETY1_CHR_Secundius SOCIETY1_CHR_Seius SOCIETY1_CHR_Sempronius SOCIETY1_CHR_Sennius SOCIETY1_CHR_Sentius SOCIETY1_CHR_Septimius SOCIETY1_CHR_Sepunius SOCIETY1_CHR_Sergius SOCIETY1_CHR_Sertorius SOCIETY1_CHR_Servilius SOCIETY1_CHR_Sestius SOCIETY1_CHR_Sextilius SOCIETY1_CHR_Sextius SOCIETY1_CHR_Sidonius SOCIETY1_CHR_Silius SOCIETY1_CHR_Sittius SOCIETY1_CHR_Socellius SOCIETY1_CHR_Sornatius SOCIETY1_CHR_Spurius SOCIETY1_CHR_Statius SOCIETY1_CHR_Statilius SOCIETY1_CHR_Stertinius SOCIETY1_CHR_Suedius SOCIETY1_CHR_Sulpicius SOCIETY1_CHR_Tadius SOCIETY1_CHR_Tanicius SOCIETY1_CHR_Tertinius SOCIETY1_CHR_Tettidius SOCIETY1_CHR_Tettienus SOCIETY1_CHR_Tettius SOCIETY1_CHR_Titiedius SOCIETY1_CHR_Titius SOCIETY1_CHR_Titinius SOCIETY1_CHR_Trebatius SOCIETY1_CHR_Trebellius SOCIETY1_CHR_Treblanus SOCIETY1_CHR_Tremellius SOCIETY1_CHR_Tuccius SOCIETY1_CHR_Tullius SOCIETY1_CHR_Turullius SOCIETY1_CHR_Ulpius SOCIETY1_CHR_Umbrius SOCIETY1_CHR_Ummidius SOCIETY1_CHR_Urgulanius SOCIETY1_CHR_Valerius SOCIETY1_CHR_Varius SOCIETY1_CHR_Vatinius SOCIETY1_CHR_Vedius SOCIETY1_CHR_Velius SOCIETY1_CHR_Veranius SOCIETY1_CHR_Verecundius SOCIETY1_CHR_Vergilius SOCIETY1_CHR_Verginius SOCIETY1_CHR_Vesnius SOCIETY1_CHR_Veturius SOCIETY1_CHR_Vibenius SOCIETY1_CHR_Vibidius SOCIETY1_CHR_Vibius SOCIETY1_CHR_Victricius SOCIETY1_CHR_Viducius SOCIETY1_CHR_Vinicius SOCIETY1_CHR_Vipsanius SOCIETY1_CHR_Vipstanus SOCIETY1_CHR_Viridius SOCIETY1_CHR_Virius SOCIETY1_CHR_Visellius SOCIETY1_CHR_Vitellius SOCIETY1_CHR_Vitruvius SOCIETY1_CHR_Volcatius SOCIETY1_CHR_Volumnius SOCIETY1_CHR_Volusenna SOCIETY1_CHR_Volusenus SOCIETY1_CHR_Volusius SOCIETY1_CHR_Vulius
 			}
 			regnal_first_names_male = {
-				Agrippa Gaius Lucius Marcus Octavius Primus Tiberius Titus
+				HUMAN3_CHR_Agrippa HUMAN3_CHR_Gaius HUMAN3_CHR_Lucius HUMAN3_CHR_Marcus HUMAN3_CHR_Octavius HUMAN3_CHR_Primus HUMAN3_CHR_Tiberius HUMAN3_CHR_Titus
 			}
 			regnal_first_names_female = {
-				Appia Decima Fausta Lucia Numeria Octavia Procula Vopisca
-				
+				HUMAN3_CHR_Appia HUMAN3_CHR_Decima HUMAN3_CHR_Fausta HUMAN3_CHR_Lucia HUMAN3_CHR_Numeria HUMAN3_CHR_Octavia HUMAN3_CHR_Procula HUMAN3_CHR_Vopisca
+
 			}
 			regnal_second_names = {
-				Antonius Aurelius Domitius Fabius Valerius Egnatius
+				HUMAN3_CHR_Antonius HUMAN3_CHR_Aurelius HUMAN3_CHR_Domitius HUMAN3_CHR_Fabius HUMAN3_CHR_Valerius HUMAN3_CHR_Egnatius
 			}
 		}
 		
