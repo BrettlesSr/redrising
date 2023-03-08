@@ -2110,7 +2110,7 @@ country_event = {
 				}
 				set_migration_controls = {
 					country = root
-					type = no
+					type = migration_control_no
 				}
 				set_living_standard = {
 					country = root
@@ -2118,7 +2118,7 @@ country_event = {
 				}
 				set_population_controls = {
 					country = root
-					type = no
+					type = population_control_no
 				}
 			}
 		}		
