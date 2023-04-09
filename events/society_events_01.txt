@@ -92,20 +92,9 @@ country_event = {
 	immediate = {
 		set_country_flag = redrising_society
 		set_country_flag = custom_start_screen
-		set_variable = {
-			which = redrising_decadence
-			value = 25
+		start_situation = {
+			type = situation_redrising_decadence
 		}
-		set_variable = {
-			which = redrising_decadence_rate_of_change_monthly
-			value = 0.1
-		}
-
-		begin_event_chain = {
-			event_chain = "redrising_decadence_tracker_chain"
-			target = root.owner
-		}
-
 		country_event = {
 			id = redrising.301
 		}

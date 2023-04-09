@@ -1,0 +1,67 @@
+situation_redrising_decadence = {
+	picture = GFX_evt_friendly_infiltration
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	complete_icon = GFX_situation_outcome_revolt
+	start_value = 25
+	on_progress_complete = {
+		
+	}
+	stages = {
+		
+	}
+	monthly_progress = {
+		base = 0.1
+		modifier = {
+			desc = redrising_reduce_decadence_edict_activated_desc
+			add = -0.2
+			has_edict = redrising_reduce_decadence
+		}
+		modifier = {
+			desc = redrising_institute_pscarred_built_desc
+			add = -0.05
+			has_country_flag = redrising_institute_pscarred_built
+		}
+		modifier = {
+			desc = redrising_discovery_reduces_decadence_set_desc
+			add = -0.05
+			has_country_flag = redrising_discovery_reduces_decadence_set
+		}
+		modifier = {
+			desc = redrising_board_pink_deployed_desc
+			add = 0.1
+			has_modifier = redrising_board_pink_deployed
+		}
+		modifier = {
+			desc = redrising_board_white_deployed_desc
+			add = -0.05
+			has_modifier = redrising_board_white_deployed
+		}
+		modifier = {
+			desc = redrising_board_control_chain_complete_desc
+			add = 0.05
+			has_country_flag = redrising_board_control_chain_complete
+		}
+	}
+	abort_trigger = {
+		#lost conditions
+	}
+}
+
+situation_redrising_the_rising = {
+	picture = GFX_evt_burning_city
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	complete_icon = GFX_situation_outcome_revolt
+	on_progress_complete = {
+		
+	}
+	stages = {
+		
+	}
+	monthly_progress = {
+		base = 0.1
+		
+	}
+	abort_trigger = {
+		#lost conditions
+	}
+}

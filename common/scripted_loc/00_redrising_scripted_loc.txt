@@ -1,162 +1,109 @@
 defined_text = { # Country/leader/pop/species scope
-name = GetSpeciesSpawnNamePluralCap
-text = {
-	trigger = {
-		is_species_class = AVI
-	}
-	localization_key = PRE_AVI_spawn_plural_cap
-}
-text = {
-	trigger = {
-		is_species_class = MAM
-	}
-	localization_key = PRE_MAM_spawn_plural_cap
-}
-text = {
-	trigger = {
-		is_species_class = REP
-	}
-	localization_key = PRE_REP_spawn_plural_cap
-}
-text = {
-	trigger = {
-		is_species_class = FUN
-	}
-	localization_key = PRE_FUN_spawn_plural_cap
-}
-text = {
-	trigger = {
-		is_species_class = MOL
-	}
-	localization_key = PRE_MOL_spawn_plural_cap
-}
-text = {
-	trigger = {
-		is_species_class = HUM
-	}
-	localization_key = PRE_HUM_spawn_plural_cap
-}
-text = {
-	trigger = {
-		is_species_class = ART
-	}
-	localization_key = PRE_ART_spawn_plural_cap
-}
-text = {
-	trigger = {
-		is_species_class = PLANT
-	}
-	localization_key = PRE_PLANT_spawn_plural_cap
-}
-text = {
-	localization_key = PRE_HUM_spawn_plural_cap
-}
-}
-
-defined_text = { # Country/leader/pop/species scope
-name = GetSpeciesSpawnNameCap
-text = {
-	trigger = {
-		is_species_class = AVI
-	}
-	localization_key = PRE_AVI_spawn_cap
-}
-text = {
-	trigger = {
-		is_species_class = MAM
-	}
-	localization_key = PRE_MAM_spawn_cap
-}
-text = {
-	trigger = {
-		is_species_class = REP
-	}
-	localization_key = PRE_REP_spawn_cap
-}
-text = {
-	trigger = {
-		is_species_class = FUN
-	}
-	localization_key = PRE_FUN_spawn_cap
-}
-text = {
-	trigger = {
-		is_species_class = MOL
-	}
-	localization_key = PRE_MOL_spawn_cap
-}
-text = {
-	trigger = {
-		is_species_class = HUM
-	}
-	localization_key = PRE_HUM_spawn_cap
-}
-text = {
-	trigger = {
-		is_species_class = ART
-	}
-	localization_key = PRE_ART_spawn_cap
-}
-text = {
-	trigger = {
-		is_species_class = PLANT
-	}
-	localization_key = PRE_PLANT_spawn_cap
-}
-text = {
-	localization_key = PRE_HUM_spawn_cap
-}
-}
-
-defined_text = { # Country/leader/pop/species scope
-name = PlusZeroOrBlankOnDecadenceRateOfChangeMonthly
+	name = GetSpeciesSpawnNamePluralCap
 	text = {
 		trigger = {
-			check_variable = {
-				which = redrising_decadence_rate_of_change_monthly
-				value = 0
-			}
+			is_species_class = AVI
 		}
-		localization_key = REDRISING_zero
+		localization_key = PRE_AVI_spawn_plural_cap
 	}
 	text = {
 		trigger = {
-			check_variable = {
-				which = redrising_decadence_rate_of_change_monthly
-				value > 0.001
-			}
+			is_species_class = MAM
 		}
-		localization_key = REDRISING_plus
+		localization_key = PRE_MAM_spawn_plural_cap
 	}
-	text = {	
+	text = {
 		trigger = {
-			check_variable = {
-				which = redrising_decadence_rate_of_change_monthly
-				value < -0.001
-			}
-		}	
-		localization_key = REDRISING_blank
+			is_species_class = REP
+		}
+		localization_key = PRE_REP_spawn_plural_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = FUN
+		}
+		localization_key = PRE_FUN_spawn_plural_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = MOL
+		}
+		localization_key = PRE_MOL_spawn_plural_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = HUM
+		}
+		localization_key = PRE_HUM_spawn_plural_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = ART
+		}
+		localization_key = PRE_ART_spawn_plural_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = PLANT
+		}
+		localization_key = PRE_PLANT_spawn_plural_cap
+	}
+	text = {
+		localization_key = PRE_HUM_spawn_plural_cap
 	}
 }
 
 defined_text = { # Country/leader/pop/species scope
-name = ZeroOrBlankOnDecadence
+	name = GetSpeciesSpawnNameCap
 	text = {
 		trigger = {
-			check_variable = {
-				which = redrising_decadence
-				value = 0
-			}
+			is_species_class = AVI
 		}
-		localization_key = REDRISING_zero
+		localization_key = PRE_AVI_spawn_cap
 	}
-	text = {	
+	text = {
 		trigger = {
-			check_variable = {
-				which = redrising_decadence
-				value > 0.001
-			}
-		}	
-		localization_key = REDRISING_blank
+			is_species_class = MAM
+		}
+		localization_key = PRE_MAM_spawn_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = REP
+		}
+		localization_key = PRE_REP_spawn_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = FUN
+		}
+		localization_key = PRE_FUN_spawn_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = MOL
+		}
+		localization_key = PRE_MOL_spawn_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = HUM
+		}
+		localization_key = PRE_HUM_spawn_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = ART
+		}
+		localization_key = PRE_ART_spawn_cap
+	}
+	text = {
+		trigger = {
+			is_species_class = PLANT
+		}
+		localization_key = PRE_PLANT_spawn_cap
+	}
+	text = {
+		localization_key = PRE_HUM_spawn_cap
 	}
 }

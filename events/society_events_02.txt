@@ -115,17 +115,10 @@ country_event = {
 	option = {
 		name = "redrising.5.a"
 		custom_tooltip = redrising.1.a.tooltip		
-			add_modifier = { 
-							modifier = redrising_institute_pscarred_built
-							days = -1
-			}
-			hidden_effect = {
-				set_country_flag = redrising_institute_pscarred_built
-				subtract_variable = { 
-					which = redrising_decadence_rate_of_change_monthly
-					value = 0.05
-				}
-			}
+		add_modifier = { 
+			modifier = redrising_institute_pscarred_built
+			days = -1
+		}
 	}
 }
 

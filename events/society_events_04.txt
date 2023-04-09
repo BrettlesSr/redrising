@@ -459,12 +459,8 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = {
-			id = redrising.418
-			days = 40
-			}
-			change_variable = {
-				which = redrising_decadence_rate_of_change_monthly
-				value = 0.1
+				id = redrising.418
+				days = 40
 			}
 		}
 	}
@@ -486,10 +482,6 @@ country_event = {
 			days = -1
 		}
 		hidden_effect = {
-			subtract_variable = {
-			which = redrising_decadence_rate_of_change_monthly
-			value = 0.05
-			}
 			country_event = {
 				id = redrising.418
 				days = 40
@@ -514,12 +506,6 @@ country_event = {
 		}
 		custom_tooltip = "redrising.418.a.tooltip"
 		end_event_chain = redrising_board_control_chain
-		hidden_effect = {
-			change_variable = {
-				which = redrising_decadence_rate_of_change_monthly
-				value = 0.05
-			}
-		}
 		add_monthly_resource_mult = {
 			resource = unity
 			value = 60
@@ -541,12 +527,7 @@ country_event = {
 		}
 		custom_tooltip = "redrising.418.a.tooltip"
 		end_event_chain = redrising_board_control_chain
-		hidden_effect = {
-			change_variable = {
-				which = redrising_decadence_rate_of_change_monthly
-				value = 0.05
-			}
-		}		
+		set_country_flag = redrising_board_control_chain_complete
 		add_monthly_resource_mult = {
 			resource = unity
 			value = 60
