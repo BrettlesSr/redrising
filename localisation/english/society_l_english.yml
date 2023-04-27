@@ -204,7 +204,6 @@
  redrising_10_decadence:0 "100% Decadence"
  redrising.302.name:0 "Tempered By War"
  redrising.302.desc:0 "Whenever the [Root.GetName] goes to war, either in offense or defense, it is an opportunity for [Root.GetSpeciesAdj] youths to earn the respect of their elders, and join the highest ranks of our society. They will be the better for it, should they survive."
- redrising.302.a:0 "§G-20§! §MDecadence§!"
  redrising.303.name:0 "Leadership and Exploration"
  redrising.303.desc:0 "The highest caste of our society, [Root.GetSpeciesName], was not just engineered for leadership, but also to be the pioneering explorers our civilization needs. As we rededicate our society to the ideal of exploration, we find ever more of the [Root.GetSpeciesName] caste are giving up their excessive lifestyles to take up the mantle of the brave explorer."
  redrising_discovery_reduces_decadence:0 "Mantle of the Explorer"
@@ -305,8 +304,9 @@
  NAME_mustang_leader:0 "Virginia au Augustus"
  NAME_redrising_The_Rising_War:0 "The Rising"
  NAME_redrising_The_Dark_Revolt:0 "The Dark Revolt"
+ NAME_darrow_au_andromedus:0 "Darrow au Andromedus"
 
-REDRISING_RED:0 "Humanoid"
+ REDRISING_RED:0 "Humanoid"
  REDRISING_RED_desc:1 "Species Class has no effect on your Empire, but Humanoid-class Species may consider other Humanoids to be less alien than other Species Classes."
  REDRISING_RED_plural:0 "Humanoids"
  REDRISING_RED_insult_01:0 "beast"

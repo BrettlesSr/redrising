@@ -96,9 +96,6 @@ country_event = {
 			type = situation_redrising_decadence
 		}
 		country_event = {
-			id = redrising.301
-		}
-		country_event = {
 			id =  redrising.1
 			days = @institutetimetotriggerdays
 			random = 360

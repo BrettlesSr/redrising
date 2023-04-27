@@ -7,7 +7,6 @@ situation_redrising_decadence = {
 		
 	}
 	stages = {
-		
 	}
 	monthly_progress = {
 		base = 0.1
@@ -24,7 +23,7 @@ situation_redrising_decadence = {
 		modifier = {
 			desc = redrising_discovery_reduces_decadence_set_desc
 			add = -0.05
-			has_country_flag = redrising_discovery_reduces_decadence_set
+			has_modifier = redrising_discovery_reduces_decadence
 		}
 		modifier = {
 			desc = redrising_board_pink_deployed_desc

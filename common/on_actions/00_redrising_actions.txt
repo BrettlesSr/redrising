@@ -56,12 +56,6 @@ on_monthly_pulse = {
 	}
 }
 
-on_monthly_pulse_country = {
-	events = {
-		redrising.301
-	}
-}
-
 on_ruler_set = {
 	events = {
 		redrising.45

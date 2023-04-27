@@ -13,14 +13,19 @@ country_event = {
 		has_valid_civic = civic_redrising_noble_lie
 	}
 
+	immediate = {
+		random_situation = {
+			limit = {
+				is_situation_type = situation_redrising_decadence
+			}
+			save_event_target_as = situation_redrising_decadence
+		}
+	}
+
 	option = {
 		name = EXCELLENT
-		custom_tooltip = "redrising.302.a"
-		hidden_effect = {
-			subtract_variable = {
-				which = redrising_decadence
-				value = 20
-			}
+		event_target:situation_redrising_decadence = {
+			add_situation_progress = -20
 		}
     }
 }
@@ -36,7 +41,7 @@ country_event = {
 		has_valid_civic = civic_redrising_noble_lie
 		has_tradition = tr_discovery_finish
 		NOT = {
-			has_country_flag = redrising_discovery_reduces_decadence_set
+			has_modifier = redrising_discovery_reduces_decadence
 		}
 	}
 
@@ -46,7 +51,7 @@ country_event = {
 
 	option = {
 		name = EXCELLENT
-		add_modifier = {#todo remove
+		add_modifier = {
 			modifier = redrising_discovery_reduces_decadence
 			days = -1
 		}
