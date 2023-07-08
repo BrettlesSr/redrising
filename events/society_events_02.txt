@@ -122,89 +122,9 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = redrising.6
-	is_triggered_only = yes
-	hide_window = yes
+#6 removed
 
-	trigger = {
-		from = {
-			owner = { has_country_flag = redrising_institute_pscarred_built }
-			has_trait = trait_redrising_pscarred_ruler
-			NOR = {
-				has_trait = trait_redrising_pscarred_admiral
-				has_trait = trait_redrising_pscarred_general
-				has_trait = trait_redrising_pscarred_governor
-				has_trait = trait_redrising_pscarred_scientist
-			}
-		}
-	}
-
-	immediate = {
-		from = {
-			if = {
-				limit = { leader_class = admiral }
-				add_trait = trait_redrising_pscarred_admiral
-				break = yes
-			}
-			if = {
-				limit = { leader_class = general }
-				add_trait = trait_redrising_pscarred_general
-				break = yes
-			}
-			if = {
-				limit = { leader_class = governor }
-				add_trait = trait_redrising_pscarred_governor
-				break = yes
-			}
-			if = {
-				limit = { leader_class = scientist }
-				add_trait = trait_redrising_pscarred_scientist
-				break = yes
-			}
-		}
-	}
-}
-
-country_event = {
-	id = redrising.7
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		has_country_flag = redrising_institute_pscarred_built
-	}
-
-	immediate = {
-		from = {
-			if = {
-				limit = { leader_class = admiral }
-				add_trait = trait_redrising_pscarred_admiral
-				break = yes
-			}
-			if = {
-				limit = { leader_class = general }
-				add_trait = trait_redrising_pscarred_general
-				break = yes
-			}
-			if = {
-				limit = { leader_class = governor }
-				add_trait = trait_redrising_pscarred_governor
-				break = yes
-			}
-			if = {
-				limit = { leader_class = scientist }
-				add_trait = trait_redrising_pscarred_scientist
-				break = yes
-			}
-			if = {
-				limit = { leader_class = ruler }
-				add_ruler_trait = trait_redrising_pscarred_ruler
-				break = yes
-			}
-		}
-	}
-}
+#7 removed
 
 #Obsidan Event Chain
 
@@ -725,7 +645,7 @@ country_event = {
 				limit = {
 					has_country_flag = redrising_dark_revolt_begun				
 				}
-				country_event = { id = redrising.18 } 
+				country_event = { id = redrising.18 } #todo, redo with flags
 			}		
 		}
 	}
@@ -764,35 +684,11 @@ country_event = {
 	
 	immediate = {
 		set_country_flag = redrising_sons_founded
-		if = {
-			limit = {
-				is_ai = yes
-			}			
-			country_event = { id = redrising.22 }
-		}
-		if = {
-			limit = {
-				is_ai = no
-			}
-			country_event = { id = redrising.23 }
-		}
+		country_event = { id = redrising.23 }
 	}
 }
 
-country_event = {
-	id = redrising.22
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		random_list = {
-						50 = {	country_event = { id = redrising.37 }
-						}
-						50 = { 	country_event = { id = redrising.38 }
-						}
-					}
-	}
-}
+#22 removed
 
 
 #Founding the Sons
@@ -1144,7 +1040,7 @@ country_event = {
 		name = DOTDOTDOT
 		hidden_effect = {
 			country_event = { 
-				id = redrising.43
+				id = redrising.43 #todo, check if all checks like (has_country_flag = redrising_society) are OR between the origin and the civic
 			}
 		}
 	}
@@ -2193,10 +2089,13 @@ country_event = {
 	picture = GFX_evt_galactic_senate
 		
 	immediate = {
-		if = { limit = { has_country_flag = redrising_society 
-						NOR = {	has_ethic = ethic_authoritarian
-								has_ethic = ethic_fanatic_authoritarian
-						}
+		if = { 
+			limit = {
+				has_country_flag = redrising_society 
+				NOR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+				}
 			}
 
 			redrising_grab_red_species = yes
@@ -2289,22 +2188,29 @@ country_event = {
 	is_triggered_only = yes
 		
 	immediate = {
-		if = { limit =	{	has_country_flag = redrising_society 
-							NOT = { has_country_flag = redrising_darrow_died }
-							from = { has_leader_flag = redrising_darrow }
-							NOT = { from = { has_leader_flag = redrising_darrow_defected }}
+		if = {
+			limit =	{
+				has_country_flag = redrising_society 
+				NOT = { has_country_flag = redrising_darrow_died }
+				from = { has_leader_flag = redrising_darrow }
+				NOT = { from = { has_leader_flag = redrising_darrow_defected }}
 			}
+			
 			country_event = { id = redrising.33 }			
-			if = { limit =	{	OR = {
-			ruler = {					
-				has_leader_flag = redrising_darrow
-			}
-			ruler = {					
-				has_leader_flag = redrising_became_soveriegn
-			}}
-			}
+			if = { 
+				limit =	{
+					OR = {
+						ruler = {					
+							has_leader_flag = redrising_darrow
+						}
+						ruler = {					
+							has_leader_flag = redrising_became_soveriegn
+						}
+					}
+				}
+
 			country_event = { id = redrising.46 }			
-		}
+			}
 		}		 
 	}
 }
@@ -2420,49 +2326,7 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = redrising.47
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		has_country_flag = redrising_institute_pscarred_built
-		ruler = {			
-			NOT = { has_trait = trait_redrising_pscarred_ruler }
-			OR = {
-				has_trait = trait_redrising_pscarred_admiral
-				has_trait = trait_redrising_pscarred_general
-				has_trait = trait_redrising_pscarred_governor
-				has_trait = trait_redrising_pscarred_scientist
-			}
-		}
-	}
-
-	immediate = {
-		ruler = {
-			if = {
-				limit = { has_trait = trait_redrising_pscarred_admiral }
-				remove_trait = trait_redrising_pscarred_admiral
-				break = yes
-			}
-			if = {
-				limit = { has_trait = trait_redrising_pscarred_general }
-				remove_trait = trait_redrising_pscarred_general
-				break = yes
-			}
-			if = {
-				limit = { has_trait = trait_redrising_pscarred_governor }
-				remove_trait = trait_redrising_pscarred_governor
-				break = yes
-			}
-			if = {
-				limit = { has_trait = trait_redrising_pscarred_scientist }
-				remove_trait = trait_redrising_pscarred_scientist
-				break = yes
-			}
-		}
-	}
-}
+#removed 47
 
 country_event = {
 	id = redrising.48
