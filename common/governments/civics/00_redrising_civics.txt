@@ -23,6 +23,7 @@ civic_redrising_noble_lie = {
 			}
 		}
 	}
+	
 	random_weight = {
 		base = 0
 	}
