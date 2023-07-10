@@ -32,7 +32,6 @@ redrising_grab_red_species = {
 				NOT = { is_same_species = ROOT }
 				has_trait = trait_communal
 				has_trait = trait_industrious
-				has_trait = trait_fleeting
 			}
 			save_event_target_as = redrising_red
 		}

@@ -8,6 +8,9 @@ situation_redrising_decadence = {
 	}
 	stages = {
 	}
+	modifier = {
+		redrising_decadence_modifier
+	}
 	monthly_progress = {
 		base = 0.1
 		modifier = {

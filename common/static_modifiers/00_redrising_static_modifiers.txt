@@ -159,6 +159,12 @@ redrising_10_decadence = {
 	show_only_custom_tooltip = no
 }
 
+redrising_decadence_modifier = {
+	pop_category_rulers_upkeep_mult = 1
+	pop_category_rulers_happiness = 0.5
+	
+}
+
 redrising_discovery_reduces_decadence = {
 	icon = "gfx/interface/icons/modifiers/mod_ship_anomaly_generation_chance.dds"
 	custom_tooltip = redrising_discovery_reduces_decadence_tooltip
