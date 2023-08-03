@@ -73,7 +73,8 @@ redrising_unrest_patience = {
 
 redrising_0_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0
-	pop_cat_slave_happiness = 0
+	pop_cat_ruler_happiness = 0
+	planet_stability_add = 0
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
@@ -81,7 +82,8 @@ redrising_0_decadence = {
 
 redrising_1_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0.1
-	pop_cat_slave_happiness = -0.05
+	pop_cat_ruler_happiness = 0.04
+	planet_stability_add = -2
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
@@ -89,7 +91,8 @@ redrising_1_decadence = {
 
 redrising_2_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0.2
-	pop_cat_slave_happiness = -0.1
+	pop_cat_ruler_happiness = 0.08
+	planet_stability_add = -4
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
@@ -97,7 +100,8 @@ redrising_2_decadence = {
 
 redrising_3_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0.3
-	pop_cat_slave_happiness = -0.15
+	pop_cat_ruler_happiness = 0.12
+	planet_stability_add = -6
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
@@ -105,7 +109,8 @@ redrising_3_decadence = {
 
 redrising_4_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0.4
-	pop_cat_slave_happiness = -0.2
+	pop_cat_ruler_happiness = 0.16
+	planet_stability_add = -8
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
@@ -113,7 +118,8 @@ redrising_4_decadence = {
 
 redrising_5_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0.5
-	pop_cat_slave_happiness = -0.25
+	pop_cat_ruler_happiness = 0.20
+	planet_stability_add = -10
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
@@ -121,7 +127,8 @@ redrising_5_decadence = {
 
 redrising_6_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0.6
-	pop_cat_slave_happiness = -0.3
+	pop_cat_ruler_happiness = 0.24
+	planet_stability_add = -12
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
@@ -129,7 +136,8 @@ redrising_6_decadence = {
 
 redrising_7_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0.7
-	pop_cat_slave_happiness = -0.35
+	pop_cat_ruler_happiness = 0.28
+	planet_stability_add = -14
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc#
 	show_only_custom_tooltip = no
@@ -137,15 +145,17 @@ redrising_7_decadence = {
 
 redrising_8_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 0.8
-	pop_cat_slave_happiness = -0.4
+	pop_cat_ruler_happiness = 0.32
+	planet_stability_add = -16
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
 }
 
 redrising_9_decadence = {
-	pop_category_rulers_consumer_goods_upkeep_mult = 0.9
-	pop_cat_slave_happiness = -0.45
+	pop_category_rulers_consumer_goods_upkeep_mult = 1
+	pop_cat_ruler_happiness = 0.36
+	planet_stability_add = -18
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
@@ -153,16 +163,11 @@ redrising_9_decadence = {
 
 redrising_10_decadence = {
 	pop_category_rulers_consumer_goods_upkeep_mult = 1
-	pop_cat_slave_happiness = -0.5
+	pop_cat_ruler_happiness = 0.4
+	planet_stability_add = -20
 	icon = "gfx/interface/icons/modifiers/mod_resource_luxury_goods_mult.dds"
 	custom_tooltip = redrising_decadence_desc
 	show_only_custom_tooltip = no
-}
-
-redrising_decadence_modifier = {
-	pop_category_rulers_upkeep_mult = 1
-	pop_category_rulers_happiness = 0.5
-	
 }
 
 redrising_discovery_reduces_decadence = {

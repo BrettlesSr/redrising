@@ -1,13 +1,11 @@
 civic_redrising_noble_lie = {
 	icon = "gfx/interface/icons/governments/civics/redrising_civic_racial_stratocracy.dds"
 	modification = no
-	potential = { ethics = {NOT = { value = ethic_gestalt_consciousness } 
-							OR = {
-									value = ethic_fanatic_authoritarian
-									value = ethic_authoritarian
-								}
-							}
-				}
+	potential = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+		}
+	}
 	pickable_at_start = yes
 	possible = {
 		civics = {

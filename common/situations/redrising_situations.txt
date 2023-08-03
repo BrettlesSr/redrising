@@ -3,14 +3,80 @@ situation_redrising_decadence = {
 	complete_icon_frame = GFX_situation_outcome_frame_red
 	complete_icon = GFX_situation_outcome_revolt
 	start_value = 25
+	
 	on_progress_complete = {
 		
 	}
+
 	stages = {
+		stage_0 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_0_decadence }
+			end = 10
+		}
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_1_decadence }
+			end = 20
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_2_decadence }
+			end = 30
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_3_decadence }
+			end = 40
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_4_decadence }
+			end = 50
+		}
+		stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_5_decadence }
+			end = 60
+		}
+		stage_6 = {
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_6_decadence }
+			end = 70
+		}
+		stage_7 = {
+			icon = GFX_situation_stage_7
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_7_decadence }
+			end = 80
+		}
+		stage_8 = {
+			icon = GFX_situation_stage_8
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_8_decadence }
+			end = 90
+		}
+		stage_9 = {
+			icon = GFX_situation_stage_9
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_9_decadence }
+			end = 99
+		}
+		stage_10 = {
+			icon = GFX_situation_stage_10
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_10_decadence }
+			end = 100
+		}
 	}
-	modifier = {
-		redrising_decadence_modifier
-	}
+	
 	monthly_progress = {
 		base = 0.1
 		modifier = {
@@ -44,8 +110,13 @@ situation_redrising_decadence = {
 			has_country_flag = redrising_board_control_chain_complete
 		}
 	}
+
 	abort_trigger = {
-		#lost conditions
+		owner = {
+			NOT = {
+				has_valid_civic = civic_redrising_noble_lie
+			}
+		}
 	}
 }
 
@@ -53,17 +124,25 @@ situation_redrising_the_rising = {
 	picture = GFX_evt_burning_city
 	complete_icon_frame = GFX_situation_outcome_frame_red
 	complete_icon = GFX_situation_outcome_revolt
+	
 	on_progress_complete = {
 		
 	}
+
 	stages = {
 		
 	}
+
 	monthly_progress = {
 		base = 0.1
 		
 	}
+
 	abort_trigger = {
-		#lost conditions
+		owner = {
+			NOT = {
+				has_valid_civic = civic_redrising_noble_lie
+			}
+		}
 	}
 }
