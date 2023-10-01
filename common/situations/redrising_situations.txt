@@ -80,11 +80,6 @@ situation_redrising_decadence = {
 	monthly_progress = {
 		base = 0.1
 		modifier = {
-			desc = redrising_reduce_decadence_edict_activated_desc
-			add = -0.2
-			has_edict = redrising_reduce_decadence
-		}
-		modifier = {
 			desc = redrising_institute_pscarred_built_desc
 			add = -0.05
 			has_country_flag = redrising_institute_pscarred_built
@@ -109,12 +104,99 @@ situation_redrising_decadence = {
 			add = 0.05
 			has_country_flag = redrising_board_control_chain_complete
 		}
+		modifier = {
+			desc = redrising_approach_indulge_the_pixies_desc
+			add = 0.2
+			current_situation_approach = approach_redrising_decadence_indulge_the_pixies
+		}
+		
+		modifier = {
+			desc = redrising_approach_promote_iron_gold_desc
+			add = -0.2
+			current_situation_approach = approach_redrising_decadence_promote_iron_gold
+		}
 	}
 
 	abort_trigger = {
 		owner = {
 			NOT = {
 				has_valid_civic = civic_redrising_noble_lie
+			}
+		}
+	}
+
+	approach = {
+		name = approach_redrising_decadence_indulge_the_pixies
+		icon = GFX_situation_approach_amenities
+		icon_background = GFX_situation_approach_bg_green
+		triggered_target_modifier = {
+			
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				trigger = {
+					owner = { is_gestalt = no }
+				}
+				consumer_goods = 20
+			}
+		}
+		ai_weight = {
+			base = 2
+			modifier = {
+				factor = 2
+				OR = {
+					current_situation_approach = approach_revolt_distribute_amenities
+					target = { free_amenities < -5 }
+				}
+			}
+		}
+	}
+
+	approach = {
+		name = approach_redrising_decadence_do_nothing
+		icon = GFX_situation_shrug
+		icon_background = GFX_situation_approach_bg_yellow
+		triggered_target_modifier = {
+			
+		}
+
+		ai_weight = {
+			base = 2
+			modifier = {
+				factor = 2
+				OR = {
+					current_situation_approach = approach_revolt_distribute_amenities
+					target = { free_amenities < -5 }
+				}
+			}
+		}
+	}
+
+	approach = {
+		name = approach_redrising_decadence_promote_iron_gold
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_red
+		triggered_target_modifier = {
+			
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				trigger = {
+					owner = { is_gestalt = no }
+				}
+				consumer_goods = 20
+			}
+		}
+		ai_weight = {
+			base = 2
+			modifier = {
+				factor = 2
+				OR = {
+					current_situation_approach = approach_revolt_distribute_amenities
+					target = { free_amenities < -5 }
+				}
 			}
 		}
 	}
@@ -130,18 +212,52 @@ situation_redrising_the_rising = {
 	}
 
 	stages = {
-		
+		prelude = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_10_decadence }
+			end = 20
+		}
+		simmering = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_10_decadence }
+			on_first_enter = {
+				#sons of ares event
+			}
+			end = 80
+		}
+		crisis = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_10_decadence }
+			on_first_enter = {
+				#phobos address
+			}
+			end = 90
+		}
+		open_war = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			target_modifier = { redrising_10_decadence }
+			on_first_enter = {
+				#the rising
+			}
+			end = 100
+		}
 	}
 
 	monthly_progress = {
-		base = 0.1
-		
+		base = 1
 	}
 
 	abort_trigger = {
 		owner = {
-			NOT = {
-				has_valid_civic = civic_redrising_noble_lie
+			OR = {
+				NOT = {
+					has_valid_civic = civic_redrising_noble_lie
+				}
+				#has won war with republic
 			}
 		}
 	}
