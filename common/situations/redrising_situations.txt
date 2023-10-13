@@ -1,7 +1,8 @@
 situation_redrising_decadence = {
 	picture = GFX_evt_friendly_infiltration
+	category = neutral
 	complete_icon_frame = GFX_situation_outcome_frame_red
-	complete_icon = GFX_situation_outcome_revolt
+	complete_icon = GFX_situation_outcome_meh
 	start_value = 25
 	
 	on_progress_complete = {
@@ -12,67 +13,86 @@ situation_redrising_decadence = {
 		stage_0 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_0_decadence }
 			end = 10
 		}
 		stage_1 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_1_decadence }
+			modifier = {
+				pop_category_rulers_consumer_goods_upkeep_mult = 0.1
+				pop_cat_ruler_happiness = 0.04
+				planet_stability_add = -2
+			}
 			end = 20
 		}
 		stage_2 = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_2_decadence }
+			modifier = { 
+				pop_category_rulers_consumer_goods_upkeep_mult = 0.2
+				pop_cat_ruler_happiness = 0.08
+				planet_stability_add = -4
+			}
 			end = 30
 		}
 		stage_3 = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_3_decadence }
+			modifier = { 
+				pop_category_rulers_consumer_goods_upkeep_mult = 0.3
+				pop_cat_ruler_happiness = 0.12
+				planet_stability_add = -6
+			}
 			end = 40
 		}
 		stage_4 = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_4_decadence }
+			modifier = { 
+				pop_category_rulers_consumer_goods_upkeep_mult = 0.4
+				pop_cat_ruler_happiness = 0.16
+				planet_stability_add = -8
+			}
 			end = 50
 		}
 		stage_5 = {
 			icon = GFX_situation_stage_5
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_5_decadence }
+			modifier = { 
+				pop_category_rulers_consumer_goods_upkeep_mult = 0.5
+				pop_cat_ruler_happiness = 0.20
+				planet_stability_add = -10
+			}
 			end = 60
 		}
 		stage_6 = {
 			icon = GFX_situation_stage_6
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_6_decadence }
-			end = 70
+			modifier = {
+				pop_category_rulers_consumer_goods_upkeep_mult = 0.6
+				pop_cat_ruler_happiness = 0.24
+				planet_stability_add = -12
+			}
+			end = 75
 		}
 		stage_7 = {
 			icon = GFX_situation_stage_7
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_7_decadence }
-			end = 80
+			modifier = { 
+				pop_category_rulers_consumer_goods_upkeep_mult = 0.8
+				pop_cat_ruler_happiness = 0.32
+				planet_stability_add = -16
+			}
+			end = 90
 		}
 		stage_8 = {
 			icon = GFX_situation_stage_8
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_8_decadence }
-			end = 90
-		}
-		stage_9 = {
-			icon = GFX_situation_stage_9
-			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_9_decadence }
-			end = 99
-		}
-		stage_10 = {
-			icon = GFX_situation_stage_10
-			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_10_decadence }
+			modifier = { 
+				pop_category_rulers_consumer_goods_upkeep_mult = 1
+				pop_cat_ruler_happiness = 0.4
+				planet_stability_add = -20
+			}
 			end = 100
 		}
 	}
@@ -145,9 +165,11 @@ situation_redrising_decadence = {
 			base = 2
 			modifier = {
 				factor = 2
-				OR = {
-					current_situation_approach = approach_revolt_distribute_amenities
-					target = { free_amenities < -5 }
+				owner = {
+					resource_income_compare = {
+						resource = consumer_goods
+						value >= 20
+					}
 				}
 			}
 		}
@@ -155,7 +177,7 @@ situation_redrising_decadence = {
 
 	approach = {
 		name = approach_redrising_decadence_do_nothing
-		icon = GFX_situation_shrug
+		icon = GFX_situation_approach_this_is_fine
 		icon_background = GFX_situation_approach_bg_yellow
 		triggered_target_modifier = {
 			
@@ -163,13 +185,6 @@ situation_redrising_decadence = {
 
 		ai_weight = {
 			base = 2
-			modifier = {
-				factor = 2
-				OR = {
-					current_situation_approach = approach_revolt_distribute_amenities
-					target = { free_amenities < -5 }
-				}
-			}
 		}
 	}
 
@@ -178,24 +193,14 @@ situation_redrising_decadence = {
 		icon = GFX_situation_approach_fist
 		icon_background = GFX_situation_approach_bg_red
 		triggered_target_modifier = {
-			
-		}
-		resources = {
-			category = situations
-			upkeep = {
-				trigger = {
-					owner = { is_gestalt = no }
-				}
-				consumer_goods = 20
-			}
+			pop_citizen_happiness = -0.1
 		}
 		ai_weight = {
 			base = 2
 			modifier = {
-				factor = 2
+				factor = 1.5
 				OR = {
-					current_situation_approach = approach_revolt_distribute_amenities
-					target = { free_amenities < -5 }
+					situation_progress >= 80
 				}
 			}
 		}

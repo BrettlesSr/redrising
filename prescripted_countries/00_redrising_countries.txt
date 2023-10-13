@@ -75,7 +75,7 @@ thesocietyofman = {
 		texture = 0
 		attachment = 4
 		clothes = 0
-		leader_class = ruler
+		leader_class = governor
 		ruler_title = "redrising_ruler_title_sovereign"
 		ruler_title_female= "redrising_ruler_title_sovereign"
 	}

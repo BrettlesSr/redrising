@@ -2173,7 +2173,8 @@ country_event = {
 			abort_special_project = {
 				type = REDRISING_WHITES
 			}
-			end_situation = 
+			end_situation = situation_redrising_decadence
+			end_situation = situation_redrising_the_rising
 		}
 	}
 	
