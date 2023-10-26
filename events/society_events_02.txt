@@ -672,7 +672,6 @@ country_event = {
 	hide_window = yes
 	
 	trigger = {
-		has_country_flag = redrising_society
 		has_valid_civic = civic_redrising_noble_lie
 		any_owned_pop = {
 			is_enslaved = yes
@@ -688,9 +687,6 @@ country_event = {
 	}
 }
 
-#22 removed
-
-
 #Founding the Sons
 
 country_event = {
@@ -699,8 +695,13 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-			country_event = { id = redrising.24 }
+		country_event = { id = redrising.24 }
+		if = {
+			limit = {
+				has_origin = origin_redrising_society
+			}
 			country_event = { id = redrising.32 days = @timetodarrowafteraresdays random = 360 }
+		}			
 	}
 }
 
@@ -715,6 +716,10 @@ country_event = {
 	
 	immediate = {
 		redrising_grab_red_species = yes
+		start_situation = {
+			type = situation_redrising_the_rising
+			target = root
+		}
 		country_event = { id = redrising.40 days = @timebetweenunresteventsdays }
 		set_country_flag = redrising_ares_insurrecting_0
 	}
@@ -987,11 +992,15 @@ country_event = {
 			class = general
 			species = owner_main_species
 			name = "NAME_darrow_au_andromedus"
-			skill = 2
+			skill = 3
 			set_age = 22
 			gender = male
+			background_ethic = ethic_militarist
 			traits = {
-				trait = leader_trait_charismatic
+				0 = subclass_general_invader
+				1 = 
+				2 = leader_trait_charismatic
+				trait = 
 				trait = trait_redrising_pscarred_general					
 			}
 		}
@@ -1119,7 +1128,6 @@ country_event = {
 							}
 							NOT = { has_modifier = redrising_red_rising }
 						}
-			country_event = { id = redrising.35 days = 500 }
 		}
 	}
 

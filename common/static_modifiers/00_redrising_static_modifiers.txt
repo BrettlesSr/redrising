@@ -25,12 +25,6 @@ redrising_secret_red = {
 
 }
 
-redrising_red_rising = {
-	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
-	pop_government_ethic_attraction = -0.2
-	planet_stability_add = -10
-}
-
 redrising_red_risen = {
 	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
 	pop_government_ethic_attraction = -0.1

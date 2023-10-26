@@ -81,7 +81,7 @@ planet_event = {
 	}
 }
 
-#sets decadence on game start
+#sets noble lie effects on game start
 country_event = {
 	id = redrising.150
 	hide_window = yes
@@ -91,7 +91,6 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = redrising_society
 		set_country_flag = custom_start_screen
 		start_situation = {
 			type = situation_redrising_decadence
@@ -102,6 +101,25 @@ country_event = {
 			random = 360
 		}
 		country_event = {
+			id = redrising.21
+			days = @arestimetotriggerdays
+			random = 360
+		}
+	}
+}
+
+#sets HoC origin effects on game start
+country_event = {
+	id = redrising.160
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_redrising_society
+	}
+
+	immediate = {
+		set_country_flag = custom_start_screen
+		country_event = {
 			id = redrising.8
 			days = @obsidiantimetotriggerdays
 			random = 360
@@ -109,11 +127,6 @@ country_event = {
 		country_event = {
 			id = redrising.401
 			days = @boardtimetotriggerdays
-			random = 360
-		}
-		country_event = {
-			id = redrising.21
-			days = @arestimetotriggerdays
 			random = 360
 		}
 	}

@@ -162,9 +162,9 @@ situation_redrising_decadence = {
 			}
 		}
 		ai_weight = {
-			base = 2
+			base = 1
 			modifier = {
-				factor = 2
+				factor = 3
 				owner = {
 					resource_income_compare = {
 						resource = consumer_goods
@@ -184,7 +184,7 @@ situation_redrising_decadence = {
 		}
 
 		ai_weight = {
-			base = 2
+			base = 1.5
 		}
 	}
 
@@ -196,9 +196,9 @@ situation_redrising_decadence = {
 			pop_citizen_happiness = -0.1
 		}
 		ai_weight = {
-			base = 2
+			base = 1
 			modifier = {
-				factor = 1.5
+				factor = 2
 				OR = {
 					situation_progress >= 80
 				}
@@ -209,6 +209,7 @@ situation_redrising_decadence = {
 
 situation_redrising_the_rising = {
 	picture = GFX_evt_burning_city
+	start_value = 25
 	complete_icon_frame = GFX_situation_outcome_frame_red
 	complete_icon = GFX_situation_outcome_revolt
 	
@@ -220,31 +221,35 @@ situation_redrising_the_rising = {
 		prelude = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_10_decadence }
+			target_modifier = { 
+				planet_stability_add = -1
+			}
 			end = 20
 		}
 		simmering = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_10_decadence }
-			on_first_enter = {
-				#sons of ares event
+			target_modifier = { 
+				planet_stability_add = -3
 			}
 			end = 80
 		}
 		crisis = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_10_decadence }
 			on_first_enter = {
 				#phobos address
+				country_event = { id = redrising.35 days = 15 }
 			}
 			end = 90
 		}
 		open_war = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { redrising_10_decadence }
+			target_modifier = { 
+				pop_government_ethic_attraction = -0.25
+				planet_stability_add = -10
+			}
 			on_first_enter = {
 				#the rising
 			}
@@ -254,6 +259,78 @@ situation_redrising_the_rising = {
 
 	monthly_progress = {
 		base = 1
+		modifier = {
+			desc = redrising_phobos_address_happened
+			add = 10
+			current_stage = crisis
+		}
+		modifier = {
+			desc = redrising_secret_red_happened
+			add = 2
+			has_modifier = redrising_secret_red
+		}
+		modifier = {
+			desc = approach_redrising_the_rising_crackdowns_desc
+			add = -0.5
+			current_situation_approach = approach_redrising_the_rising_crackdowns
+		}
+		modifier = {
+			desc = approach_redrising_the_rising_infiltrate_desc
+			add = -0.25
+			current_situation_approach = approach_redrising_the_rising_infiltrate
+		}
+	}
+
+	approach = {
+		name = approach_redrising_the_rising_crackdowns
+		icon = GFX_situation_approach_fist
+		icon_background = GFX_situation_approach_bg_red
+		triggered_target_modifier = {
+			#todo
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 3
+				OR = {
+					situation_progress >= 50
+				}
+			}
+		}
+	}
+
+	approach = {
+		name = approach_redrising_the_rising_infiltrate
+		icon = GFX_situation_approach_suspicious
+		icon_background = GFX_situation_approach_bg_yellow
+		triggered_target_modifier = {
+			envoys_add = -1
+		}
+		ai_weight = {
+			base = 1
+			modifier = {
+				factor = 2
+				AND = {
+					situation_progress >= 50
+				}
+			}
+		}
+	}
+
+	approach = {
+		name = approach_redrising_the_rising_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_green
+		default = yes
+		ai_weight = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				OR = {
+					situation_progress < 20
+				}
+			}
+		}
 	}
 
 	abort_trigger = {
@@ -262,7 +339,7 @@ situation_redrising_the_rising = {
 				NOT = {
 					has_valid_civic = civic_redrising_noble_lie
 				}
-				#has won war with republic
+				#todo has won war with republic
 			}
 		}
 	}
