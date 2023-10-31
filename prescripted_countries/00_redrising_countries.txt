@@ -76,6 +76,7 @@ thesocietyofman = {
 		attachment = 4
 		clothes = 0
 		leader_class = governor
+		trait = trait_ruler_eye_for_talent
 		ruler_title = "redrising_ruler_title_sovereign"
 		ruler_title_female= "redrising_ruler_title_sovereign"
 	}
