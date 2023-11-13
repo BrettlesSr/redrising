@@ -239,7 +239,7 @@ situation_redrising_the_rising = {
 			icon_background = GFX_situation_stage_frame_red
 			on_first_enter = {
 				#phobos address
-				country_event = { id = redrising.35 days = 15 }
+				situation_event = { id = redrising.35 }
 			}
 			end = 90
 		}
@@ -252,6 +252,7 @@ situation_redrising_the_rising = {
 			}
 			on_first_enter = {
 				#the rising
+				situation_event = { id = redrising.36 }
 			}
 			end = 100
 		}
@@ -286,7 +287,7 @@ situation_redrising_the_rising = {
 		icon = GFX_situation_approach_fist
 		icon_background = GFX_situation_approach_bg_red
 		triggered_target_modifier = {
-			#todo
+			pop_citizen_happiness = -0.10
 		}
 		ai_weight = {
 			base = 1
@@ -339,7 +340,8 @@ situation_redrising_the_rising = {
 				NOT = {
 					has_valid_civic = civic_redrising_noble_lie
 				}
-				#todo has won war with republic
+				#has won war with republic
+				has_country_flag = redrising_beat_republic
 			}
 		}
 	}

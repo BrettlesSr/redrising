@@ -18,6 +18,11 @@ planet_event = {
 			owner = {
 				set_country_flag = starting_event
 				set_country_flag = redrising_society
+				give_technology = { message = no tech = tech_gene_tailoring }
+				country_event = {
+					id = tutorial.64
+					days = 5
+				}
 			}
 			
 			while = {
@@ -44,7 +49,7 @@ planet_event = {
 					}
 					kill_pop = yes
 				}
-			}	
+			}
 			
 			planet_event = {
 				id = redrising.129

@@ -502,7 +502,7 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			has_technology = tech_gene_tailoring
+			has_technology = tech_gene_expressions
 		}
 		custom_tooltip = "redrising.418.a.tooltip"
 		end_event_chain = redrising_board_control_chain
@@ -523,7 +523,7 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			NOT = { has_technology = tech_gene_tailoring }
+			NOT = { has_technology = tech_gene_expressions }
 		}
 		custom_tooltip = "redrising.418.a.tooltip"
 		end_event_chain = redrising_board_control_chain
@@ -534,6 +534,10 @@ country_event = {
 			min = 120
 			max = 9999
 		}
-		give_technology = { tech = tech_gene_tailoring }
+		add_tech_option_or_research_effect = {
+			TECH = tech_gene_expressions
+			PROGRESS = 0.1
+			CATEGORY = society_research
+		}
 	}
 }

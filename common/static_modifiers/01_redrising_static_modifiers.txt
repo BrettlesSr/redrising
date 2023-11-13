@@ -1,7 +1,7 @@
 #modifiers for board of quality control event chain
 
 redrising_board_greens_deployed = {
-	empire_size_pops_mult = -0.1
+	empire_size_pops_mult = -0.05
 	icon = "gfx/interface/icons/modifiers/mod_country_admin_cap_mult.dds"
 }
 
@@ -22,15 +22,14 @@ redrising_board_blue_deployed = {
 }
 
 redrising_board_pink_deployed = {
-	pop_cat_ruler_happiness = 0.10
-	country_influence_produces_mult = 0.10
+	job_entertainer_per_pop = 0.05
 	icon = "gfx/interface/icons/modifiers/mod_pop_happiness.dds"
 	custom_tooltip = redrising_pinks_increase_decadence
 	show_only_custom_tooltip = no
 }
 
 redrising_board_white_deployed = {
-	planet_crime_add = -3
+	job_redrising_justiciar_per_pop = 0.025
 	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
 	custom_tooltip = redrising_whites_decrease_decadence
 	show_only_custom_tooltip = no

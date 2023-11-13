@@ -1,0 +1,3 @@
+concept_society_proles = {
+	icon = "gfx/interface/icons/text_icons/slavery.dds"
+}

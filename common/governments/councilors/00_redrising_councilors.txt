@@ -8,6 +8,6 @@ councilor_redrising_noble_lie = {
 	}
 	civic = civic_redrising_noble_lie
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.02
+		pop_category_slave_unity_upkeep_mult = -0.1
 	}
 }

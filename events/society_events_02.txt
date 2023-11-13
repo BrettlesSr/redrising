@@ -988,30 +988,45 @@ country_event = {
 			has_country_flag = redrising_institute_pscarred_built
 			has_country_flag = redrising_society
 		}
-		create_leader = {
-			class = general
-			species = owner_main_species
-			name = "NAME_darrow_au_andromedus"
-			skill = 3
-			set_age = 22
-			gender = male
-			background_ethic = ethic_militarist
-			traits = {
-				0 = subclass_general_invader
-				1 = 
-				2 = leader_trait_charismatic
-				trait = 
-				trait = trait_redrising_pscarred_general					
-			}
-		}
-		last_created_leader = {
-			set_leader_flag = redrising_darrow
-		}
 		hidden_effect = {
+			create_leader = {
+				class = general
+				species = owner_main_species
+				name = "NAME_darrow_au_andromedus"
+				skill = 4
+				set_age = 22
+				gender = male
+				background_ethic = ethic_militarist
+				traits = {
+					0 = subclass_general_invader
+					1 = leader_trait_redrising_peerless_scarred
+					2 = leader_trait_inspiring_2		
+					#todo destiny
+				}
+			}
+			last_created_leader = {
+				set_leader_flag = redrising_darrow
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization =  MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = last_created_leader
+				variable = {
+					type = name
+					localization = LEADER
+					scope = last_created_leader
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_veteran"
+				}
+			}
+
 			country_event = { 
 				id = redrising.33 days = 2900 random = 100 
 			}
-		}		
+		}
 	}
 	
 	option = {
@@ -1021,23 +1036,42 @@ country_event = {
 			NOT = { has_country_flag = redrising_institute_pscarred_built }
 			has_country_flag = redrising_society
 		}
-		create_leader = {
-			class = general
-			species = owner_main_species
-			name = "NAME_darrow_au_andromedus"
-			skill = 2
-			set_age = 22
-			gender = male
-			traits = {
-				trait = leader_trait_charismatic
-			}
-		}
-		last_created_leader = {
-			set_leader_flag = redrising_darrow
-		}
 		hidden_effect = {
+			create_leader = {
+				class = general
+				species = owner_main_species
+				name = "NAME_darrow_au_andromedus"
+				skill = 4
+				set_age = 22
+				gender = male
+				background_ethic = ethic_militarist
+				traits = {
+					0 = subclass_general_invader
+					2 = leader_trait_inspiring_2		
+					#todo destiny
+				}
+			}
+			last_created_leader = {
+				set_leader_flag = redrising_darrow
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization =  MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = last_created_leader
+				variable = {
+					type = name
+					localization = LEADER
+					scope = last_created_leader
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_veteran"
+				}
+			}
+
 			country_event = { 
-				id = redrising.33 days = 2900 random = 100
+				id = redrising.33 days = 2900 random = 100 
 			}
 		}
 	}
@@ -1049,7 +1083,7 @@ country_event = {
 		name = DOTDOTDOT
 		hidden_effect = {
 			country_event = { 
-				id = redrising.43 #todo, check if all checks like (has_country_flag = redrising_society) are OR between the origin and the civic
+				id = redrising.43
 			}
 		}
 	}
@@ -1142,7 +1176,7 @@ country_event = {
 
 #Phobos Address
 
-country_event = {
+situation_event = {
 	id = redrising.35
 	hide_window = no
 	is_triggered_only = yes
@@ -1150,6 +1184,9 @@ country_event = {
 	title = rising.35
 	desc = rising.35.desc
 	picture = GFX_evt_redrising_phobos_address
+
+	location = target
+	situation = this
 
 	immediate = {
 		if = {
@@ -1180,10 +1217,13 @@ country_event = {
 
 #Open War
 
-country_event = {
+situation_event = {
 	id = redrising.36
 	hide_window = yes
 	is_triggered_only = yes
+
+	location = target
+	situation = this
 
 	immediate = {
 		save_global_event_target_as = redrising_current_pre_rising_society
@@ -1913,6 +1953,7 @@ country_event = {
 	immediate = {
 			remove_modifier = redrising_red_rising
 			remove_modifier = redrising_secret_red
+			set_country_flag = redrising_beat_republic
 			add_modifier = { 
 				modifier = redrising_red_risen
 				days = 1800

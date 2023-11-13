@@ -28,7 +28,7 @@ civic_redrising_noble_lie = {
 
 	description = civic_redrising_noble_lie_effects
 	modifier = {
-		pop_cat_slave_political_power = -0.25
+		planet_jobs_slave_produces_mult = 0.10
 	}
 }
 

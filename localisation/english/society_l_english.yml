@@ -189,7 +189,7 @@
  name_list_SOCIETY1:0 "The Society of Man"
  origin_redrising_society:0 "Hierarchy of Colors"
  origin_redrising_society_desc:0 "The leaders of this society are descended from the early lunar colonists who resented the shackles and obligations of their governments and shareholders. They fought and won a war of extermination against their homeworld, establishing a society based on slavery across their solar system. They then further consolidated their rule through primitive surgical and genetic enhancements to themselves and to their slaves."
- origin_redrising_society_effects:0 "- Start the game with §Y13§! £pop Pops being of another, altered, subservient, species.\n- Start with the ability to §Hgenetically modify§! your £pop£ Pops.\n- Enables 'The Board of Quality Control' quest-line.\n- If the §BHierarchy of Colors§! origin is also active, the Darrow au Andromedus quest-line will also be active."
+ origin_redrising_society_effects:0 "- £pop£ §IPops§! with ['concept_society_proles'] Trait: 12\n- Enables 'The Board of Quality Control' quest-line.\n- If the §BHierarchy of Colors§! origin is also active, the Darrow au Andromedus quest-line will also be active.\n- $ADDITONAL_TECHNOLOGIES_STRING$ ['concept_gene_tailoring', £society£ $tech_gene_tailoring$]"
  civic_redrising_society_secondary_species:0 "Low Color Species"
  redrising_decadence_desc:0 "As your society grows more §Mdecadent§!, ruler upkeep and happiness increases, will primary species army damage falls."
  redrising_0_decadence:0 "0% Decadence"
