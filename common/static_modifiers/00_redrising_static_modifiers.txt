@@ -69,3 +69,10 @@ redrising_discovery_reduces_decadence = {
 	icon = "gfx/interface/icons/modifiers/mod_ship_anomaly_generation_chance.dds"
 	custom_tooltip = redrising_discovery_reduces_decadence_tooltip
 }
+
+agenda_redrising_slave_output_program_finish = {
+	planet_jobs_slave_produces_mult = 0.10
+	pop_cat_slave_political_power = -0.25
+	pop_category_slave_upkeep_mult = -0.10
+	pop_category_slave_happiness = 0.10
+}

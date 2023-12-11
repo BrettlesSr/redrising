@@ -18,7 +18,6 @@ country_event = {
 	immediate = {
 		if = { limit = {	has_valid_civic = civic_redrising_noble_lie
 							NOT = { has_country_flag = redrising_institute_offered }
-							has_country_flag = redrising_society
 							OR = {
 								has_ethic = ethic_fanatic_authoritarian
 								has_ethic = ethic_authoritarian
@@ -54,7 +53,6 @@ country_event = {
 	
 	immediate = {
 		if = { limit = { has_valid_civic = civic_redrising_noble_lie
-									has_country_flag = redrising_society
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
 										has_ethic = ethic_authoritarian
@@ -134,8 +132,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-	if = { limit = { has_valid_civic = civic_redrising_noble_lie
-									has_country_flag = redrising_society
+	if = { limit = { has_origin = origin_redrising_society
 									NOT = { has_country_flag = redrising_society_bodies_quest }
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
@@ -442,8 +439,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = { limit =	{has_valid_civic = civic_redrising_noble_lie
-									has_country_flag = redrising_society
+		if = { limit =	{has_origin = origin_redrising_society
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
 										has_ethic = ethic_authoritarian
@@ -948,7 +944,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = { limit = { has_country_flag = redrising_society }
+		if = { limit = { has_origin = origin_redrising_society
+	has_valid_civic = civic_redrising_noble_lie }
 			country_event = { id = redrising.33 }
 		}
 		else = { country_event = { id = redrising.43 }
@@ -986,11 +983,12 @@ country_event = {
 		custom_tooltip = "redrising.32.a.tooltip"
 		trigger = { 
 			has_country_flag = redrising_institute_pscarred_built
-			has_country_flag = redrising_society
+			has_origin = origin_redrising_society
+			has_valid_civic = civic_redrising_noble_lie
 		}
 		hidden_effect = {
 			create_leader = {
-				class = general
+				class = commander
 				species = owner_main_species
 				name = "NAME_darrow_au_andromedus"
 				skill = 4
@@ -998,10 +996,9 @@ country_event = {
 				gender = male
 				background_ethic = ethic_militarist
 				traits = {
-					0 = subclass_general_invader
+					0 = subclass_commander_general
 					1 = leader_trait_redrising_peerless_scarred
-					2 = leader_trait_inspiring_2		
-					#todo destiny
+					2 = leader_trait_butcher		
 				}
 			}
 			last_created_leader = {
@@ -1034,11 +1031,12 @@ country_event = {
 		custom_tooltip = "redrising.32.a.2.tooltip.no_scars"
 		trigger = {
 			NOT = { has_country_flag = redrising_institute_pscarred_built }
-			has_country_flag = redrising_society
+			has_origin = origin_redrising_society
+			has_valid_civic = civic_redrising_noble_lie
 		}
 		hidden_effect = {
 			create_leader = {
-				class = general
+				class = commander
 				species = owner_main_species
 				name = "NAME_darrow_au_andromedus"
 				skill = 4
@@ -1046,9 +1044,8 @@ country_event = {
 				gender = male
 				background_ethic = ethic_militarist
 				traits = {
-					0 = subclass_general_invader
-					2 = leader_trait_inspiring_2		
-					#todo destiny
+					0 = subclass_commander_general
+					1 = leader_trait_butcher	
 				}
 			}
 			last_created_leader = {
@@ -1078,7 +1075,8 @@ country_event = {
 
 	option = {
 		trigger = {
-			NOT = { has_country_flag = redrising_society }			
+			NAND = { has_origin = origin_redrising_society
+			has_valid_civic = civic_redrising_noble_lie }			
 		}
 		name = DOTDOTDOT
 		hidden_effect = {
@@ -1156,7 +1154,7 @@ country_event = {
 	immediate = {
 		redrising_grab_red_species = yes
 		if = { limit =	{	has_valid_civic = civic_redrising_noble_lie
-							has_country_flag = redrising_society
+							has_origin = origin_redrising_society
 							any_owned_pop = {
 								is_enslaved = yes
 							}
@@ -1197,7 +1195,7 @@ situation_event = {
 				has_country_flag = redrising_no_rising
 				}		
 				has_valid_civic = civic_redrising_noble_lie
-				has_country_flag = redrising_society
+				has_origin = origin_redrising_society
 				any_owned_pop = {
 					is_enslaved = yes
 				}
@@ -1432,15 +1430,16 @@ planet_event = { #rising
 							save_event_target_as = redrising_current_rising
 							country_event = { id = redrising.362 }
 							create_leader = { 
-								class = ruler
+								class = official
 								species = root.owner_species
 								name = "NAME_mustang_leader"
 								skill = 3
 								set_age = 22
 								gender = female
 								traits = {
-									trait = trait_ruler_deep_connections
-									trait = leader_trait_reformer
+									0 = subclass_official_diplomacy_councilor
+									1 = trait_ruler_deep_connections
+									2 = leader_trait_reformer
 								}
 							}
 							assign_leader = last_created_leader
@@ -1827,7 +1826,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_country_flag = redrising_society
+		has_valid_civic = civic_redrising_noble_lie
 	}
 
 	immediate = {		
@@ -1909,7 +1908,7 @@ country_event = {
 		if = {			
 			limit = {
 				any_country = {					
-					has_country_flag = redrising_society
+					has_valid_civic = civic_redrising_noble_lie
 					reverse_has_relation_flag = {
 						who = event_target:DestroyedRepublic
 						flag = redrising_rising_to_host_flag
@@ -1918,7 +1917,7 @@ country_event = {
 			}
 			random_country = {
 				limit = {
-					has_country_flag = redrising_society
+					has_valid_civic = civic_redrising_noble_lie
 					reverse_has_relation_flag = {
 						who = event_target:DestroyedRepublic
 						flag = redrising_rising_to_host_flag
@@ -1947,7 +1946,7 @@ country_event = {
 	picture = GFX_evt_victorious_army
 	
 	trigger = {
-		has_country_flag = redrising_society
+		has_valid_civic = civic_redrising_noble_lie
 	}
 
 	immediate = {
@@ -2007,7 +2006,7 @@ country_event = {
 	option = {
 		name = "redrising.39.b"
 		trigger = {	has_valid_civic = civic_redrising_noble_lie
-									has_country_flag = redrising_society
+									has_origin = origin_redrising_society
 									OR = {
 										has_ethic = ethic_fanatic_authoritarian
 										has_ethic = ethic_authoritarian
@@ -2024,15 +2023,16 @@ country_event = {
 			}
 		}
 		create_leader = {
-								class =  ruler
+								class = official
 								species = root.owner_species
 								name = "NAME_mustang_leader"
 								skill = 3
 								set_age = 22
 								gender = female
 								traits = {
-									trait = trait_ruler_deep_connections
-									trait = leader_trait_reformer
+									0 = subclass_official_diplomacy_councilor
+									1 = trait_ruler_deep_connections
+									2 = leader_trait_reformer
 								}
 							}		
 		hidden_effect = {
@@ -2140,7 +2140,6 @@ country_event = {
 	immediate = {
 		if = { 
 			limit = {
-				has_country_flag = redrising_society 
 				NOR = {
 					has_ethic = ethic_authoritarian
 					has_ethic = ethic_fanatic_authoritarian
@@ -2165,18 +2164,6 @@ country_event = {
 			every_owned_pop = {
 				remove_modifier = redrising_enlightened
 			}
-
-			remove_modifier = redrising_10_decadence
-			remove_modifier = redrising_9_decadence
-			remove_modifier = redrising_8_decadence
-			remove_modifier = redrising_7_decadence
-			remove_modifier = redrising_6_decadence
-			remove_modifier = redrising_5_decadence
-			remove_modifier = redrising_4_decadence
-			remove_modifier = redrising_3_decadence
-			remove_modifier = redrising_2_decadence
-			remove_modifier = redrising_1_decadence
-			remove_modifier = redrising_0_decadence
 
 			remove_modifier = redrising_board_greens_deployed
 			remove_modifier = redrising_board_silvers_deployed
@@ -2222,8 +2209,6 @@ country_event = {
 			abort_special_project = {
 				type = REDRISING_WHITES
 			}
-			end_situation = situation_redrising_decadence
-			end_situation = situation_redrising_the_rising
 		}
 	}
 	
@@ -2241,7 +2226,8 @@ country_event = {
 	immediate = {
 		if = {
 			limit =	{
-				has_country_flag = redrising_society 
+				has_origin = origin_redrising_society
+				has_valid_civic = civic_redrising_noble_lie
 				NOT = { has_country_flag = redrising_darrow_died }
 				from = { has_leader_flag = redrising_darrow }
 				NOT = { from = { has_leader_flag = redrising_darrow_defected }}
@@ -2274,7 +2260,10 @@ country_event = {
 	
 	trigger = {
 		any_country = {
-			has_country_flag = redrising_society 
+			OR = {
+				has_civic = civic_redrising_noble_lie
+				has_origin = origin_redrising_society
+			}
 			NOR = {	has_ethic = ethic_authoritarian
 					has_ethic = ethic_fanatic_authoritarian
 			}
@@ -2284,7 +2273,10 @@ country_event = {
 	immediate = {
 		every_country = {
 			limit = {
-				has_country_flag = redrising_society 
+				OR = {
+					has_civic = civic_redrising_noble_lie
+					has_origin = origin_redrising_society
+				}
 				NOR = {	has_ethic = ethic_authoritarian
 						has_ethic = ethic_fanatic_authoritarian
 				}
@@ -2397,87 +2389,6 @@ country_event = {
 }
 
 country_event = {
-	id = redrising.50
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		has_country_flag = redrising_institute_pscarred_built
-	}
-
-	immediate = {
-		from = {
-			if = {
-				limit = {
-					leader_class = admiral
-					num_traits < 3
-					NOR = {
-						has_leader_flag = has_gained_level_trait
-						has_trait = trait_redrising_pscarred_admiral
-					}
-				}
-				random_list = {
-					90 = { }
-					10 = {
-						modifier = {
-							factor = 1.5
-							has_level = 3
-						}
-						modifier = {
-							factor = 2
-							has_level = 4
-						}						
-						modifier = {
-							factor = 3
-							has_level > 4
-						}
-						add_trait = trait_redrising_pscarred_admiral
-						set_leader_flag = has_gained_level_trait
-						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
-						owner = {
-							country_event = { id = leader.22 }
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					leader_class = general
-					num_traits < 3
-					NOR = {
-						has_leader_flag = has_gained_level_trait
-						has_trait = trait_redrising_pscarred_general
-					}
-				}
-				random_list = {
-					90 = { }
-					10 = {
-						modifier = {
-							factor = 1.5
-							has_level = 3
-						}
-						modifier = {
-							factor = 2
-							has_level = 4
-						}						
-						modifier = {
-							factor = 3
-							has_level > 4
-						}
-						add_trait = trait_redrising_pscarred_general
-						set_leader_flag = has_gained_level_trait
-						set_timed_leader_flag = { flag = has_gained_trait days = 7 }
-						owner = {
-							country_event = { id = leader.24 }
-						}
-					}
-				}
-			}			
-		}
-	}
-}
-
-country_event = {
 	id = redrising.51
 	title = redrising.51
 	is_triggered_only = yes
@@ -2485,7 +2396,8 @@ country_event = {
 	picture = GFX_evt_pirate_armada
 
 	trigger = {
-		has_country_flag = redrising_society
+		has_origin = origin_redrising_society
+		has_valid_civic = civic_redrising_noble_lie
 		NOT = { has_country_flag = redrising_republic }
 		has_modifier = redrising_red_rising
 		any_owned_leader = {
@@ -2517,7 +2429,6 @@ country_event = {
 
 	trigger = {
 		has_country_flag = redrising_republic
-		NOT = { has_country_flag = redrising_society }
 		NOT = {
 			any_owned_leader = {
 				has_leader_flag = redrising_darrow

@@ -3,6 +3,6 @@ part = {
 	localization = "REDRISING_START_SCREEN_SOCIETY"
 	
 	trigger = {
-		has_country_flag = redrising_society
+		has_origin = origin_redrising_society
 	}
 }

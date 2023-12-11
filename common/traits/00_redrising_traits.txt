@@ -30,13 +30,6 @@ leader_trait_redrising_peerless_scarred = {
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = admiral
-		}
-		ship_fire_rate_mult = 0.05
-	}
-	triggered_modifier = {
-		potential = {
-			is_ruler = no
 			leader_class = scientist
 		}
 		science_ship_survey_speed = 0.10
@@ -44,14 +37,16 @@ leader_trait_redrising_peerless_scarred = {
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = general
+			leader_class = commander
 		}
 		army_damage_mult = 0.05
+		ship_fire_rate_mult = 0.05
+		army_collateral_damage_mult = 0.05
 	}
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = governor
+			leader_class = official
 		}
 		planet_jobs_slave_produces_mult = 0.1
 	}
@@ -68,7 +63,7 @@ leader_trait_redrising_peerless_scarred = {
 	leader_potential_add = {
 		is_pool_leader = yes # Starting trait only.
 	}
-	leader_class = { admiral scientist general governor }
+	leader_class = { commander scientist official }
 	selectable_weight = 10
 }
 
@@ -89,13 +84,6 @@ leader_trait_redrising_iron_gold = {
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = admiral
-		}
-		country_power_projection_influence_produces_add = 2
-	}
-	triggered_modifier = {
-		potential = {
-			is_ruler = no
 			leader_class = scientist
 		}
 		science_ship_survey_speed = 0.10
@@ -103,14 +91,14 @@ leader_trait_redrising_iron_gold = {
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = general
+			leader_class = commander
 		}
 		monthly_loyalty_from_subjects = 1
 	}
 	triggered_modifier = {
 		potential = {
 			is_ruler = no
-			leader_class = governor
+			leader_class = official
 		}
 		planet_jobs_slave_produces_mult = 0.25
 	}
@@ -121,7 +109,7 @@ leader_trait_redrising_iron_gold = {
 		pop_government_ethic_attraction = 0.35
 	}
 
-	leader_class = { admiral scientist general governor }
+	leader_class = { commander scientist official }
 	custom_tooltip_with_modifiers = leader_trait_redrising_iron_gold_effect
 	selectable_weight = 10
 	destiny_background_icon = "GFX_leader_background_destiny_1"

@@ -1,0 +1,16 @@
+agenda_redrising_slave_output_program = {
+	agenda_cost = 7000
+	potential = {
+		has_valid_civic = civic_redrising_noble_lie
+		has_country_flag = redrising_board_enable_agenda
+	}
+	allow = {
+		always = yes
+	}
+	modifier = {
+		planet_jobs_slave_produces_mult = 0.05
+		pop_cat_slave_political_power = -0.05
+		pop_category_slave_upkeep_mult = -0.05
+	}
+	finish_modifier = agenda_redrising_slave_output_program_finish
+}

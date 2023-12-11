@@ -35,7 +35,7 @@ special_project = {
 
 	requirements = {
 		fleet_power = 500
-		leader = admiral
+		leader = commander
 	}
 
 	on_success = {
