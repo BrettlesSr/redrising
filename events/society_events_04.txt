@@ -9,7 +9,7 @@ country_event = {
 	picture = GFX_evt_analyzing_artifacts
 
 	trigger = {
-		has_valid_civic = civic_redrising_noble_lie
+		has_origin = origin_redrising_society
 		is_ai = no
 		NOR = {
 			has_event_chain = redrising_board_control_chain

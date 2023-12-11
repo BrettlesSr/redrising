@@ -2,7 +2,13 @@ agenda_redrising_slave_output_program = {
 	agenda_cost = 7000
 	potential = {
 		has_valid_civic = civic_redrising_noble_lie
-		has_country_flag = redrising_board_enable_agenda
+		any_owned_leader = {
+			OR = {
+				is_councilor = yes
+				is_ruler = yes
+			}
+			has_trait = leader_trait_redrising_iron_gold
+		}
 	}
 	allow = {
 		always = yes

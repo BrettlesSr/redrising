@@ -504,6 +504,8 @@ country_event = {
 			effect = {
 				save_event_target_as = obsidian_rebels
 				set_country_flag = redrising_obsidian_rebels
+				
+
 				establish_communications_no_message = root.owner
 				root = {
 					owner = {
@@ -520,6 +522,12 @@ country_event = {
 			}
 		}
 	}
+
+	set_relation_flag = {
+		who = event_target:obsidian_rebels
+		flag = redrising_dark_revolt_host_to_rebels
+	}
+
 	every_owned_pop = {
 		limit = { is_same_species = event_target:obsidian_rebels }
 		planet = {
@@ -635,13 +643,20 @@ country_event = {
 				any_country = {						
 					has_country_flag = redrising_dark_revolt_begun						
 				}
-				has_country_flag = redrising_obsidian_rebels				
+				has_relation_flag = {
+					flag = redrising_dark_revolt_host_to_rebels
+					who = this
+				}
 			}
 			every_country = {
 				limit = {
-					has_country_flag = redrising_dark_revolt_begun				
+					has_country_flag = redrising_dark_revolt_begun			
+					has_relation_flag = {
+						flag = redrising_dark_revolt_host_to_rebels
+						who = this
+					}	
 				}
-				country_event = { id = redrising.18 } #todo, redo with flags
+				country_event = { id = redrising.18 }
 			}		
 		}
 	}
