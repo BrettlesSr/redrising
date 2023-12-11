@@ -99,37 +99,60 @@ situation_redrising_decadence = {
 	
 	monthly_progress = {
 		base = 0.1
+		complex_trigger_modifier = {
+			trigger = count_owned_leader
+			trigger_scope = owner
+			parameters = {
+				limit = {
+					is_councilor = yes
+					has_trait = leader_trait_redrising_iron_gold
+				}
+			}
+			mode = add
+			mult = -0.01
+			desc = redrising_iron_gold_leader_trait_decadence_situation
+		}
 		modifier = {
 			desc = redrising_institute_pscarred_built_desc
 			add = -0.05
-			has_country_flag = redrising_institute_pscarred_built
+			owner = {
+				has_country_flag = redrising_institute_pscarred_built
+			}
 		}
 		modifier = {
 			desc = redrising_discovery_reduces_decadence_set_desc
 			add = -0.05
-			has_modifier = redrising_discovery_reduces_decadence
+			owner = {
+				has_modifier = redrising_discovery_reduces_decadence
+			}
 		}
 		modifier = {
 			desc = redrising_board_pink_deployed_desc
 			add = 0.1
-			has_modifier = redrising_board_pink_deployed
+			owner = {
+				has_modifier = redrising_board_pink_deployed
+			}
 		}
 		modifier = {
 			desc = redrising_board_white_deployed_desc
 			add = -0.05
-			has_modifier = redrising_board_white_deployed
+			owner = {
+				has_modifier = redrising_board_white_deployed
+			}
+			
 		}
 		modifier = {
 			desc = redrising_board_control_chain_complete_desc
 			add = 0.05
-			has_country_flag = redrising_board_control_chain_complete
+			owner = {
+				has_country_flag = redrising_board_control_chain_complete
+			}
 		}
 		modifier = {
 			desc = redrising_approach_indulge_the_pixies_desc
 			add = 0.2
 			current_situation_approach = approach_redrising_decadence_indulge_the_pixies
 		}
-		
 		modifier = {
 			desc = redrising_approach_promote_iron_gold_desc
 			add = -0.2
@@ -268,7 +291,9 @@ situation_redrising_the_rising = {
 		modifier = {
 			desc = redrising_secret_red_happened
 			add = 2
-			has_modifier = redrising_secret_red
+			owner = {
+				has_modifier = redrising_secret_red
+			}
 		}
 		modifier = {
 			desc = approach_redrising_the_rising_crackdowns_desc

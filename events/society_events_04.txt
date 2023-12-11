@@ -41,9 +41,9 @@ country_event = {
 	trigger = {
 		has_event_chain = "redrising_board_control_chain"
 		NOR = {
-		 has_country_flag = redrising_board_colony_quest_0
-		 has_country_flag = redrising_board_colony_quest_1
-		 has_country_flag = redrising_board_colony_quest_2
+			has_country_flag = redrising_board_colony_quest_0
+			has_country_flag = redrising_board_colony_quest_1
+			has_country_flag = redrising_board_colony_quest_2
 		}
 	}
 	

@@ -74,5 +74,5 @@ agenda_redrising_slave_output_program_finish = {
 	planet_jobs_slave_produces_mult = 0.10
 	pop_cat_slave_political_power = -0.25
 	pop_category_slave_upkeep_mult = -0.10
-	pop_category_slave_happiness = 0.10
+	pop_cat_slave_happiness = 0.10
 }
