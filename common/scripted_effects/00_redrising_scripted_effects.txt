@@ -60,3 +60,63 @@ redrising_grab_red_species = {
 		}
 	}
 }
+
+redrising_grab_obsidian_species = {
+	if = {
+		limit = {
+			any_owned_pop = {
+				has_pop_flag = redrising_obsidian_pop
+			}
+		}
+		
+		random_owned_pop = {
+			limit = {
+				has_pop_flag = redrising_obsidian_pop
+			}
+			save_event_target_as = redrising_obsidian
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_pop = {
+				is_enslaved = yes
+				is_robot_pop = no
+				NOT = { is_same_species = ROOT }
+				has_trait = trait_redrising_warlike
+			}
+		}
+		
+		random_owned_pop = {
+			limit = {
+				is_enslaved = yes
+				is_robot_pop = no
+				NOT = { is_same_species = ROOT }
+				has_trait = trait_redrising_warlike
+			}
+			save_event_target_as = redrising_obsidian
+		}
+	}
+	else_if = {
+		limit = {
+			any_owned_pop = {
+				is_enslaved = yes
+				is_robot_pop = no
+				NOT = { is_same_species = ROOT }
+			}
+		}
+		
+		random_owned_pop = {
+			limit = {
+				is_enslaved = yes
+				is_robot_pop = no
+				NOT = { is_same_species = ROOT }
+			}
+			save_event_target_as = redrising_obsidian
+		}
+	}
+	else = {
+		random_owned_pop = {
+			save_event_target_as = redrising_red
+		}
+	}
+}

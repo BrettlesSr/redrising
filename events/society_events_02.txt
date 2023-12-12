@@ -6,7 +6,6 @@ namespace = redrising
 @timebetweenunresteventsdays = 1500
 @timetodarkrevoltdays = 7800
 @timetofreedomdays = 3600
-
 #Institute Questline
 country_event = {
 	id = redrising.1
@@ -225,7 +224,7 @@ country_event = {
 				}
 			}
 			last_created_species = {
-				save_global_event_target_as = obsidian_redrising
+				save_event_target_as = obsidian_redrising
 			}
 			event_target:obsidian_planet = {
 				while = {
@@ -237,6 +236,12 @@ country_event = {
 						}
 					}
 				}
+			}
+			every_owned_pop = {
+				limit = {
+					is_same_species = last_created_species
+				}
+				set_pop_flag = redrising_obsidian_pop
 			}
 			last_created_species = {
 				set_citizenship_type = {
@@ -303,7 +308,7 @@ country_event = {
 			every_owned_planet = {
 				add_modifier = {
 					modifier = redrising_overstretched_grey_legions
-					days = 3000
+					days = 3600
 				}
 			}
 		}
@@ -452,10 +457,10 @@ country_event = {
 				OR = {
 					has_ethic = ethic_fanatic_authoritarian
 					has_ethic = ethic_authoritarian
-					any_owned_pop = {
-						is_same_species = event_target:obsidian_redrising
-						is_enslaved = yes
-					}
+				}
+				any_owned_pop = {
+					has_trait = trait_redrising_warlike
+					is_enslaved = yes
 				}
 			}
 			country_event = {
@@ -496,6 +501,7 @@ country_event = {
 	picture = GFX_evt_ground_combat
 	immediate = {
 		set_country_flag = redrising_dark_revolt_begun
+		redrising_grab_obsidian_species = yes
 		capital_scope = {
 			create_rebels = {
 				name = obsidian_rebels
@@ -509,7 +515,7 @@ country_event = {
 					civic = civic_warrior_culture
 				}
 				origin = origin_separatists
-				species = event_target:obsidian_redrising
+				species = event_target:redrising_obsidian
 				flag = random
 				effect = {
 					save_event_target_as = obsidian_rebels
@@ -550,14 +556,14 @@ country_event = {
 				}
 				create_army = {
 					owner = event_target:obsidian_rebels
-					species = event_target:obsidian_redrising
+					species = event_target:redrising_obsidian
 					type = "assault_army"
 				}
 				random_list = {
 					20 = {
 						create_army = {
 							owner = event_target:obsidian_rebels
-							species = event_target:obsidian_redrising
+							species = event_target:redrising_obsidian
 							type = "assault_army"
 						}
 					}
@@ -604,10 +610,11 @@ country_event = {
 		name = "redrising.18.a"
 		custom_tooltip = redrising.18.a.tooltip
 		hidden_effect = {
+			redrising_grab_obsidian_species = yes
 			every_owned_pop = {
 				if = {
 					limit = {
-						is_same_species = event_target:obsidian_redrising
+						is_same_species = event_target:redrising_obsidian
 					}
 					wipe_pop_ethos = yes
 					pop_change_ethic = ethic_spiritualist
@@ -615,14 +622,9 @@ country_event = {
 			}
 			every_owned_planet = {
 				modify_species = {
-					species = event_target:obsidian_redrising
+					species = event_target:redrising_obsidian
 					remove_trait = trait_deviants
-				}
-				last_created_species = {
-					save_global_event_target_as = obsidian_redrising_2
-				}
-				planet_event = {
-					id = redrising.20
+					add_trait = trait_nonadaptive
 				}
 			}
 		}
@@ -635,12 +637,12 @@ country_event = {
 			every_owned_pop = {
 				if = {
 					limit = {
-						is_same_species = event_target:obsidian_redrising
+						is_same_species = event_target:redrising_obsidian
 					}
 					set_citizenship_type = {
 						country = root
 						type = citizenship_purge
-						cooldown = no
+						cooldown = yes
 					}
 				}
 			}
@@ -681,17 +683,18 @@ country_event = {
 	}
 }
 
-planet_event = {
-	id = redrising.20
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		modify_species = {
-			species = event_target:obsidian_redrising_2
-			add_trait = trait_nonadaptive
-		}
-	}
-}
+# removed to test
+# planet_event = {
+# 	id = redrising.20
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		modify_species = {
+# 			species = event_target:obsidian_redrising_2
+# 			add_trait = trait_nonadaptive
+# 		}
+# 	}
+# }
 
 #The Rising Event Chain
 #Gateway
@@ -763,32 +766,38 @@ country_event = {
 }
 
 #Unrest events 1-6
-country_event = {
+situation_event = {
 	id = redrising.25
 	hide_window = no
 	is_triggered_only = yes
 	trigger = {
-		has_valid_civic = civic_redrising_noble_lie
+		owner = {
+			has_valid_civic = civic_redrising_noble_lie
+		}
 	}
 	title = rising.25
 	desc = rising.25.desc
 	picture = GFX_evt_redrising_ares_face
 	show_sound = event_public_unrest
 	immediate = {
-		redrising_grab_red_species = yes
-		set_country_flag = redrising_ares_insurrecting_1
+		owner = {
+			redrising_grab_red_species = yes
+			set_country_flag = redrising_ares_insurrecting_1
+		}
 	}
 	option = {
 		name = "redrising.25.a"
 		custom_tooltip = redrising.25.a.tooltip
 		hidden_effect = {
-			while = {
-				count = 3
-				random_owned_pop = {
-					limit = {
-						is_enslaved = yes
+			owner = {
+				while = {
+					count = 3
+					random_owned_pop = {
+						limit = {
+							is_enslaved = yes
+						}
+						kill_pop = yes
 					}
-					kill_pop = yes
 				}
 			}
 		}
@@ -797,18 +806,20 @@ country_event = {
 		name = "redrising.25.b"
 		custom_tooltip = redrising.25.b.tooltip
 		hidden_effect = {
-			while = {
-				count = 3
-				random_owned_pop = {
-					limit = {
-						is_enslaved = yes
-						NOT = {
-							has_modifier = redrising_enlightened
+			owner = {
+				while = {
+					count = 3
+					random_owned_pop = {
+						limit = {
+							is_enslaved = yes
+							NOT = {
+								has_modifier = redrising_enlightened
+							}
 						}
-					}
-					add_modifier = {
-						modifier = redrising_enlightened
-						days = 3600
+						add_modifier = {
+							modifier = redrising_enlightened
+							days = 3600
+						}
 					}
 				}
 			}
@@ -816,7 +827,7 @@ country_event = {
 	}
 }
 
-country_event = {
+situation_event = {
 	id = redrising.26
 	hide_window = no
 	is_triggered_only = yes
@@ -826,23 +837,28 @@ country_event = {
 	picture = GFX_evt_burning_settlement
 	immediate = {
 		redrising_grab_red_species = yes
-		set_country_flag = redrising_ares_insurrecting_2
+		owner = {
+			set_country_flag = redrising_ares_insurrecting_2
+		}
 	}
 	option = {
 		name = "redrising.26.a"
+		add_situation_progress = 5
 		custom_tooltip = "redrising.26.a.tooltip"
 		hidden_effect = {
-			every_owned_planet = {
-				add_modifier = {
-					modifier = redrising_unrest_bombing
-					days = 1800
+			owner = {
+				every_owned_planet = {
+					add_modifier = {
+						modifier = redrising_unrest_bombing
+						days = 1800
+					}
 				}
 			}
 		}
 	}
 }
 
-country_event = {
+situation_event = {
 	id = redrising.27
 	hide_window = no
 	is_triggered_only = yes
@@ -851,27 +867,32 @@ country_event = {
 	picture = GFX_evt_pirate_armada
 	show_sound = event_public_unrest
 	immediate = {
-		set_country_flag = redrising_ares_insurrecting_3
+		owner = {
+			set_country_flag = redrising_ares_insurrecting_3
+		}
 	}
 	option = {
 		name = "redrising.27.a"
-		add_resource = {
-			unity = -1000
+		add_situation_progress = 5
+		owner = {
+			set_country_flag = redrising_conspiracy_grows
 		}
-		set_country_flag = redrising_conspiracy_grows
 		custom_tooltip = redrising.27.a.tooltip
 	}
 	option = {
 		name = "redrising.27.b"
-		add_modifier = {
-			modifier = redrising_unrest_embarrasment
-			days = 3600
+		add_situation_progress = -5
+		owner = {
+			add_modifier = {
+				modifier = redrising_unrest_embarrasment
+				days = 3600
+			}
 		}
 		custom_tooltip = redrising.27.b.tooltip
 	}
 }
 
-country_event = {
+situation_event = {
 	id = redrising.28
 	hide_window = no
 	is_triggered_only = yes
@@ -880,33 +901,35 @@ country_event = {
 	picture = GFX_evt_redrising_domes
 	show_sound = event_air_raid_siren
 	immediate = {
-		set_country_flag = redrising_ares_insurrecting_4
-		capital_scope = {
-			solar_system = {
-				if = {
-					limit = {
-						any_system_planet = {
-							is_planet_class = pc_nuked
-							is_capital = no
-							is_colony = no
+		owner = {
+			set_country_flag = redrising_ares_insurrecting_4
+			capital_scope = {
+				solar_system = {
+					if = {
+						limit = {
+							any_system_planet = {
+								is_planet_class = pc_nuked
+								is_capital = no
+								is_colony = no
+							}
+						}
+						random_system_planet = {
+							limit = {
+								is_planet_class = pc_nuked
+								is_capital = no
+								is_colony = no
+							}
+							save_event_target_as = redrising_earth
 						}
 					}
-					random_system_planet = {
-						limit = {
-							is_planet_class = pc_nuked
-							is_capital = no
-							is_colony = no
+					else = {
+						random_system_planet = {
+							limit = {
+								is_capital = no
+								is_colony = no
+							}
+							save_event_target_as = redrising_earth
 						}
-						save_event_target_as = redrising_earth
-					}
-				}
-				else = {
-					random_system_planet = {
-						limit = {
-							is_capital = no
-							is_colony = no
-						}
-						save_event_target_as = redrising_earth
 					}
 				}
 			}
@@ -914,19 +937,22 @@ country_event = {
 	}
 	option = {
 		name = "redrising.28.a"
+		add_situation_progress = 5
 		custom_tooltip = "redrising.28.a.tooltip"
 		hidden_effect = {
-			every_owned_planet = {
-				add_modifier = {
-					modifier = redrising_unrest_prison
-					days = 2400
+			owner = {
+				every_owned_planet = {
+					add_modifier = {
+						modifier = redrising_unrest_prison
+						days = 2400
+					}
 				}
 			}
 		}
 	}
 }
 
-country_event = {
+situation_event = {
 	id = redrising.29
 	hide_window = no
 	is_triggered_only = yes
@@ -934,18 +960,23 @@ country_event = {
 	desc = rising.29.desc
 	picture = GFX_evt_synth_sabotage
 	immediate = {
-		set_country_flag = redrising_ares_insurrecting_5
+		owner = {
+			set_country_flag = redrising_ares_insurrecting_5
+		}
 	}
 	option = {
 		name = "redrising.29.b"
-		add_modifier = {
-			modifier = redrising_unrest_crash
-			days = 1800
+		add_situation_progress = 5
+		owner = {
+			add_modifier = {
+				modifier = redrising_unrest_crash
+				days = 1800
+			}
 		}
 	}
 }
 
-country_event = {
+situation_event = {
 	id = redrising.30
 	hide_window = no
 	is_triggered_only = yes
@@ -955,20 +986,26 @@ country_event = {
 	show_sound = event_public_unrest
 	immediate = {
 		redrising_grab_red_species = yes
-		set_country_flag = redrising_ares_insurrecting_6
+		owner = {
+			set_country_flag = redrising_ares_insurrecting_6
+		}
 	}
 	option = {
 		name = "redrising.30.a"
-		add_modifier = {
-			modifier = redrising_unrest_crackdown
-			days = 3600
+		owner = {
+			add_modifier = {
+				modifier = redrising_unrest_crackdown
+				days = 3600
+			}
 		}
 	}
 	option = {
 		name = "redrising.30.b"
-		add_modifier = {
-			modifier = redrising_unrest_patience
-			days = 3600
+		owner = {
+			add_modifier = {
+				modifier = redrising_unrest_patience
+				days = 3600
+			}
 		}
 	}
 }
@@ -1274,31 +1311,7 @@ situation_event = {
 		save_global_event_target_as = redrising_current_pre_rising_society
 		owner = {
 			set_country_flag = no_machine_uprising
-		set_country_flag = redrising_no_rising
-		if = {
-			limit = {
-				any_owned_planet = {
-					any_owned_pop = {
-						is_enslaved = yes
-					}
-					is_capital = no
-					exists = sector
-				}
-			}
-			random_owned_planet = {
-				limit = {
-					any_owned_pop = {
-						is_enslaved = yes
-					}
-					is_capital = no
-					exists = sector
-				}
-				planet_event = {
-					id = redrising.361
-				}
-			}
-		}
-		else = {
+			set_country_flag = redrising_no_rising
 			if = {
 				limit = {
 					any_owned_planet = {
@@ -1306,6 +1319,7 @@ situation_event = {
 							is_enslaved = yes
 						}
 						is_capital = no
+						exists = sector
 					}
 				}
 				random_owned_planet = {
@@ -1314,6 +1328,7 @@ situation_event = {
 							is_enslaved = yes
 						}
 						is_capital = no
+						exists = sector
 					}
 					planet_event = {
 						id = redrising.361
@@ -1321,18 +1336,21 @@ situation_event = {
 				}
 			}
 			else = {
-				# random sector
 				if = {
 					limit = {
 						any_owned_planet = {
+							any_owned_pop = {
+								is_enslaved = yes
+							}
 							is_capital = no
-							exists = sector
 						}
 					}
 					random_owned_planet = {
 						limit = {
+							any_owned_pop = {
+								is_enslaved = yes
+							}
 							is_capital = no
-							exists = sector
 						}
 						planet_event = {
 							id = redrising.361
@@ -1340,18 +1358,37 @@ situation_event = {
 					}
 				}
 				else = {
-					# random core
-					random_owned_planet = {
+					# random sector
+					if = {
 						limit = {
-							is_capital = no
+							any_owned_planet = {
+								is_capital = no
+								exists = sector
+							}
 						}
-						planet_event = {
-							id = redrising.361
+						random_owned_planet = {
+							limit = {
+								is_capital = no
+								exists = sector
+							}
+							planet_event = {
+								id = redrising.361
+							}
+						}
+					}
+					else = {
+						# random core
+						random_owned_planet = {
+							limit = {
+								is_capital = no
+							}
+							planet_event = {
+								id = redrising.361
+							}
 						}
 					}
 				}
 			}
-		}
 		}
 	}
 }
@@ -1549,6 +1586,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		redrising_grab_obsidian_species = yes
 		# saving uprising and host as event targets
 		save_event_target_as = redrising_current_rising
 		from.owner = {
@@ -1658,7 +1696,7 @@ country_event = {
 					create_army = {
 						owner = root
 						type = "assault_army"
-						species = event_target:obsidian_redrising
+						species = event_target:redrising_obsidian
 					}
 				}
 			}
@@ -1739,7 +1777,7 @@ country_event = {
 							create_army = {
 								owner = root
 								type = "assault_army"
-								species = event_target:obsidian_redrising
+								species = event_target:redrising_obsidian
 							}
 						}
 					}
@@ -2131,7 +2169,18 @@ country_event = {
 	hide_window = yes
 	fire_only_once = no
 	is_triggered_only = yes
+	trigger = {
+		any_situation = {
+			is_situation_type = situation_redrising_the_rising
+		}
+	}
 	immediate = {
+		random_situation = {
+			limit = {
+				is_situation_type = situation_redrising_the_rising
+			}
+			save_event_target_as = situation_redrising_the_rising
+		}
 		if = {
 			limit = {
 				has_country_flag = redrising_ares_insurrecting_0
@@ -2142,8 +2191,10 @@ country_event = {
 						factor = 0
 						has_country_flag = redrising_ares_insurrecting_1
 					}
-					country_event = {
-						id = redrising.25
+					event_target:situation_redrising_the_rising = {
+						situation_event = {
+							id = redrising.25
+						}
 					}
 					country_event = {
 						id = redrising.40
@@ -2156,8 +2207,10 @@ country_event = {
 						factor = 0
 						has_country_flag = redrising_ares_insurrecting_2
 					}
-					country_event = {
-						id = redrising.26
+					event_target:situation_redrising_the_rising = {
+						situation_event = {
+							id = redrising.26
+						}
 					}
 					country_event = {
 						id = redrising.40
@@ -2170,8 +2223,10 @@ country_event = {
 						factor = 0
 						has_country_flag = redrising_ares_insurrecting_3
 					}
-					country_event = {
-						id = redrising.27
+					event_target:situation_redrising_the_rising = {
+						situation_event = {
+							id = redrising.27
+						}
 					}
 					country_event = {
 						id = redrising.40
@@ -2184,8 +2239,10 @@ country_event = {
 						factor = 0
 						has_country_flag = redrising_ares_insurrecting_4
 					}
-					country_event = {
-						id = redrising.28
+					event_target:situation_redrising_the_rising = {
+						situation_event = {
+							id = redrising.28
+						}
 					}
 					country_event = {
 						id = redrising.40
@@ -2198,8 +2255,10 @@ country_event = {
 						factor = 0
 						has_country_flag = redrising_ares_insurrecting_5
 					}
-					country_event = {
-						id = redrising.29
+					event_target:situation_redrising_the_rising = {
+						situation_event = {
+							id = redrising.29
+						}
 					}
 					country_event = {
 						id = redrising.40
@@ -2212,8 +2271,10 @@ country_event = {
 						factor = 0
 						has_country_flag = redrising_ares_insurrecting_6
 					}
-					country_event = {
-						id = redrising.30
+					event_target:situation_redrising_the_rising = {
+						situation_event = {
+							id = redrising.30
+						}
 					}
 					country_event = {
 						id = redrising.40
