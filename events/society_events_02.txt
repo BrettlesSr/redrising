@@ -1308,7 +1308,6 @@ situation_event = {
 	location = target
 	situation = this
 	immediate = {
-		save_global_event_target_as = redrising_current_pre_rising_society
 		owner = {
 			set_country_flag = no_machine_uprising
 			set_country_flag = redrising_no_rising
@@ -1419,7 +1418,7 @@ planet_event = {
 	is_triggered_only = yes
 	desc = {
 		trigger = {
-			event_target:redrising_current_pre_rising_society = {
+			owner = {
 				has_country_flag = redrising_obsidians_deployed
 			}
 		}
@@ -1428,7 +1427,7 @@ planet_event = {
 	desc = {
 		trigger = {
 			NOT = {
-				event_target:redrising_current_pre_rising_society = {
+				owner = {
 					has_country_flag = redrising_obsidians_deployed
 				}
 			}
@@ -1450,16 +1449,12 @@ planet_event = {
 		}
 	}
 	immediate = {
-		event_target:redrising_current_pre_rising_society = {
+		owner = {
 			redrising_grab_red_species = yes
-		}
-		event_target:redrising_current_pre_rising_society = {
 			country_event = {
 				id = redrising.51
 				days = 5
 			}
-		}
-		owner = {
 			save_event_target_as = redrising_the_rising_originator
 		}
 		set_planet_flag = redrising_rising_capital@root.owner

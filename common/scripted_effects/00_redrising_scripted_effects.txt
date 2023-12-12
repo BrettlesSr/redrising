@@ -116,7 +116,7 @@ redrising_grab_obsidian_species = {
 	}
 	else = {
 		random_owned_pop = {
-			save_event_target_as = redrising_red
+			save_event_target_as = redrising_obsidian
 		}
 	}
 }
