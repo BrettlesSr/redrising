@@ -38,7 +38,14 @@ origin_redrising_society = {
 	picture = GFX_origin_redrising_society
 
 	possible = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		ethics = { 
+			NOT = { value = ethic_gestalt_consciousness }
+			NOR = { 
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian 
+				value = ethic_fanatic_egalitarian
+			}
+		}
 		civics = { NOT = { value = civic_fanatic_purifiers } }
 	}
 

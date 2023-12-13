@@ -149,12 +149,12 @@ situation_redrising_decadence = {
 			}
 		}
 		modifier = {
-			desc = redrising_approach_indulge_the_pixies_desc
+			desc = string_current_approach
 			add = 0.2
 			current_situation_approach = approach_redrising_decadence_indulge_the_pixies
 		}
 		modifier = {
-			desc = redrising_approach_promote_iron_gold_desc
+			desc = string_current_approach
 			add = -0.2
 			current_situation_approach = approach_redrising_decadence_promote_iron_gold
 		}
@@ -296,12 +296,12 @@ situation_redrising_the_rising = {
 			}
 		}
 		modifier = {
-			desc = approach_redrising_the_rising_crackdowns_desc
+			desc = string_current_approach
 			add = -0.5
 			current_situation_approach = approach_redrising_the_rising_crackdowns
 		}
 		modifier = {
-			desc = approach_redrising_the_rising_infiltrate_desc
+			desc = string_current_approach
 			add = -0.25
 			current_situation_approach = approach_redrising_the_rising_infiltrate
 		}
