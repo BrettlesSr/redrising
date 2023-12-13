@@ -1,3 +1,38 @@
+[texturehandler.cpp:174]: Texture Handler encountered missing texture file: gfx/interface/icons/jobs/job_redrising_justiciar.dds
+[00:16:00][texturehandler.cpp:227]: Couldn't find texture file: gfx/interface/icons/jobs/job_redrising_justiciar.dds.
+[00:16:00][spritetype.cpp:336]: Error initialising texture: gfx/interface/icons/jobs/job_redrising_justiciar.dds for spritetype GFX_text_job_redrising_justiciar
+[00:16:00][modifier.cpp:1840]: Missing modifier icon "gfx/interface/icons/modifiers/mod_job_redrising_justiciar_add.dds"
+[00:16:01][pdxmodifier.h:549]: Modifier has entry not allowed by category:  file: common/situations/redrising_situations.txt line: 333
+[00:16:02][persistent.cpp:46]: Error: "Unexpected token: destiny_background_icon, near line: 115
+" in file: "common/traits/00_redrising_traits.txt" near line: 115
+[00:16:03][job_type.cpp:703]: Job redrising_justiciar is missing texture gfx/interface/icons/jobs/job_redrising_justiciar.dds
+[00:16:03][council_agenda.cpp:58]: Missing sprite for council agenda, expected sprite "GFX_council_agenda_icon_agenda_redrising_slave_output_program"
+[00:16:03][situation_type.cpp:310]: Missing situation localization key: stage_0
+[00:16:03][situation_type.cpp:346]: Situation Approach approach_redrising_the_rising_do_nothing in Situation situation_redrising_the_rising lacks any effects, this will not display well. It needs at least a custom tooltip in on_select
+[00:16:03][situation_type.cpp:310]: Missing situation localization key: prelude
+[00:16:03][situation_type.cpp:310]: Missing situation localization key: simmering
+[00:16:03][situation_type.cpp:310]: Missing situation localization key: crisis
+[00:16:03][situation_type.cpp:310]: Missing situation localization key: open_war
+[00:16:05][trigger.cpp:578]: Invalid Scope type for trigger 'any_owned_pop'.  file: scripted effect redrising_grab_red_species at file: events/society_events_02.txt line: 839 line: 1.
+Current Scope: situation
+Supported Scopes: planet country pop_faction sector
+
+[00:16:05][effect.cpp:851]: Invalid Scope type for effect 'random_owned_pop'.  file: scripted effect redrising_grab_red_species at file: events/society_events_02.txt line: 839 line: 1.
+Current Scope: situation
+Supported Scopes: planet country pop_faction sector
+
+[00:16:05][trigger.cpp:578]: Invalid Scope type for trigger 'any_owned_pop'.  file: scripted effect redrising_grab_red_species at file: events/society_events_02.txt line: 988 line: 1.
+Current Scope: situation
+Supported Scopes: planet country pop_faction sector
+
+[00:16:05][effect.cpp:851]: Invalid Scope type for effect 'random_owned_pop'.  file: scripted effect redrising_grab_red_species at file: events/society_events_02.txt line: 988 line: 1.
+Current Scope: situation
+Supported Scopes: planet country pop_faction sector
+
+[00:16:05][modifier.cpp:1544]: mod_pop_category_slave_unity_upkeep_add modifier is used but not localized!
+[00:16:05][modifier.cpp:1544]: mod_pop_category_slave_unity_upkeep_mult modifier is used but not localized!
+[00:16:05][modifier.cpp:1544]: mod_job_redrising_justiciar_per_pop modifier is used but not localized!
+
 update workshop
 testing
     check if correct slavery is chosen by default and ai
