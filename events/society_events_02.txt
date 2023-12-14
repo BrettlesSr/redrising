@@ -836,8 +836,8 @@ situation_event = {
 	desc = rising.26.desc
 	picture = GFX_evt_burning_settlement
 	immediate = {
-		redrising_grab_red_species = yes
 		owner = {
+			redrising_grab_red_species = yes
 			set_country_flag = redrising_ares_insurrecting_2
 		}
 	}
@@ -985,8 +985,8 @@ situation_event = {
 	picture = GFX_evt_smugglers_in_bar
 	show_sound = event_public_unrest
 	immediate = {
-		redrising_grab_red_species = yes
 		owner = {
+			redrising_grab_red_species = yes
 			set_country_flag = redrising_ares_insurrecting_6
 		}
 	}

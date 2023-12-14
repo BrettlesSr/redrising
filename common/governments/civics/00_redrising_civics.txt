@@ -49,7 +49,7 @@ origin_redrising_society = {
 		civics = { NOT = { value = civic_fanatic_purifiers } }
 	}
 
-	description = civic_tooltip_syncretic_evolution_effects
+	description = civic_tooltip_redrising_evolution_effects
 
 	has_secondary_species = {	# see game_start.11
 		title = civic_redrising_society_secondary_species

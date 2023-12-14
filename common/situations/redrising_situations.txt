@@ -172,8 +172,11 @@ situation_redrising_decadence = {
 		name = approach_redrising_decadence_indulge_the_pixies
 		icon = GFX_situation_approach_amenities
 		icon_background = GFX_situation_approach_bg_green
-		triggered_target_modifier = {
-			
+		modifier = {
+			planet_amenities_mult = 0.05
+		}
+		on_select = {
+			custom_tooltip = approach_redrising_decadence_indulge_the_pixies_effect
 		}
 		resources = {
 			category = situations
@@ -205,7 +208,9 @@ situation_redrising_decadence = {
 		triggered_target_modifier = {
 			
 		}
-
+		on_select = {
+			custom_tooltip = approach_redrising_decadence_do_nothing_effect
+		}
 		ai_weight = {
 			base = 1.5
 		}
@@ -215,8 +220,11 @@ situation_redrising_decadence = {
 		name = approach_redrising_decadence_promote_iron_gold
 		icon = GFX_situation_approach_fist
 		icon_background = GFX_situation_approach_bg_red
-		triggered_target_modifier = {
+		modifier = {
 			pop_citizen_happiness = -0.1
+		}
+		on_select = {
+			custom_tooltip = approach_redrising_decadence_promote_iron_gold_effect
 		}
 		ai_weight = {
 			base = 1
@@ -241,23 +249,23 @@ situation_redrising_the_rising = {
 	}
 
 	stages = {
-		prelude = {
+		redrising_the_rising_prelude = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { 
+			modifier = { 
 				planet_stability_add = -1
 			}
 			end = 20
 		}
-		simmering = {
+		redrising_the_rising_simmering = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { 
+			modifier = { 
 				planet_stability_add = -3
 			}
 			end = 80
 		}
-		crisis = {
+		redrising_the_rising_crisis = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_red
 			on_first_enter = {
@@ -266,10 +274,10 @@ situation_redrising_the_rising = {
 			}
 			end = 90
 		}
-		open_war = {
+		redrising_the_rising_open_war = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_red
-			target_modifier = { 
+			modifier = { 
 				pop_government_ethic_attraction = -0.25
 				planet_stability_add = -10
 			}
@@ -286,7 +294,7 @@ situation_redrising_the_rising = {
 		modifier = {
 			desc = redrising_phobos_address_happened
 			add = 10
-			current_stage = crisis
+			current_stage = redrising_the_rising_crisis
 		}
 		modifier = {
 			desc = redrising_secret_red_happened
@@ -314,6 +322,9 @@ situation_redrising_the_rising = {
 		triggered_target_modifier = {
 			pop_citizen_happiness = -0.10
 		}
+		on_select = {
+			custom_tooltip = approach_redrising_the_rising_crackdowns_effect
+		}
 		ai_weight = {
 			base = 1
 			modifier = {
@@ -329,8 +340,11 @@ situation_redrising_the_rising = {
 		name = approach_redrising_the_rising_infiltrate
 		icon = GFX_situation_approach_suspicious
 		icon_background = GFX_situation_approach_bg_yellow
-		triggered_target_modifier = {
+		modifier = {
 			espionage_operation_cost_mult = 0.2
+		}
+		on_select = {
+			custom_tooltip = approach_redrising_the_rising_infiltrate_effect
 		}
 		ai_weight = {
 			base = 1
@@ -348,6 +362,9 @@ situation_redrising_the_rising = {
 		icon = GFX_situation_approach_this_is_fine
 		icon_background = GFX_situation_approach_bg_green
 		default = yes
+		on_select = {
+			custom_tooltip = approach_redrising_the_rising_do_nothing_effect
+		}
 		ai_weight = {
 			base = 1.5
 			modifier = {

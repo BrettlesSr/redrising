@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_redrising_slave_output_program"
+		texturefile = "gfx/interface/icons/agenda_icons/agenda_redrising_slave_output_program.dds"
+	}
+}

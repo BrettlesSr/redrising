@@ -112,5 +112,4 @@ leader_trait_redrising_iron_gold = {
 	leader_class = { commander scientist official }
 	custom_tooltip_with_modifiers = leader_trait_redrising_iron_gold_effect
 	selectable_weight = 10
-	destiny_background_icon = "GFX_leader_background_destiny_1"
 }
