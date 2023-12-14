@@ -330,7 +330,7 @@ situation_redrising_the_rising = {
 		icon = GFX_situation_approach_suspicious
 		icon_background = GFX_situation_approach_bg_yellow
 		triggered_target_modifier = {
-			envoys_add = -1
+			espionage_operation_cost_mult = 0.2
 		}
 		ai_weight = {
 			base = 1
