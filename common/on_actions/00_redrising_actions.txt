@@ -35,7 +35,7 @@ on_country_destroyed = {
 	}
 }
 
-on_monthly_pulse = {
+on_monthly_pulse_country = {
 	events = {
 		redrising.43
 	}

@@ -2414,32 +2414,18 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = yes
 	trigger = {
-		any_country = {
-			OR = {
-				has_civic = civic_redrising_noble_lie
-				has_origin = origin_redrising_society
-			}
-			NOR = {
-				has_ethic = ethic_authoritarian
-				has_ethic = ethic_fanatic_authoritarian
-			}
+		OR = {
+			has_civic = civic_redrising_noble_lie
+			has_origin = origin_redrising_society
+		}
+		NOR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
 		}
 	}
 	immediate = {
-		every_country = {
-			limit = {
-				OR = {
-					has_civic = civic_redrising_noble_lie
-					has_origin = origin_redrising_society
-				}
-				NOR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-				}
-			}
-			country_event = {
-				id = redrising.41
-			}
+		country_event = {
+			id = redrising.41
 		}
 	}
 }

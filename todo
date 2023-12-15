@@ -1,11 +1,7 @@
-Situation situation_redrising_decadence has a target modifier but no target
-[22:52:57][event.cpp:712]: Script Error, attempting to fire country scope event redrising.43 on no_scope
-[22:52:24][bitmapfont.cpp:3496]: Could not find coloring for character ' ' (0x20)
-
 update workshop
 testing
     check if correct slavery is chosen by default and ai
     check luna has low gravity
     weakening obsidians works proeprly (swaps trait)
     has 12 slave pops
-make darraw a paragon
+make darrow a paragon

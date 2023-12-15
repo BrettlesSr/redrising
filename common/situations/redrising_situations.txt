@@ -205,9 +205,6 @@ situation_redrising_decadence = {
 		name = approach_redrising_decadence_do_nothing
 		icon = GFX_situation_approach_this_is_fine
 		icon_background = GFX_situation_approach_bg_yellow
-		triggered_target_modifier = {
-			
-		}
 		on_select = {
 			custom_tooltip = approach_redrising_decadence_do_nothing_effect
 		}
