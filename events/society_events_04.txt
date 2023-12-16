@@ -215,7 +215,7 @@ ship_event = {
 	id = redrising.408
 	title = "redrising.408.name"
 	desc = "redrising.408.desc"
-	picture = GFX_evt_colony_settlement
+	picture = GFX_evt_fleet_from_surface
 
 	is_triggered_only = yes
 

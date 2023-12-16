@@ -27,9 +27,6 @@ civic_redrising_noble_lie = {
 	}
 
 	description = civic_redrising_noble_lie_effects
-	modifier = {
-		planet_jobs_slave_produces_mult = 0.10
-	}
 }
 
 origin_redrising_society = {

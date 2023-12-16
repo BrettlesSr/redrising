@@ -1,9 +1,9 @@
 namespace = redrising
 
-@boardtimetotriggerdays = 500
-@institutetimetotriggerdays = 7200
-@obsidiantimetotriggerdays = 14400
-@arestimetotriggerdays = 28800
+@boardtimetotriggerdays = 5#00
+@institutetimetotriggerdays = 7#200
+@obsidiantimetotriggerdays = 144#00
+@arestimetotriggerdays = 288#00
 
 #game start code, sets up racial stratocracy
 planet_event = {
@@ -26,7 +26,7 @@ planet_event = {
 			}
 			
 			while = {
-				count = 13
+				count = 12
 				create_pop = {
 					species = last_created_species
 					ethos = random
@@ -81,6 +81,11 @@ planet_event = {
 					type = military_service_none  
 					cooldown = no              
 				}
+				set_slavery_type = {
+					type = slavery_noble_lie
+					country = owner
+					cooldown = no
+				}
 			}			
 		}
 	}
@@ -96,7 +101,6 @@ country_event = {
 	}
 
 	immediate = {
-		set_country_flag = custom_start_screen
 		start_situation = {
 			type = situation_redrising_decadence
 		}

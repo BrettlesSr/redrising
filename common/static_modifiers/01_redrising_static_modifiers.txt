@@ -11,7 +11,8 @@ redrising_board_silvers_deployed = {
 }
 
 redrising_board_orange_deployed = {
-	ship_hull_regen_add_perc = 0.25
+	ship_hull_regen_add_perc = 0.02
+	ship_armor_regen_add_perc = 0.02
 	icon = "gfx/interface/icons/modifiers/mod_ship_hull_regen_add_perc.dds"
 }
 
