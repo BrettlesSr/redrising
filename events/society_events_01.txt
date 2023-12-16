@@ -167,3 +167,20 @@ country_event = {
 		}
 	}
 }
+
+# New Leaders Get Cyborg Trait
+country_event = {
+	id = redrising.180
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = redrising_institute_pscarred_built
+	}
+
+	immediate = {
+		from = {
+			add_trait_no_notify = leader_trait_redrising_peerless_scarred
+		}
+	}
+}

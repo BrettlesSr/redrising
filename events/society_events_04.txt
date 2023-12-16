@@ -51,6 +51,18 @@ country_event = {
 		days = 360
 	}
 
+	immediate = {
+		hidden_effect = {
+			create_point_of_interest = {
+				id = redrising_board_control_chain_poi.1
+				name = "redrising_board_control_chain_poi.1"
+				desc = "redrising_board_control_chain_poi.1.desc"
+				event_chain = "redrising_board_control_chain"
+				location = root.capital
+			}
+		}
+	}
+
 	option = {
 		name = UNDERSTOOD
 		set_country_flag = redrising_board_colony_quest_0
@@ -75,6 +87,9 @@ planet_event = {
 	}
 
 	immediate = {
+		hidden_effect = {
+			remove_point_of_interest = redrising_board_control_chain_poi.1
+		}
 		owner = {
 			set_country_flag = redrising_board_colony_quest_1
 		}	
@@ -338,6 +353,15 @@ country_event = {
 			id = redrising.414
 			days = 30
 		}
+		hidden_effect = {
+			create_point_of_interest = {
+				id = redrising_board_control_chain_poi.2
+				name = "redrising_board_control_chain_poi.2"
+				desc = "redrising_board_control_chain_poi.2.desc"
+				event_chain = "redrising_board_control_chain"
+				location = root.capital
+			}
+		}
 	}
 
 	option = {
@@ -399,6 +423,20 @@ planet_event = {
 		save_event_target_as = redrising_large_planet
 		owner = {
 			set_country_flag = redrising_has_large_planet
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					owner.capital = {
+						is_point_of_interest = {
+							id = redrising_board_control_chain_poi.2
+							event_chain = redrising_board_control_chain
+							owner = root.owner
+						}
+					}
+				}
+				remove_point_of_interest = redrising_board_control_chain_poi.2
+			}
 		}
 	}
 

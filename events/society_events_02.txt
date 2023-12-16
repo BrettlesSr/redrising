@@ -118,6 +118,7 @@ country_event = {
 	option = {
 		name = "redrising.5.a"
 		custom_tooltip = redrising.1.a.tooltip
+		set_country_flag = redrising_institute_pscarred_built
 		add_modifier = {
 			modifier = redrising_institute_pscarred_built
 			days = -1
@@ -998,6 +999,7 @@ situation_event = {
 	}
 	option = {
 		name = "redrising.30.a"
+		add_situation_progress = 5
 		owner = {
 			add_modifier = {
 				modifier = redrising_unrest_crackdown
@@ -1007,6 +1009,7 @@ situation_event = {
 	}
 	option = {
 		name = "redrising.30.b"
+		add_situation_progress = 5
 		owner = {
 			add_modifier = {
 				modifier = redrising_unrest_patience

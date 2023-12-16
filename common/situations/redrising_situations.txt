@@ -290,27 +290,27 @@ situation_redrising_the_rising = {
 	}
 
 	monthly_progress = {
-		base = 1
+		base = 0.25
 		modifier = {
 			desc = redrising_phobos_address_happened
-			add = 10
+			add = 5
 			current_stage = redrising_the_rising_crisis
 		}
 		modifier = {
 			desc = redrising_secret_red_happened
-			add = 2
+			add = 0.5
 			owner = {
 				has_modifier = redrising_secret_red
 			}
 		}
 		modifier = {
 			desc = string_current_approach
-			add = -0.5
+			add = -0.1
 			current_situation_approach = approach_redrising_the_rising_crackdowns
 		}
 		modifier = {
 			desc = string_current_approach
-			add = -0.25
+			add = -0.05
 			current_situation_approach = approach_redrising_the_rising_infiltrate
 		}
 	}

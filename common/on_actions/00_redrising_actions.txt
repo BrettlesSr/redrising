@@ -68,3 +68,10 @@ on_colonized = {
 		redrising.404
 	}
 }
+
+on_leader_spawned = {
+	random_events = {
+		50 = 0
+		50 = redrising.
+	}
+}
