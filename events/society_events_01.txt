@@ -168,7 +168,7 @@ country_event = {
 	}
 }
 
-# New Leaders Get Cyborg Trait
+# New Leaders Get PS Trait
 country_event = {
 	id = redrising.180
 	is_triggered_only = yes

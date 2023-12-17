@@ -72,6 +72,6 @@ on_colonized = {
 on_leader_spawned = {
 	random_events = {
 		50 = 0
-		50 = redrising.
+		50 = redrising.180
 	}
 }

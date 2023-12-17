@@ -58,7 +58,7 @@ country_event = {
 				name = "redrising_board_control_chain_poi.1"
 				desc = "redrising_board_control_chain_poi.1.desc"
 				event_chain = "redrising_board_control_chain"
-				location = root.capital
+				location = root.capital_scope
 			}
 		}
 	}
@@ -88,7 +88,9 @@ planet_event = {
 
 	immediate = {
 		hidden_effect = {
-			remove_point_of_interest = redrising_board_control_chain_poi.1
+			owner = {
+				remove_point_of_interest = redrising_board_control_chain_poi.1
+			}
 		}
 		owner = {
 			set_country_flag = redrising_board_colony_quest_1
@@ -359,7 +361,7 @@ country_event = {
 				name = "redrising_board_control_chain_poi.2"
 				desc = "redrising_board_control_chain_poi.2.desc"
 				event_chain = "redrising_board_control_chain"
-				location = root.capital
+				location = root.capital_scope
 			}
 		}
 	}
@@ -427,7 +429,7 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					owner.capital = {
+					owner.capital_scope = {
 						is_point_of_interest = {
 							id = redrising_board_control_chain_poi.2
 							event_chain = redrising_board_control_chain
@@ -435,7 +437,9 @@ planet_event = {
 						}
 					}
 				}
-				remove_point_of_interest = redrising_board_control_chain_poi.2
+				owner = {
+					remove_point_of_interest = redrising_board_control_chain_poi.2
+				}
 			}
 		}
 	}

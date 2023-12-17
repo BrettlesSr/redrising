@@ -2,6 +2,9 @@ situation_redrising_decadence = {
 	picture = GFX_evt_friendly_infiltration
 	category = neutral
 
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	complete_icon = GFX_situation_outcome_negative
+
 	progress_direction = bidirectional
 	complete_category = negative
 	fail_category = positive
@@ -106,9 +109,11 @@ situation_redrising_decadence = {
 				}
 			}
 			potential = {
-				any_leader = {
-					is_councilor = yes
-					has_trait = leader_trait_redrising_iron_gold
+				owner = {
+					any_owned_leader = {
+						is_councilor = yes
+						has_trait = leader_trait_redrising_iron_gold
+					}
 				}
 			}
 			mode = subtract

@@ -70,8 +70,6 @@ thesocietyofman = {
 	
 	ruler = {
 		name = "redrising_ruler_name_society"
-		skip_background_generation = yes
-		background_ethic = ethic_authoritarian
 		gender = female
 		portrait = "human_female_04"
 		texture = 0

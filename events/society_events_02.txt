@@ -1091,15 +1091,19 @@ country_event = {
 				skill = 4
 				set_age = 22
 				gender = male
+				randomize_traits = no
 				background_ethic = ethic_militarist
 				traits = {
 					0 = subclass_commander_general
-					1 = leader_trait_redrising_peerless_scarred
-					2 = leader_trait_butcher
+					1 = leader_trait_dreaded
+					2 = leader_trait_redrising_peerless_scarred
+					3 = leader_trait_trickster
+					4 = leader_trait_reckless
 				}
 			}
 			last_created_leader = {
 				set_leader_flag = redrising_darrow
+				set_leader_flag = immune_to_negative_traits
 			}
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER
@@ -1141,14 +1145,19 @@ country_event = {
 				skill = 4
 				set_age = 22
 				gender = male
+				randomize_traits = no
 				background_ethic = ethic_militarist
 				traits = {
 					0 = subclass_commander_general
-					1 = leader_trait_butcher
+					1 = leader_trait_dreaded
+					2 = leader_trait_trickster
+					3 = leader_trait_aggressive
+					4 = leader_trait_reckless
 				}
 			}
 			last_created_leader = {
 				set_leader_flag = redrising_darrow
+				set_leader_flag = immune_to_negative_traits
 			}
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER
@@ -1320,6 +1329,7 @@ situation_event = {
 		owner = {
 			set_country_flag = no_machine_uprising
 			set_country_flag = redrising_no_rising
+			save_event_target_as = redrising_current_pre_rising_society
 			if = {
 				limit = {
 					any_owned_planet = {
