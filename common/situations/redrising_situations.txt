@@ -1,14 +1,11 @@
 situation_redrising_decadence = {
 	picture = GFX_evt_friendly_infiltration
-	category = neutral
+	category = negative
 
 	complete_icon_frame = GFX_situation_outcome_frame_red
 	complete_icon = GFX_situation_outcome_negative
 
-	progress_direction = bidirectional
-	complete_category = negative
-	fail_category = positive
-	start_value = 25
+	start_value = 0
 	
 	on_progress_complete = {
 		
@@ -20,7 +17,7 @@ situation_redrising_decadence = {
 			icon_background = GFX_situation_stage_frame_red
 			modifier = {
 				pop_category_rulers_consumer_goods_upkeep_mult = 0
-				pop_cat_ruler_happiness = 0.05
+				pop_cat_ruler_happiness = 0.0
 				planet_stability_add = 0
 			}
 			end = 10
@@ -30,7 +27,7 @@ situation_redrising_decadence = {
 			icon_background = GFX_situation_stage_frame_red
 			modifier = { 
 				pop_category_rulers_consumer_goods_upkeep_mult = 0.125
-				pop_cat_ruler_happiness = 0.1
+				pop_cat_ruler_happiness = 0.05
 				planet_stability_add = -3
 			}
 			end = 20
@@ -40,7 +37,7 @@ situation_redrising_decadence = {
 			icon_background = GFX_situation_stage_frame_red
 			modifier = { 
 				pop_category_rulers_consumer_goods_upkeep_mult = 0.375
-				pop_cat_ruler_happiness = 0.15
+				pop_cat_ruler_happiness = 0.10
 				planet_stability_add = -6
 			}
 			end = 30
@@ -50,7 +47,7 @@ situation_redrising_decadence = {
 			icon_background = GFX_situation_stage_frame_red
 			modifier = { 
 				pop_category_rulers_consumer_goods_upkeep_mult = 0.5
-				pop_cat_ruler_happiness = 0.20
+				pop_cat_ruler_happiness = 0.15
 				planet_stability_add = -9
 			}
 			end = 40
@@ -60,7 +57,7 @@ situation_redrising_decadence = {
 			icon_background = GFX_situation_stage_frame_red
 			modifier = { 
 				pop_category_rulers_consumer_goods_upkeep_mult = 0.635
-				pop_cat_ruler_happiness = 0.25
+				pop_cat_ruler_happiness = 0.20
 				planet_stability_add = -12
 			}
 			end = 50
@@ -70,7 +67,7 @@ situation_redrising_decadence = {
 			icon_background = GFX_situation_stage_frame_red
 			modifier = {
 				pop_category_rulers_consumer_goods_upkeep_mult = 0.75
-				pop_cat_ruler_happiness = 0.3
+				pop_cat_ruler_happiness = 0.25
 				planet_stability_add = -15
 			}
 			end = 60
@@ -80,7 +77,7 @@ situation_redrising_decadence = {
 			icon_background = GFX_situation_stage_frame_red
 			modifier = { 
 				pop_category_rulers_consumer_goods_upkeep_mult = 0.875
-				pop_cat_ruler_happiness = 0.35
+				pop_cat_ruler_happiness = 0.30
 				planet_stability_add = -18
 			}
 			end = 70
@@ -90,7 +87,7 @@ situation_redrising_decadence = {
 			icon_background = GFX_situation_stage_frame_red
 			modifier = { 
 				pop_category_rulers_consumer_goods_upkeep_mult = 1
-				pop_cat_ruler_happiness = 0.4
+				pop_cat_ruler_happiness = 0.35
 				planet_stability_add = -21
 			}
 			end = 80
@@ -121,7 +118,7 @@ situation_redrising_decadence = {
 			desc = redrising_iron_gold_leader_trait_decadence_situation
 		}
 		modifier = {
-			desc = redrising_institute_pscarred_built_desc
+			desc = redrising_situation_institute_pscarred_built_desc
 			subtract = 0.05
 			owner = {
 				has_country_flag = redrising_institute_pscarred_built

@@ -69,6 +69,12 @@ country_event = {
 				modifier = redrising_institute_pscarred_built
 				days = -1
 			}
+			every_pool_leader = {
+				random = {
+					chance = 50
+					add_trait = leader_trait_redrising_peerless_scarred
+				}
+			}
 		}
 		else = {
 			country_event = {
@@ -2065,6 +2071,7 @@ country_event = {
 		has_valid_civic = civic_redrising_noble_lie
 	}
 	immediate = {
+		redrising_grab_red_species = yes
 		remove_modifier = redrising_secret_red
 		set_country_flag = redrising_beat_republic
 		add_modifier = {

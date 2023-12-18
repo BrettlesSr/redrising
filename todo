@@ -1,13 +1,3 @@
-20:21:52][game_text.cpp:1285]: Unknown promotion `redrising_red` in text: redrising_red.GetSpeciesName] species is restored to their proper place and the last [Root.GetSpeciesSpawnNameCap] of Ares put down.
-However, the damage the Rising has wrought will be a long time in fixing, and things may not ever truly be as we wish. But now we can strive for that dream, without resistance.
-[20:21:52][game_text.cpp:1140]: Unknown property `GetSpeciesName` in text: GetSpeciesName] species is restored to their proper place and the last [Root.GetSpeciesSpawnNameCap] of Ares put down.
-We expect a permanent increase to ruler happiness, and influence generation, at the cost of MDecadence! gain.
- Invalid scope for event target 'owner' at  file: events/society_events_01.txt line: 84. Got species
-[01:20:47][game_concept_type.cpp:36]: Missing Loc for game concept: concept_redrising_decadence
-[01:20:47][game_concept_type.cpp:44]: Missing Desc Loc for game concept: concept_redrising_decadence_desc
-[01:22:24][eventscope.cpp:2284]: Script error, set_slavery_type: 'owner' is invalid at  file: events/society_events_01.txt line: 84
-
-
 update workshop
 testing
     weakening obsidians works properly (swaps trait)
@@ -19,3 +9,4 @@ eventual goals
 make darrow a paragon
 add helldivers/browns/mid reds/gamma clan
 make decadence a scripted modifier
+darrow a duelist
