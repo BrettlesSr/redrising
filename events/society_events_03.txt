@@ -1,35 +1,5 @@
 namespace = redrising
 
-#lowers decadence in a war
-country_event = {
-	id = redrising.302
-	is_triggered_only = yes
-	title = "redrising.302.name"
-	desc = "redrising.302.desc"
-	picture = GFX_evt_victorious_army
-	fire_only_once = no
-	
-	trigger = {
-		has_valid_civic = civic_redrising_noble_lie
-	}
-
-	immediate = {
-		random_situation = {
-			limit = {
-				is_situation_type = situation_redrising_decadence
-			}
-			save_event_target_as = situation_redrising_decadence
-		}
-	}
-
-	option = {
-		name = EXCELLENT
-		event_target:situation_redrising_decadence = {
-			add_situation_progress = -20
-		}
-    }
-}
-
 #finishing discovery includes a decadence reduction bonus
 country_event = {
 	id = redrising.303
@@ -54,6 +24,43 @@ country_event = {
 		add_modifier = {
 			modifier = redrising_discovery_reduces_decadence
 			days = -1
+		}
+    }
+}
+
+#austere gold
+country_event = {
+	id = redrising.304
+	title = "redrising.304.name"
+	desc = "redrising.304.desc"
+	picture = GFX_evt_alien_propaganda
+	is_triggered_only = yes
+
+	trigger = {
+		has_valid_civic = civic_redrising_noble_lie
+	}
+
+	option = {
+		name = redrising.304.a
+		add_modifier = {
+			modifier = redrising_decadence_austerity
+			days = -1
+		}
+    }
+
+	option = {
+		name = redrising.304.b
+		start_situation = {
+			type = situation_redrising_decadence
+		}
+		allow = {
+			resource_stockpile_compare = {
+				resource = consumer_goods
+				value >= 1000
+			}
+		}
+		add_resource = {
+			consumer_goods = -1000
 		}
     }
 }

@@ -1,14 +1,34 @@
 situation_redrising_decadence = {
-	picture = GFX_evt_friendly_infiltration
 	category = negative
+	picture = GFX_evt_friendly_infiltration
+	fail_category = positive
+	progress_direction = bidirectional
+	
+	fail_icon = GFX_situation_outcome_positive
+	fail_icon_frame = GFX_situation_outcome_frame_blue
 
-	complete_icon_frame = GFX_situation_outcome_frame_red
-	complete_icon = GFX_situation_outcome_negative
-
-	start_value = 0
+	start_value = 750
 	
 	on_progress_complete = {
-		
+		add_situation_progress = -1
+	}
+
+	on_fail = {
+		owner = {
+			country_event = {
+				id = redrising.304
+				days = 1
+			}
+		}
+		hidden_effect = {
+			destroy_situation = this
+		}
+	}
+
+	on_abort = {
+		hidden_effect = {
+			destroy_situation = this
+		}
 	}
 
 	stages = {
@@ -20,7 +40,7 @@ situation_redrising_decadence = {
 				pop_cat_ruler_happiness = 0.0
 				planet_stability_add = 0
 			}
-			end = 10
+			end = 300
 		}
 		stage_2 = {
 			icon = GFX_situation_stage_2
@@ -30,7 +50,7 @@ situation_redrising_decadence = {
 				pop_cat_ruler_happiness = 0.05
 				planet_stability_add = -3
 			}
-			end = 20
+			end = 600
 		}
 		stage_3 = {
 			icon = GFX_situation_stage_3
@@ -40,7 +60,7 @@ situation_redrising_decadence = {
 				pop_cat_ruler_happiness = 0.10
 				planet_stability_add = -6
 			}
-			end = 30
+			end = 900
 		}
 		stage_4 = {
 			icon = GFX_situation_stage_4
@@ -50,7 +70,7 @@ situation_redrising_decadence = {
 				pop_cat_ruler_happiness = 0.15
 				planet_stability_add = -9
 			}
-			end = 40
+			end = 1200
 		}
 		stage_5 = {
 			icon = GFX_situation_stage_5
@@ -60,7 +80,7 @@ situation_redrising_decadence = {
 				pop_cat_ruler_happiness = 0.20
 				planet_stability_add = -12
 			}
-			end = 50
+			end = 1500
 		}
 		stage_6 = {
 			icon = GFX_situation_stage_6
@@ -70,7 +90,7 @@ situation_redrising_decadence = {
 				pop_cat_ruler_happiness = 0.25
 				planet_stability_add = -15
 			}
-			end = 60
+			end = 1800
 		}
 		stage_7 = {
 			icon = GFX_situation_stage_7
@@ -80,7 +100,7 @@ situation_redrising_decadence = {
 				pop_cat_ruler_happiness = 0.30
 				planet_stability_add = -18
 			}
-			end = 70
+			end = 2100
 		}
 		stage_8 = {
 			icon = GFX_situation_stage_8
@@ -90,12 +110,12 @@ situation_redrising_decadence = {
 				pop_cat_ruler_happiness = 0.35
 				planet_stability_add = -21
 			}
-			end = 80
+			end = 2400
 		}
 	}
 	
 	monthly_progress = {
-		base = 0.1
+		base = 3
 		complex_trigger_modifier = {
 			trigger = count_owned_leader
 			trigger_scope = owner
@@ -114,33 +134,40 @@ situation_redrising_decadence = {
 				}
 			}
 			mode = subtract
-			mult = 0.01
+			mult = 1
 			desc = redrising_iron_gold_leader_trait_decadence_situation
 		}
 		modifier = {
+			desc = redrising_situation_war_reduces_decadence
+			subtract = 1
+			owner = {
+				is_at_war = yes
+			}
+		}
+		modifier = {
 			desc = redrising_situation_institute_pscarred_built_desc
-			subtract = 0.05
+			subtract = 1
 			owner = {
 				has_country_flag = redrising_institute_pscarred_built
 			}
 		}
 		modifier = {
 			desc = redrising_discovery_reduces_decadence_set_desc
-			subtract = 0.05
+			subtract = 1
 			owner = {
 				has_modifier = redrising_discovery_reduces_decadence
 			}
 		}
 		modifier = {
-			desc = redrising_board_pink_deployed_desc
-			add = 0.1
+			desc = redrising_board_pink_deployed_sit_desc
+			add = 2
 			owner = {
 				has_modifier = redrising_board_pink_deployed
 			}
 		}
 		modifier = {
-			desc = redrising_board_white_deployed_desc
-			subtract = 0.05
+			desc = redrising_board_white_deployed_sit_desc
+			subtract = 2
 			owner = {
 				has_modifier = redrising_board_white_deployed
 			}
@@ -148,19 +175,24 @@ situation_redrising_decadence = {
 		}
 		modifier = {
 			desc = redrising_board_control_chain_complete_desc
-			add = 0.05
+			add = 1
 			owner = {
 				has_country_flag = redrising_board_control_chain_complete
 			}
 		}
 		modifier = {
+			desc = redrising_decadence_capped
+			subtract = 10
+			situation_progress > 2380
+		}
+		modifier = {
 			desc = string_current_approach
-			add = 0.2
+			add = 3
 			current_situation_approach = approach_redrising_decadence_indulge_the_pixies
 		}
 		modifier = {
 			desc = string_current_approach
-			subtract = 0.2
+			subtract = 1
 			current_situation_approach = approach_redrising_decadence_promote_iron_gold
 		}
 	}
@@ -247,7 +279,15 @@ situation_redrising_the_rising = {
 	complete_icon = GFX_situation_outcome_revolt
 	
 	on_progress_complete = {
-		
+		hidden_effect = {
+			destroy_situation = this
+		}
+	}
+
+	on_abort = {
+		hidden_effect = {
+			destroy_situation = this
+		}
 	}
 
 	stages = {
@@ -257,7 +297,7 @@ situation_redrising_the_rising = {
 			modifier = { 
 				planet_stability_add = -1
 			}
-			end = 20
+			end = 400
 		}
 		redrising_the_rising_simmering = {
 			icon = GFX_situation_stage_2
@@ -265,7 +305,7 @@ situation_redrising_the_rising = {
 			modifier = { 
 				planet_stability_add = -3
 			}
-			end = 80
+			end = 1600
 		}
 		redrising_the_rising_crisis = {
 			icon = GFX_situation_stage_3
@@ -274,7 +314,7 @@ situation_redrising_the_rising = {
 				#phobos address
 				situation_event = { id = redrising.35 }
 			}
-			end = 90
+			end = 1800
 		}
 		redrising_the_rising_open_war = {
 			icon = GFX_situation_stage_4
@@ -287,32 +327,32 @@ situation_redrising_the_rising = {
 				#the rising
 				situation_event = { id = redrising.36 }
 			}
-			end = 100
+			end = 2000
 		}
 	}
 
 	monthly_progress = {
-		base = 0.25
+		base = 3
 		modifier = {
 			desc = redrising_phobos_address_happened
-			add = 5
+			add = 10
 			current_stage = redrising_the_rising_crisis
 		}
 		modifier = {
 			desc = redrising_secret_red_happened
-			add = 0.5
+			add = 20
 			owner = {
 				has_modifier = redrising_secret_red
 			}
 		}
 		modifier = {
 			desc = string_current_approach
-			add = -0.1
+			subtract = 2
 			current_situation_approach = approach_redrising_the_rising_crackdowns
 		}
 		modifier = {
 			desc = string_current_approach
-			add = -0.05
+			subtract = 1
 			current_situation_approach = approach_redrising_the_rising_infiltrate
 		}
 	}

@@ -55,12 +55,6 @@ on_game_start_country = {
 	}
 }
 
-on_war_beginning = {
-	events = {
-		redrising.302
-	}
-}
-
 # A planet has been colonized.
 # Scope = Planet
 on_colonized = {

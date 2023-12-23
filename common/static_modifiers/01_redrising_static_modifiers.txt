@@ -2,36 +2,30 @@
 
 redrising_board_greens_deployed = {
 	empire_size_pops_mult = -0.05
-	icon = "gfx/interface/icons/modifiers/mod_country_admin_cap_mult.dds"
 }
 
 redrising_board_silvers_deployed = {
 	trade_value_mult = 0.05
-	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
 }
 
 redrising_board_orange_deployed = {
 	ship_hull_regen_add_perc = 0.01
 	ship_armor_regen_add_perc = 0.01
-	icon = "gfx/interface/icons/modifiers/mod_ship_hull_regen_add_perc.dds"
 }
 
 redrising_board_blue_deployed = {
-	icon = "gfx/interface/icons/modifiers/mod_ship_speed_mult.dds"
 	ship_speed_mult = 0.05
 	ship_disengage_chance_mult = 0.05
 }
 
 redrising_board_pink_deployed = {
 	job_entertainer_per_pop = 0.05
-	icon = "gfx/interface/icons/modifiers/mod_pop_happiness.dds"
 	custom_tooltip = redrising_pinks_increase_decadence
 	show_only_custom_tooltip = no
 }
 
 redrising_board_white_deployed = {
 	job_redrising_justiciar_per_pop = 0.025
-	icon = "gfx/interface/icons/modifiers/mod_planet_crime_add.dds"
 	custom_tooltip = redrising_whites_decrease_decadence
 	show_only_custom_tooltip = no
 }

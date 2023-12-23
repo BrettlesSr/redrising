@@ -1,10 +1,10 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_leader_trait_redrising_peerless_scarred"
-		texturefile = "gfx/interface/icons/traits/leader_trait_icons/redrising_leader_trait_pscarred.dds"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/redrising_peerless_scarred.dds"
 	}
 	spriteType = {
 		name = "GFX_leader_trait_redrising_iron_gold"
-		texturefile = "gfx/interface/icons/traits/leader_trait_icons/redrising_leader_trait_iron_gold.dds"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/redrising_iron_gold.dds"
 	}
 }
