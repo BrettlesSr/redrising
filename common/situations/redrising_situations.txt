@@ -10,7 +10,6 @@ situation_redrising_decadence = {
 	start_value = 750
 	
 	on_progress_complete = {
-		add_situation_progress = -1
 	}
 
 	on_fail = {
@@ -305,6 +304,13 @@ situation_redrising_the_rising = {
 			modifier = { 
 				planet_stability_add = -3
 			}
+			on_first_enter = {
+				owner = {
+					country_event = {
+						id = redrising.40
+					}
+				}
+			}
 			end = 1600
 		}
 		redrising_the_rising_crisis = {
@@ -335,7 +341,7 @@ situation_redrising_the_rising = {
 		base = 3
 		modifier = {
 			desc = redrising_phobos_address_happened
-			add = 10
+			add = 100
 			current_stage = redrising_the_rising_crisis
 		}
 		modifier = {
