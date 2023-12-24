@@ -8,6 +8,7 @@ Includes the following features:
 > A new mechanic, Decadence, represents the balance between Pixies and Iron Gold in your empire.
 > Other event chains depict the Society's history as we know it from the books, including the Dark Revolt and the Rising.
 > You can also use the origin and civic in your own custom empires, and the quest-lines will adapt to your species and country. 
+> Also includes new councils positions, destiny traits, council agendas, sitations and more!
 
 If you don't choose to play as the Society yourself, they should spawn somewhere in the galaxy under the control of an AI. This mod should work in multiplayer, and in theory should work even if several players play as the Society, but this feature is under-tested, so be cautious.
 
