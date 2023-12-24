@@ -25,6 +25,15 @@ on_leader_death = {
 	}
 }
 
+# Executed as a leader has been fired
+# This = Country
+# From = Leader
+on_leader_fired = {
+	events = {
+		redrising.42
+	}
+}
+
 #This = destroyed country
 #From = optional, destroyer (country)
 on_country_destroyed = {

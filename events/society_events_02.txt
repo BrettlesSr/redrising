@@ -773,10 +773,6 @@ country_event = {
 			type = situation_redrising_the_rising
 			target = root
 		}
-		country_event = {
-			id = redrising.40
-			days = @timebetweenunresteventsdays
-		}
 		set_country_flag = redrising_ares_insurrecting_0
 	}
 	option = {
@@ -1234,8 +1230,12 @@ country_event = {
 				has_leader_flag = redrising_became_soveriegn
 			}
 		}
+		NOT = {
+			has_country_flag = redrising_darrow_died_evt
+		}
 	}
 	immediate = {
+		set_country_flag = redrising_darrow_died_evt
 		if = {
 			limit = {
 				NOR = {
@@ -1316,12 +1316,6 @@ situation_event = {
 						is_enslaved = yes
 					}
 				}
-				ROOT = {
-					situation_event = {
-						id = redrising.36
-						days = 15
-					}
-				}
 			}
 			else = {
 				country_event = {
@@ -1343,6 +1337,15 @@ situation_event = {
 	is_triggered_only = yes
 	location = target
 	situation = this
+
+	trigger = {
+		NOT = {
+			owner = {
+				has_country_flag = redrising_no_rising
+			}
+		}
+	}
+
 	immediate = {
 		owner = {
 			set_country_flag = no_machine_uprising
@@ -1495,12 +1498,6 @@ planet_event = {
 			save_event_target_as = redrising_the_rising_originator
 		}
 		set_planet_flag = redrising_rising_capital@root.owner
-		# event lock all fleets to prevent exploits
-		owner = {
-			every_owned_fleet = {
-				set_event_locked = yes
-			}
-		}
 		# find and flag planets
 		owner = {
 			effect_on_blob = {
@@ -1598,15 +1595,6 @@ planet_event = {
 						}
 					}
 					assign_leader = last_created_leader
-				}
-			}
-		}
-	}
-	after = {
-		hidden_effect = {
-			event_target:redrising_current_rising_originator = {
-				every_owned_fleet = {
-					set_event_locked = no
 				}
 			}
 		}
@@ -1954,10 +1942,6 @@ country_event = {
 		country_event = {
 			id = redrising.52
 			days = 14
-		}
-		every_owned_fleet = {
-			#limit = { event_locked = yes }
-			set_event_locked = no
 		}
 	}
 }
