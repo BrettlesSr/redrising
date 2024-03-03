@@ -2009,6 +2009,18 @@ country_event = {
 	}
 	option = {
 		name = "redrising.37.a"
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 120
+			min = 2000
+			max = 6000
+		}
+		add_monthly_resource_mult = {
+			resource = influence
+			value = 120
+			min = 200
+			max = 600
+		}
 	}
 }
 
@@ -2077,6 +2089,18 @@ country_event = {
 	}
 	option = {
 		name = "redrising.38.a"
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 120
+			min = 2000
+			max = 6000
+		}
+		add_monthly_resource_mult = {
+			resource = influence
+			value = 120
+			min = 200
+			max = 600
+		}
 	}
 }
 
