@@ -7,9 +7,25 @@ situation_redrising_decadence = {
 	fail_icon = GFX_situation_outcome_positive
 	fail_icon_frame = GFX_situation_outcome_frame_blue
 
+	#no complete icons deliberate
+
 	start_value = 750
 	
 	on_progress_complete = {
+		#reboot situation if ended accidentally
+		owner = {
+			hidden_effect = {
+				start_situation = {
+					type = situation_redrising_decadence
+				}
+				random_situation = {
+					limit = {
+						is_situation_type = situation_redrising_decadence
+					}
+					add_situation_progress = 1401
+				}
+			}
+		}
 	}
 
 	on_fail = {

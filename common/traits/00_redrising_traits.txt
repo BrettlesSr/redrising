@@ -79,7 +79,7 @@ leader_trait_redrising_peerless_scarred = {
 }
 
 leader_trait_redrising_iron_gold = {
-	destiny_trait = yes
+	leader_trait_type = destiny
 	inline_script = {
 		script = trait/icon
 		ICON = "GFX_leader_trait_redrising_iron_gold"

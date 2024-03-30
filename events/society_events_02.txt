@@ -1305,19 +1305,19 @@ situation_event = {
 		owner = {
 			if = {
 				limit = {
-					is_country_type = default
-					num_owned_planets > 2
 					NOT = {
-						has_country_flag = redrising_no_rising
-					}
-					has_valid_civic = civic_redrising_noble_lie
-					has_origin = origin_redrising_society
-					any_owned_pop = {
-						is_enslaved = yes
+						is_country_type = default
+						num_owned_planets > 2
+						NOT = {
+							has_country_flag = redrising_no_rising
+						}
+						has_valid_civic = civic_redrising_noble_lie
+						has_origin = origin_redrising_society
+						any_owned_pop = {
+							is_enslaved = yes
+						}
 					}
 				}
-			}
-			else = {
 				country_event = {
 					id = redrising.363
 					days = 15
