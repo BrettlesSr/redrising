@@ -1,0 +1,12 @@
+redrising_humans = {
+	species_class = REDRISING_RED
+
+	portraits = {
+		"redrising_red"
+	} 
+
+	# These should not be used for randomly generated species
+	non_randomized_portraits = {
+		"redrising_red"
+	}
+}
