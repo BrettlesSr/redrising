@@ -14,6 +14,8 @@ redrising_justiciar = {
 
 	possible_precalc = can_fill_ruler_job
 
+	tags = { crime soldier amenities }
+
 	resources = {
 		category = planet_enforcers
 		produces = {
@@ -33,10 +35,6 @@ redrising_justiciar = {
 		upkeep = {
 			consumer_goods = 2
 		}
-	}
-
-	pop_modifier = {
-		pop_defense_armies_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -72,6 +70,7 @@ redrising_justiciar = {
 	}
 
 	planet_modifier = {
+		planet_defense_armies_add = 3
 		planet_crime_add = -45
 		planet_stability_add = 2
 	}
