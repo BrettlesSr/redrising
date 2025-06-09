@@ -37,35 +37,14 @@ redrising_justiciar = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				exists = ruler
-				ruler = {
-					has_trait = leader_trait_legendary_harsh_ruler
-				}
-			}
-		}
-		pop_happiness = -0.025
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet
-			planet = { has_modifier = anticrime_campaign }
-		}
-		modifier = {
-			planet_crime_add = -10
-		}
-	}
+	inline_script = "jobs/job_enforcer_additional_modifiers"
 
 	# This needs to be triggered planet modifier to get the correct scope.
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 500
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -78,25 +57,12 @@ redrising_justiciar = {
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
-			mult = value:job_weights_modifier|JOB|redrising_justiciar|RESOURCE|unity|FACTOR|0.25|
+			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
-		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
-			factor = 10
-			has_job = redrising_justiciar
+			factor = 50
 		}
-		modifier = {
-			factor = 10
-			planet = { planet_crime > 15}
-			NOT = { has_job = redrising_justiciar }
-		}
-		modifier = {
-			factor = 0.01
-			planet = { planet_crime <= 15}
-			NOT = { has_job = redrising_justiciar }
-		}
-
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no

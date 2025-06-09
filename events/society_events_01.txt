@@ -33,16 +33,16 @@ planet_event = {
 				}
 			}
 			
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_same_species = last_created_species
 				}
-				set_pop_flag = redrising_red_pop
+				set_pop_group_flag = redrising_red_pop
 			}
 
 			while = {
 				count = 15
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						is_pop_category = worker
 						is_same_species = root.owner_species

@@ -1,5 +1,5 @@
 slavery_noble_lie = {
-	pop_modifier = {
+	pop_group_modifier = {
 		planet_jobs_produces_mult = 0.10
 		pop_category_slave_unity_upkeep_add = 0.25
 	}

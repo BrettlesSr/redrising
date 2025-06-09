@@ -1,21 +1,21 @@
 redrising_grab_red_species = {
 	if = {
 		limit = {
-			any_owned_pop = {
-				has_pop_flag = redrising_red_pop
+			any_owned_pop_group = {
+				has_pop_group_flag = redrising_red_pop
 			}
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
-				has_pop_flag = redrising_red_pop
+				has_pop_group_flag = redrising_red_pop
 			}
 			save_event_target_as = redrising_red
 		}
 	}
 	else_if = {
 		limit = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_enslaved = yes
 				is_robot_pop = no
 				NOT = { is_same_species = ROOT }
@@ -25,7 +25,7 @@ redrising_grab_red_species = {
 			}
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				is_enslaved = yes
 				is_robot_pop = no
@@ -38,14 +38,14 @@ redrising_grab_red_species = {
 	}
 	else_if = {
 		limit = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_enslaved = yes
 				is_robot_pop = no
 				NOT = { is_same_species = ROOT }
 			}
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				is_enslaved = yes
 				is_robot_pop = no
@@ -55,7 +55,7 @@ redrising_grab_red_species = {
 		}
 	}
 	else = {
-		random_owned_pop = {
+		random_owned_pop_group = {
 			save_event_target_as = redrising_red
 		}
 	}
@@ -64,21 +64,21 @@ redrising_grab_red_species = {
 redrising_grab_obsidian_species = {
 	if = {
 		limit = {
-			any_owned_pop = {
-				has_pop_flag = redrising_obsidian_pop
+			any_owned_pop_group = {
+				has_pop_group_flag = redrising_obsidian_pop
 			}
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
-				has_pop_flag = redrising_obsidian_pop
+				has_pop_group_flag = redrising_obsidian_pop
 			}
 			save_event_target_as = redrising_obsidian
 		}
 	}
 	else_if = {
 		limit = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_enslaved = yes
 				is_robot_pop = no
 				NOT = { is_same_species = ROOT }
@@ -86,7 +86,7 @@ redrising_grab_obsidian_species = {
 			}
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				is_enslaved = yes
 				is_robot_pop = no
@@ -98,14 +98,14 @@ redrising_grab_obsidian_species = {
 	}
 	else_if = {
 		limit = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_enslaved = yes
 				is_robot_pop = no
 				NOT = { is_same_species = ROOT }
 			}
 		}
 		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				is_enslaved = yes
 				is_robot_pop = no
@@ -115,7 +115,7 @@ redrising_grab_obsidian_species = {
 		}
 	}
 	else = {
-		random_owned_pop = {
+		random_owned_pop_group = {
 			save_event_target_as = redrising_obsidian
 		}
 	}
