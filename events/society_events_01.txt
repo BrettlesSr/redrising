@@ -66,9 +66,9 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {		
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
-				has_pop_flag = redrising_red_pop			
+				has_pop_group_flag = redrising_red_pop			
 			}
 			species = {
 				set_citizenship_type = {
@@ -180,11 +180,17 @@ country_event = {
 
 	trigger = {
 		has_country_flag = redrising_institute_pscarred_built
+		from = {
+			NOT = { leader_class = envoy }
+		}
 	}
 
 	immediate = {
 		from = {
-			add_trait_no_notify = leader_trait_redrising_peerless_scarred
+			add_trait = {
+					trait = leader_trait_redrising_peerless_scarred
+					show_message = no
+			}
 		}
 	}
 }

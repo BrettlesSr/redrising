@@ -13,7 +13,7 @@ redrising_something_wicked = {
 }
 
 redrising_displace_reds = {
-	pop_growth_speed_reduction = 0.10
+	logistic_growth_mult = -0.10
 	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
 }
 
@@ -51,7 +51,7 @@ redrising_unrest_prison = {
 }
 
 redrising_unrest_crash = {
-	trade_value_mult = -0.1
+	planet_jobs_trade_produces_mult = -0.1
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
 }
 

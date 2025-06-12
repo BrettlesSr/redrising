@@ -5,7 +5,7 @@ redrising_board_greens_deployed = {
 }
 
 redrising_board_silvers_deployed = {
-	trade_value_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.05
 }
 
 redrising_board_orange_deployed = {
