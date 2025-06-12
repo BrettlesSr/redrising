@@ -6,6 +6,8 @@ namespace = redrising
 @timebetweenunresteventsdays = 1500
 @timetodarkrevoltdays = 7800
 @timetofreedomdays = 3600
+
+
 #Institute Questline
 country_event = {
 	id = redrising.1
@@ -127,7 +129,10 @@ country_event = {
 			every_pool_leader = {
 				random = {
 					chance = 50
-					add_trait = leader_trait_redrising_peerless_scarred
+					add_trait = {
+						trait = leader_trait_redrising_peerless_scarred
+						show_message = no
+					}
 				}
 			}
 			if = {
@@ -139,7 +144,10 @@ country_event = {
 					}
 				}
 				random_pool_leader = {
-					add_trait = leader_trait_redrising_peerless_scarred
+					add_trait = {
+						trait = leader_trait_redrising_peerless_scarred
+						show_message = no
+					}
 				}
 			}
 		}
@@ -201,9 +209,7 @@ country_event = {
 				NOT = {
 					any_owned_planet = {
 						is_colony = yes
-						count_owned_pop = {
-							count > 2
-						}
+						pop_amount >= 200
 					}
 				}
 			}
@@ -216,17 +222,13 @@ country_event = {
 			limit = {
 				any_owned_planet = {
 					is_colony = yes
-					count_owned_pop = {
-						count > 2
-					}
+					pop_amount >= 200
 				}
 			}
 			random_owned_planet = {
 				limit = {
 					is_colony = yes
-					count_owned_pop = {
-						count > 2
-					}
+					pop_amount >= 200
 				}
 				save_event_target_as = obsidian_planet
 			}
@@ -258,11 +260,11 @@ country_event = {
 					}
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_same_species = last_created_species
 				}
-				set_pop_flag = redrising_obsidian_pop
+				set_pop_group_flag = redrising_obsidian_pop
 			}
 			last_created_species = {
 				set_citizenship_type = {
@@ -395,9 +397,7 @@ country_event = {
 				NOT = {
 					any_owned_planet = {
 						is_colony = yes
-						count_owned_pop = {
-							count > 2
-						}
+						pop_amount >= 200
 					}
 				}
 			}
@@ -410,17 +410,13 @@ country_event = {
 			limit = {
 				any_owned_planet = {
 					is_colony = yes
-					count_owned_pop = {
-						count > 2
-					}
+					pop_amount >= 200
 				}
 			}
 			random_owned_planet = {
 				limit = {
 					is_colony = yes
-					count_owned_pop = {
-						count > 2
-					}
+					pop_amount >= 200
 				}
 				save_event_target_as = grey_planet
 			}
@@ -479,7 +475,7 @@ country_event = {
 					has_ethic = ethic_fanatic_authoritarian
 					has_ethic = ethic_authoritarian
 				}
-				any_owned_pop = {
+				any_owned_pop_group = {
 					has_trait = trait_redrising_warlike
 					is_enslaved = yes
 				}
@@ -561,7 +557,7 @@ country_event = {
 			who = event_target:obsidian_rebels
 			flag = redrising_dark_revolt_host_to_rebels
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = event_target:obsidian_rebels
 			}
@@ -632,13 +628,16 @@ country_event = {
 		custom_tooltip = redrising.18.a.tooltip
 		hidden_effect = {
 			redrising_grab_obsidian_species = yes
-			every_owned_pop = {
+			every_owned_pop_group = {
 				if = {
 					limit = {
 						is_same_species = event_target:redrising_obsidian
 					}
-					wipe_pop_ethos = yes
-					pop_change_ethic = ethic_spiritualist
+					pop_group_transfer_ethic = {
+						POP_GROUP = this
+						ETHOS = ethic_spiritualist
+						PERCENTAGE = 1
+					}
 				}
 			}
 			every_owned_planet = {
@@ -655,7 +654,7 @@ country_event = {
 		custom_tooltip = redrising.18.b.tooltip
 		hidden_effect = {
 			remove_country_flag = redrising_obsidians_deployed
-			every_owned_pop = {
+			every_owned_pop_group = {
 				if = {
 					limit = {
 						has_trait = trait_redrising_warlike
@@ -702,19 +701,6 @@ country_event = {
 	}
 }
 
-# removed to test
-# planet_event = {
-# 	id = redrising.20
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	immediate = {
-# 		modify_species = {
-# 			species = event_target:obsidian_redrising_2
-# 			add_trait = trait_nonadaptive
-# 		}
-# 	}
-# }
-
 #The Rising Event Chain
 #Gateway
 country_event = {
@@ -722,7 +708,7 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		has_valid_civic = civic_redrising_noble_lie
-		any_owned_pop = {
+		any_owned_pop_group = {
 			is_enslaved = yes
 		}
 		NOT = {
@@ -808,7 +794,7 @@ situation_event = {
 			owner = {
 				while = {
 					count = 3
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = {
 							is_enslaved = yes
 						}
@@ -825,7 +811,7 @@ situation_event = {
 			owner = {
 				while = {
 					count = 3
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = {
 							is_enslaved = yes
 							NOT = {
@@ -1313,7 +1299,7 @@ situation_event = {
 						}
 						has_valid_civic = civic_redrising_noble_lie
 						has_origin = origin_redrising_society
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_enslaved = yes
 						}
 					}
@@ -1354,7 +1340,7 @@ situation_event = {
 			if = {
 				limit = {
 					any_owned_planet = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_enslaved = yes
 						}
 						is_capital = no
@@ -1363,7 +1349,7 @@ situation_event = {
 				}
 				random_owned_planet = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_enslaved = yes
 						}
 						is_capital = no
@@ -1378,7 +1364,7 @@ situation_event = {
 				if = {
 					limit = {
 						any_owned_planet = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								is_enslaved = yes
 							}
 							is_capital = no
@@ -1386,7 +1372,7 @@ situation_event = {
 					}
 					random_owned_planet = {
 						limit = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								is_enslaved = yes
 							}
 							is_capital = no
@@ -1648,6 +1634,7 @@ country_event = {
 			influence = 800
 			alloys = 10000
 			food = 10000
+			trade = 1000
 			consumer_goods = 5000
 			rare_crystals = 1000
 			volatile_motes = 1000
@@ -2357,7 +2344,7 @@ country_event = {
 			remove_country_flag = redrising_board_colony_quest_1
 			remove_country_flag = redrising_board_colony_quest_2
 			end_event_chain = redrising_board_control_chain
-			every_owned_pop = {
+			every_owned_pop_group = {
 				remove_modifier = redrising_enlightened
 			}
 			remove_modifier = redrising_board_greens_deployed

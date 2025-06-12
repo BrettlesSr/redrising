@@ -17,7 +17,7 @@ trait_redrising_warlike = {
 	}
 	tags = { organic positive army }
 	slave_cost = {
-		energy = 1000
+		energy = 500
 	}
 	assembly_score = {
 		modifier = {

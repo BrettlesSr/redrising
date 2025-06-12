@@ -1,6 +1,9 @@
 # controls the Board of Quality Control event chain
 namespace = redrising
 
+
+@bigplanet = 4000
+
 #starts the event chain
 country_event = {
 	id = redrising.401
@@ -317,16 +320,12 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					count_owned_pop = {
-						count > 40
-					}
+					pop_amount > @bigplanet
 				}
 			}
 			random_owned_planet = {
 				limit = {
-					count_owned_pop = {
-						count > 40
-					}
+					pop_amount > @bigplanet
 				}
 				planet_event = {
 					id = redrising.413
@@ -381,16 +380,12 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_planet = {
-					count_owned_pop = {
-						count > 40
-					}
+					pop_amount > @bigplanet
 				}
 			}
 			random_owned_planet = {
 				limit = {
-					count_owned_pop = {
-						count > 40
-					}
+					pop_amount > @bigplanet
 				}
 				planet_event = {
 					id = redrising.413
