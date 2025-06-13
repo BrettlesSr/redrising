@@ -1,37 +1,21 @@
 update workshop
+make decadence a scripted modifier
+scale rising progress to decadence
+darrow dying tooltip
+make darrow chainbreaker
+[17:26:41][situation_type.cpp:382]: on_complete in situation type situation_redrising_decadence is probably lacking a description of what it does
+[17:26:41][situation_type.cpp:382]: on_complete in situation type situation_redrising_the_rising is probably lacking a description of what it does
+[17:29:57][situation.cpp:82]: End value of stage_1 is not larger than the starting value of the start or previous stage! 
+decadence is totally borked
+
 testing
     weakening obsidians works properly (swaps trait)
     has 12 slave pops
     is iron gold naming on traits working
     do situations complete?
     check trade crash works on all planets
-what is a large planet
-need to kill 1.2 k gold popsfix change to slvery
-[17:26:32][persistent.cpp:43]: Error: "Unexpected token: condition_string, near line: 3
-" in file: "common/pop_jobs/redrising_jobs.txt" near line: 3
-[17:26:32][persistent.cpp:43]: Error: "Unexpected token: building_icon, near line: 4
-" in file: "common/pop_jobs/redrising_jobs.txt" near line: 4
-[17:26:32][persistent.cpp:43]: Error: "Unexpected token: clothes_texture_index, near line: 5
-" in file: "common/pop_jobs/redrising_jobs.txt" near line: 5
-[17:26:34][layered_icon.cpp:102]: Did not find icon [gfx/interface/icons/traits/trait_redrising_warlike.dds]
-[17:26:39][persistent.cpp:43]: Error: "Unexpected token: flags, near line: 10
-" in file: "prescripted_countries/00_redrising_countries.txt" near line: 10
-[17:26:41][situation_type.cpp:382]: on_complete in situation type situation_redrising_decadence is probably lacking a description of what it does
-[17:26:41][situation_type.cpp:382]: on_complete in situation type situation_redrising_the_rising is probably lacking a description of what it does
-[17:26:47][effect_impl.cpp:809]: Script Error: Invalid scripted effect: kill_pop at  file: events/society_events_01.txt line: 50
-
-[17:26:47][effect_impl.cpp:809]: Script Error: Invalid scripted effect: kill_pop at  file: events/society_events_02.txt line: 801
-
-[17:29:57][situation.cpp:82]: End value of stage_1 is not larger than the starting value of the start or previous stage! 
-
-decadence is totally borked
+    make darrow a paragon
 
 eventual goals
-make darrow a paragon
 add helldivers/browns/mid reds/gamma clan
-make decadence a scripted modifier
-darrow a duelist
 art pass for soc icon
-scale rising progress to decadence
-darrow dying tooltip
-make darrow chainbreaker

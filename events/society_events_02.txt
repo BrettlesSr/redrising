@@ -798,7 +798,7 @@ situation_event = {
 						limit = {
 							is_enslaved = yes
 						}
-						kill_pop = yes
+						kill_single_pop = yes
 					}
 				}
 			}
@@ -1042,11 +1042,26 @@ country_event = {
 }
 
 #Darrow
+
+
 country_event = {
 	id = redrising.32
-	hide_window = no
-	is_triggered_only = yes
 	title = rising.32
+	diplomatic_title = NAME_darrow_au_andromedus
+	location = root.capital_scope
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_redrising_society
+		has_valid_civic = civic_redrising_noble_lie
+	}
+	picture = GFX_leader_recruitment_bg_renowned
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:darrow_leader
+		room = personality_hegemonic_imperialists_room
+	}
+
 	desc = {
 		trigger = {
 			has_country_flag = redrising_institute_pscarred_built
@@ -1061,50 +1076,99 @@ country_event = {
 		}
 		text = rising.32.2.desc
 	}
-	picture = {
-		picture = GFX_evt_medieval_alien_civilization
-		trigger = {
-			has_country_flag = redrising_institute_pscarred_built
-		}
-	}
-	picture = {
-		picture = GFX_evt_throne_room
-		trigger = {
-			NOT = {
-				has_country_flag = redrising_institute_pscarred_built
+
+	immediate = {
+		save_event_target_as = rising_country
+		create_country = {
+			name = "NAME_leader_country"
+			type = faction
+			auto_delete = yes
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_event_target_as = leader_country
 			}
 		}
+		create_leader = {
+				class = commander
+				species = owner_main_species
+				name = "NAME_darrow_au_andromedus"
+				skill = 4
+				set_age = 22
+				gender = male
+				randomize_traits = no
+				background_ethic = ethic_militarist
+			}
+			last_created_leader = {
+				add_trait = {
+					trait = subclass_commander_general
+				}
+				add_trait = {
+					trait = leader_trait_dreaded
+				}
+				if = {
+					limit = {
+						event_target:rising_country = {
+							has_country_flag = redrising_institute_pscarred_built
+						}
+					}
+					add_trait = {
+						trait = leader_trait_redrising_peerless_scarred
+					}
+				}
+				else = {
+					add_trait = {
+						trait = leader_trait_butcher
+					}
+				}				
+				add_trait = {
+					trait = leader_trait_trickster
+				}
+				add_trait = {
+					trait = leader_trait_reckless
+				}
+
+				set_leader_flag = redrising_darrow
+				set_leader_flag = immune_to_negative_traits
+				save_event_target_as = darrow_leader
+				set_owner = event_target:leader_country
+			}
 	}
+
+	#todo narrative
 	option = {
 		name = "redrising.32.a"
+		tag = hire_leader
 		custom_tooltip = "redrising.32.a.tooltip"
-		trigger = {
-			has_country_flag = redrising_institute_pscarred_built
-			has_origin = origin_redrising_society
-			has_valid_civic = civic_redrising_noble_lie
-		}
 		hidden_effect = {
-			create_leader = {
-				class = commander
-				species = owner_main_species
-				name = "NAME_darrow_au_andromedus"
-				skill = 4
-				set_age = 22
-				gender = male
-				randomize_traits = no
-				background_ethic = ethic_militarist
-				traits = {
-					0 = subclass_commander_general
-					1 = leader_trait_dreaded
-					2 = leader_trait_redrising_peerless_scarred
-					3 = leader_trait_trickster
-					4 = leader_trait_reckless
+			if = {
+				limit = {
+					is_variable_set = paragon_memory_vault
+				}
+				change_variable = {
+					which = paragon_memory_vault
+					value = 1
 				}
 			}
-			last_created_leader = {
-				set_leader_flag = redrising_darrow
-				set_leader_flag = immune_to_negative_traits
+
+			event_target:darrow_leader = {
+				set_owner = root
 			}
+			
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER
 				localization = MESSAGE_RECRUITED_LEADER_DESC
@@ -1124,78 +1188,12 @@ country_event = {
 				id = redrising.33
 				days = 2900
 				random = 100
-			}
-		}
-	}
-	option = {
-		name = "redrising.32.a.2"
-		custom_tooltip = "redrising.32.a.tooltip"
-		trigger = {
-			NOT = {
-				has_country_flag = redrising_institute_pscarred_built
-			}
-			has_origin = origin_redrising_society
-			has_valid_civic = civic_redrising_noble_lie
-		}
-		hidden_effect = {
-			create_leader = {
-				class = commander
-				species = owner_main_species
-				name = "NAME_darrow_au_andromedus"
-				skill = 4
-				set_age = 22
-				gender = male
-				randomize_traits = no
-				background_ethic = ethic_militarist
-				traits = {
-					0 = subclass_commander_general
-					1 = leader_trait_dreaded
-					2 = leader_trait_trickster
-					3 = leader_trait_aggressive
-					4 = leader_trait_reckless
-				}
-			}
-			last_created_leader = {
-				set_leader_flag = redrising_darrow
-				set_leader_flag = immune_to_negative_traits
-			}
-			create_message = {
-				type = MESSAGE_RECRUITED_LEADER
-				localization = MESSAGE_RECRUITED_LEADER_DESC
-				days = @toast_message_days
-				target = last_created_leader
-				variable = {
-					type = name
-					localization = LEADER
-					scope = last_created_leader
-				}
-				variable = {
-					key = "border"
-					value = "GFX_border_veteran"
-				}
-			}
-			country_event = {
-				id = redrising.33
-				days = 2900
-				random = 100
-			}
-		}
-	}
-	option = {
-		trigger = {
-			NAND = {
-				has_origin = origin_redrising_society
-				has_valid_civic = civic_redrising_noble_lie
-			}
-		}
-		name = DOTDOTDOT
-		hidden_effect = {
-			country_event = {
-				id = redrising.43
 			}
 		}
 	}
 }
+
+
 
 #Death of Darrow
 #Called either as random or by death

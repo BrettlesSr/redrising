@@ -41,13 +41,13 @@ planet_event = {
 			}
 
 			while = {
-				count = 15
+				count = 12
 				random_owned_pop_group = {
 					limit = {
 						is_pop_category = worker
 						is_same_species = root.owner_species
 					}
-					kill_pop = yes
+					kill_single_pop = yes
 				}
 			}
 			

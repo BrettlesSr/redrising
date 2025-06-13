@@ -1,6 +1,7 @@
 trait_redrising_warlike = {
 	cost = 0
 	category = normal
+	icon = "gfx/interface/icons/traits/trait_survivor.dds"
 	species_possible_add = {
 		always = no
 	}

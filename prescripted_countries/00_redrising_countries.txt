@@ -7,7 +7,6 @@ thesocietyofman = {
 
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
-	flags = { redrising_society custom_start_screen }
 	
 	species = {
 		class = "HUM"
