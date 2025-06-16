@@ -44,8 +44,9 @@ planet_event = {
 				count = 12
 				random_owned_pop_group = {
 					limit = {
-						is_pop_category = worker
-						is_same_species = root.owner_species
+						NOT = { is_pop_category = ruler }
+						NOT = { is_pop_category = specialist }
+						NOT = { is_same_species = last_created_species }
 					}
 					kill_single_pop = yes
 				}

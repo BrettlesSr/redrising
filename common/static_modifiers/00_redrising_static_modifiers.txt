@@ -1,5 +1,6 @@
 redrising_institute_pscarred_built = {
 	leaders_cost_mult = 0.25
+	redrising_monthly_decadence = -1
 	icon = "gfx/interface/icons/modifiers/mod_leader_cost.dds"
 }
 
@@ -67,7 +68,12 @@ redrising_unrest_patience = {
 
 redrising_discovery_reduces_decadence = {
 	icon = "gfx/interface/icons/modifiers/mod_ship_anomaly_generation_chance.dds"
-	custom_tooltip = redrising_discovery_reduces_decadence_tooltip
+	redrising_monthly_decadence = -1
+}
+
+redrising_hierarchy_increases_decadence = {
+	icon = "gfx/interface/icons/jobs/job_fe_hedonist.dds"
+	redrising_monthly_decadence = 1
 }
 
 agenda_redrising_slave_output_program_finish = {

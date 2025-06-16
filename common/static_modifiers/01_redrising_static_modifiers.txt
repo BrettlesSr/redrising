@@ -20,12 +20,10 @@ redrising_board_blue_deployed = {
 
 redrising_board_pink_deployed = {
 	job_entertainer_per_pop = 0.05
-	custom_tooltip = redrising_pinks_increase_decadence
-	show_only_custom_tooltip = no
+	redrising_monthly_decadence = 2
 }
 
 redrising_board_white_deployed = {
 	job_redrising_justiciar_per_pop = 0.025
-	custom_tooltip = redrising_whites_decrease_decadence
-	show_only_custom_tooltip = no
+	redrising_monthly_decadence = -2
 }

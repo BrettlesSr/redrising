@@ -1049,6 +1049,7 @@ country_event = {
 	title = rising.32
 	diplomatic_title = NAME_darrow_au_andromedus
 	location = root.capital_scope
+	show_sound = event_custodian_greeting
 	is_triggered_only = yes
 	trigger = {
 		has_origin = origin_redrising_society
@@ -1145,11 +1146,21 @@ country_event = {
 				set_leader_flag = redrising_darrow
 				set_leader_flag = immune_to_negative_traits
 				save_event_target_as = darrow_leader
+				save_event_target_as = darrow_leader_name
 				set_owner = event_target:leader_country
 			}
 	}
 
 	#todo narrative
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:darrow_leader = {
+				kill_leader = { show_notification = no } 
+			}
+		}
+	}
 	option = {
 		name = "redrising.32.a"
 		tag = hire_leader
@@ -1233,12 +1244,7 @@ country_event = {
 				}
 			}
 			set_country_flag = redrising_darrow_died
-			every_owned_leader = {
-				limit = {
-					has_leader_flag = redrising_darrow
-				}
-				exile_leader_as = redrising_darrow
-			}
+			
 			country_event = {
 				id = redrising.34
 				days = 180
@@ -1247,6 +1253,25 @@ country_event = {
 	}
 	option = {
 		name = "redrising.33.a"
+		custom_tooltip = "redrising.33.a.tooltip"
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = redrising_darrow
+				}
+				save_event_target_as = leader_darrow
+				save_event_target_as = leader_darrow_name
+				owner = {
+					clone_leader = {
+						target = event_target:leader_darrow
+						effect = {
+							exile_leader_as = redrising_darrow
+						}
+					}
+				}
+				kill_leader = { show_notification = yes }
+			}
+		}
 	}
 }
 
@@ -1265,6 +1290,7 @@ country_event = {
 	}
 	immediate = {
 		redrising_grab_red_species = yes
+		redrising_grab_darrow = yes
 	}
 	option = {
 		name = "redrising.34.a"
@@ -1287,6 +1313,7 @@ situation_event = {
 	situation = this
 	immediate = {
 		owner = {
+			redrising_grab_darrow = yes
 			if = {
 				limit = {
 					NOT = {
@@ -2117,6 +2144,7 @@ country_event = {
 	picture = GFX_evt_galactic_senate
 	immediate = {
 		redrising_grab_red_species = yes
+		redrising_grab_darrow = yes
 	}
 	option = {
 		name = "redrising.39.a"
@@ -2337,7 +2365,6 @@ country_event = {
 			remove_country_flag = redrising_obsidians_deployed
 			remove_country_flag = redrising_greys_deployed
 			remove_country_flag = redrising_conspiracy_grows
-			remove_modifier = redrising_discovery_reduces_decadence
 			remove_country_flag = redrising_board_colony_quest_0
 			remove_country_flag = redrising_board_colony_quest_1
 			remove_country_flag = redrising_board_colony_quest_2
@@ -2351,6 +2378,7 @@ country_event = {
 			remove_modifier = redrising_board_blue_deployed
 			remove_modifier = redrising_board_pink_deployed
 			remove_modifier = redrising_board_white_deployed
+			remove_modifier = redrising_hierarchy_increases_decadence
 			remove_modifier = redrising_discovery_reduces_decadence
 			abort_special_project = {
 				type = REDRISING_INSTITUTE_1
@@ -2529,6 +2557,7 @@ country_event = {
 		}
 	}
 	immediate = {
+		redrising_grab_darrow = yes
 		set_country_flag = redrising_darrow_died
 		country_event = {
 			id = redrising.34
@@ -2590,6 +2619,7 @@ country_event = {
 		}
 	}
 	immediate = {
+		redrising_grab_darrow = yes
 		every_owned_leader = {
 			limit = {
 				has_leader_flag = redrising_darrow
@@ -2618,6 +2648,7 @@ country_event = {
 		}
 	}
 	immediate = {
+		redrising_grab_darrow = yes
 		#credit to walshicus#7684 on discord for this code
 		create_fleet = {
 			name = "gone"
@@ -2655,6 +2686,14 @@ country_event = {
 		add_intel = {
 			who = event_target:redrising_intel_host_rising_society
 			amount = 50
+		}
+		random_owned_leader = {
+			limit = {
+				has_leader_flag = redrising_darrow
+			}
+			add_trait = {
+				trait = leader_trait_chainbreaker
+			}
 		}
 	}
 }

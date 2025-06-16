@@ -119,6 +119,9 @@ leader_trait_redrising_iron_gold = {
 		has_trait = leader_trait_redrising_peerless_scarred
 	}
 
+	councilor_modifier = {
+		redrising_monthly_decadence = -1
+	}
 	triggered_councilor_modifier = {
 		potential = {
 			leader_class = scientist

@@ -1,0 +1,6 @@
+redrising_monthly_decadence = {
+	icon = "mod_job_fe_hedonist_add"
+	percentage = no
+	good = no
+	category = country
+}

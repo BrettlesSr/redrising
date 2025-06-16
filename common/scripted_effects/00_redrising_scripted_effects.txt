@@ -120,3 +120,12 @@ redrising_grab_obsidian_species = {
 		}
 	}
 }
+
+redrising_grab_darrow = {
+	random_owned_leader = {
+		limit = {
+			has_leader_flag = redrising_darrow
+		}
+		save_event_target_as = redrising_darrow_name
+	}
+}

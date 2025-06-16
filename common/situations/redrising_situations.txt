@@ -1,28 +1,21 @@
 situation_redrising_decadence = {
 	category = negative
 	picture = GFX_evt_friendly_infiltration
-	fail_category = positive
-	progress_direction = bidirectional
 	
 	fail_icon = GFX_situation_outcome_positive
 	fail_icon_frame = GFX_situation_outcome_frame_blue
 
 	#no complete icons deliberate
 
-	start_value = 750
+	start_value = 1200
 	
 	on_progress_complete = {
 		#reboot situation if ended accidentally
+		custom_tooltip = situation_cannot_complete_decadence
 		owner = {
 			hidden_effect = {
 				start_situation = {
 					type = situation_redrising_decadence
-				}
-				random_situation = {
-					limit = {
-						is_situation_type = situation_redrising_decadence
-					}
-					add_situation_progress = 1401
 				}
 			}
 		}
@@ -46,85 +39,20 @@ situation_redrising_decadence = {
 		}
 	}
 
+	triggered_modifier = {
+		potential = {
+			situation_progress > 0
+		}
+		pop_category_rulers_consumer_goods_upkeep_mult = 0.0005
+		pop_cat_ruler_happiness = 0.00015
+		planet_stability_add = -0.01
+		multiplier = trigger:situation_progress
+	}
+
 	stages = {
 		stage_1 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_red
-			modifier = {
-				pop_category_rulers_consumer_goods_upkeep_mult = 0
-				pop_cat_ruler_happiness = 0.0
-				planet_stability_add = 0
-			}
-			end = 300
-		}
-		stage_2 = {
-			icon = GFX_situation_stage_2
-			icon_background = GFX_situation_stage_frame_red
-			modifier = { 
-				pop_category_rulers_consumer_goods_upkeep_mult = 0.125
-				pop_cat_ruler_happiness = 0.05
-				planet_stability_add = -3
-			}
-			end = 600
-		}
-		stage_3 = {
-			icon = GFX_situation_stage_3
-			icon_background = GFX_situation_stage_frame_red
-			modifier = { 
-				pop_category_rulers_consumer_goods_upkeep_mult = 0.375
-				pop_cat_ruler_happiness = 0.10
-				planet_stability_add = -6
-			}
-			end = 900
-		}
-		stage_4 = {
-			icon = GFX_situation_stage_4
-			icon_background = GFX_situation_stage_frame_red
-			modifier = { 
-				pop_category_rulers_consumer_goods_upkeep_mult = 0.5
-				pop_cat_ruler_happiness = 0.15
-				planet_stability_add = -9
-			}
-			end = 1200
-		}
-		stage_5 = {
-			icon = GFX_situation_stage_5
-			icon_background = GFX_situation_stage_frame_red
-			modifier = { 
-				pop_category_rulers_consumer_goods_upkeep_mult = 0.635
-				pop_cat_ruler_happiness = 0.20
-				planet_stability_add = -12
-			}
-			end = 1500
-		}
-		stage_6 = {
-			icon = GFX_situation_stage_6
-			icon_background = GFX_situation_stage_frame_red
-			modifier = {
-				pop_category_rulers_consumer_goods_upkeep_mult = 0.75
-				pop_cat_ruler_happiness = 0.25
-				planet_stability_add = -15
-			}
-			end = 1800
-		}
-		stage_7 = {
-			icon = GFX_situation_stage_7
-			icon_background = GFX_situation_stage_frame_red
-			modifier = { 
-				pop_category_rulers_consumer_goods_upkeep_mult = 0.875
-				pop_cat_ruler_happiness = 0.30
-				planet_stability_add = -18
-			}
-			end = 2100
-		}
-		stage_8 = {
-			icon = GFX_situation_stage_8
-			icon_background = GFX_situation_stage_frame_red
-			modifier = { 
-				pop_category_rulers_consumer_goods_upkeep_mult = 1
-				pop_cat_ruler_happiness = 0.35
-				planet_stability_add = -21
-			}
 			end = 2400
 		}
 	}
@@ -192,7 +120,7 @@ situation_redrising_decadence = {
 			desc = redrising_board_control_chain_complete_desc
 			add = 1
 			owner = {
-				has_country_flag = redrising_board_control_chain_complete
+				has_modifier = redrising_hierarchy_increases_decadence
 			}
 		}
 		modifier = {
@@ -294,6 +222,7 @@ situation_redrising_the_rising = {
 	complete_icon = GFX_situation_outcome_revolt
 	
 	on_progress_complete = {
+		custom_tooltip = redrising_the_rising_open_war_end
 		hidden_effect = {
 			destroy_situation = this
 		}
@@ -355,6 +284,60 @@ situation_redrising_the_rising = {
 
 	monthly_progress = {
 		base = 3
+		modifier = {
+			desc = redrising_from_decadence
+			add = 2
+			owner = {
+				any_situation = {
+					is_situation_type = situation_redrising_decadence
+					situation_progress >= 0
+					situation_progress < 480
+				}
+			}
+		}
+		modifier = {
+			desc = redrising_from_decadence
+			add = 2.5
+			owner = {
+				any_situation = {
+					is_situation_type = situation_redrising_decadence
+					situation_progress >= 480
+					situation_progress < 960
+				}
+			}
+		}
+		modifier = {
+			desc = redrising_from_decadence
+			add = 3
+			owner = {
+				any_situation = {
+					is_situation_type = situation_redrising_decadence
+					situation_progress >= 960
+					situation_progress < 1440
+				}
+			}
+		}
+		modifier = {
+			desc = redrising_from_decadence
+			add = 3.5
+			owner = {
+				any_situation = {
+					is_situation_type = situation_redrising_decadence
+					situation_progress >= 1440
+					situation_progress < 1920
+				}
+			}
+		}
+		modifier = {
+			desc = redrising_from_decadence
+			add = 4
+			owner = {
+				any_situation = {
+					is_situation_type = situation_redrising_decadence
+					situation_progress >= 1920
+				}
+			}
+		}
 		modifier = {
 			desc = redrising_phobos_address_happened
 			add = 100
