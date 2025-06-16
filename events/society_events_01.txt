@@ -30,14 +30,10 @@ planet_event = {
 				create_pop = {
 					species = last_created_species
 					ethos = random
+					effect = {
+						set_pop_group_flag = redrising_red_pop
+					}
 				}
-			}
-			
-			every_owned_pop_group = {
-				limit = {
-					is_same_species = last_created_species
-				}
-				set_pop_group_flag = redrising_red_pop
 			}
 
 			while = {
