@@ -2,13 +2,17 @@ redrising_grab_red_species = {
 	if = {
 		limit = {
 			any_owned_pop_group = {
-				has_pop_group_flag = redrising_red_pop
+				species = {
+					has_species_flag = redrising_red_pop
+				}				
 			}
 		}
 		
 		random_owned_pop_group = {
 			limit = {
-				has_pop_group_flag = redrising_red_pop
+				species = {
+					has_species_flag = redrising_red_pop
+				}	
 			}
 			save_event_target_as = redrising_red
 		}
@@ -65,13 +69,17 @@ redrising_grab_obsidian_species = {
 	if = {
 		limit = {
 			any_owned_pop_group = {
-				has_pop_group_flag = redrising_obsidian_pop
+				species = {
+					has_species_flag = redrising_obsidian_pop
+				}				
 			}
 		}
 		
 		random_owned_pop_group = {
 			limit = {
-				has_pop_group_flag = redrising_obsidian_pop
+				species = {
+					has_species_flag = redrising_obsidian_pop
+				}	
 			}
 			save_event_target_as = redrising_obsidian
 		}

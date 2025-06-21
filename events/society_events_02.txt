@@ -248,6 +248,7 @@ country_event = {
 			}
 			last_created_species = {
 				save_event_target_as = obsidian_redrising
+				set_species_flag = redrising_obsidian_pop
 			}
 			event_target:obsidian_planet = {
 				while = {
@@ -259,12 +260,6 @@ country_event = {
 						}
 					}
 				}
-			}
-			every_owned_pop_group = {
-				limit = {
-					is_same_species = last_created_species
-				}
-				set_pop_group_flag = redrising_obsidian_pop
 			}
 			last_created_species = {
 				set_citizenship_type = {
@@ -631,7 +626,9 @@ country_event = {
 			every_owned_pop_group = {
 				if = {
 					limit = {
-						is_same_species = event_target:redrising_obsidian
+						species = {
+							is_same_species = event_target:redrising_obsidian.species
+						}
 					}
 					pop_group_transfer_ethic = {
 						POP_GROUP = this
@@ -640,11 +637,18 @@ country_event = {
 					}
 				}
 			}
-			every_owned_planet = {
-				modify_species = {
-					species = event_target:redrising_obsidian
-					remove_trait = trait_deviants
-					add_trait = trait_nonadaptive
+			every_owned_pop_group = {
+				limit = {
+					species = {
+						has_species_flag = redrising_obsidian_pop
+					}
+				}
+				species = {
+					modify_species = {
+						species = event_target:redrising_obsidian.species
+						remove_trait = trait_deviants
+						add_trait = trait_nonadaptive
+					}
 				}
 			}
 		}
@@ -655,14 +659,16 @@ country_event = {
 		hidden_effect = {
 			remove_country_flag = redrising_obsidians_deployed
 			every_owned_pop_group = {
-				if = {
-					limit = {
-						has_trait = trait_redrising_warlike
-					}
-					set_citizenship_type = {
-						country = root
-						type = citizenship_purge
-						cooldown = yes
+				species = {
+					if = {
+						limit = {
+							has_species_flag = redrising_obsidian_pop
+						}
+						set_citizenship_type = {
+							country = root
+							type = citizenship_purge
+							cooldown = yes
+						}
 					}
 				}
 			}
@@ -755,14 +761,14 @@ country_event = {
 	picture = GFX_evt_redrising_ares_face
 	immediate = {
 		redrising_grab_red_species = yes
-		start_situation = {
-			type = situation_redrising_the_rising
-			target = root
-		}
 		set_country_flag = redrising_ares_insurrecting_0
 	}
 	option = {
 		name = "redrising.24.a"
+		start_situation = {
+			type = situation_redrising_the_rising
+			target = root
+		}
 	}
 }
 

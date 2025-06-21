@@ -30,10 +30,11 @@ planet_event = {
 				create_pop = {
 					species = last_created_species
 					ethos = random
-					effect = {
-						set_pop_group_flag = redrising_red_pop
-					}
 				}
+			}
+
+			last_created_species = {
+				set_species_flag = redrising_red_pop
 			}
 
 			while = {
@@ -65,7 +66,9 @@ planet_event = {
 	immediate = {		
 		random_owned_pop_group = {
 			limit = {
-				has_pop_group_flag = redrising_red_pop			
+				species = {
+					has_species_flag = redrising_red_pop
+				}			
 			}
 			species = {
 				set_citizenship_type = {
@@ -104,6 +107,7 @@ country_event = {
 	immediate = {
 		start_situation = {
 			type = situation_redrising_decadence
+			target = root
 		}
 		country_event = {
 			id =  redrising.1

@@ -2,7 +2,7 @@
 namespace = redrising
 
 
-@bigplanet = 4000
+@bigplanet = 7000
 
 #starts the event chain
 country_event = {

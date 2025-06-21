@@ -4,7 +4,7 @@ redrising_justiciar = {
 		default = {
 			condition_string = RULER_JOB_TRIGGER
 			building_icon = building_precinct_house
-			icon = enforcer
+			icon = redrising_justiciar #todo fix also modifier icon broke
 		}
 	}
 

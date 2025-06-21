@@ -1,14 +1,13 @@
 situation_redrising_decadence = {
 	category = negative
 	picture = GFX_evt_friendly_infiltration
-	
+	initial_progress = 1200
+
 	fail_icon = GFX_situation_outcome_positive
 	fail_icon_frame = GFX_situation_outcome_frame_blue
 
 	#no complete icons deliberate
 
-	start_value = 1200
-	
 	on_progress_complete = {
 		#reboot situation if ended accidentally
 		custom_tooltip = situation_cannot_complete_decadence
