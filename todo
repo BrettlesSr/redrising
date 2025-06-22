@@ -1,7 +1,6 @@
 update workshop
 obsidians shouldnt invade planets that are occupied/in danger already
 phbos can fire without darrow???
-rebel evetns fire after awr has started
 obsidian revolt is broken
 species modding doesnt work
 [15:25:27][eventscope.cpp:2593]: Script error, create_army/modify_army species: 'event_target:redrising_obsidian' is invalid at  file: events/society_events_02.txt line: 1815
