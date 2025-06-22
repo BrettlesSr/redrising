@@ -1,6 +1,14 @@
 update workshop
-
 obsidians shouldnt invade planets that are occupied/in danger already
+phbos can fire without darrow???
+rebel evetns fire after awr has started
+obsidian revolt is broken
+species modding doesnt work
+[15:25:27][eventscope.cpp:2593]: Script error, create_army/modify_army species: 'event_target:redrising_obsidian' is invalid at  file: events/society_events_02.txt line: 1815
+[15:25:47][effect_impl.cpp:16881]: set_leader at  file: events/society_events_02.txt line: 2667 is referencing an invalid leader.
+[15:29:13][effect_impl.cpp:18899]: Unable to add trait for [reason] is_opposite_of [at]  file: events/society_events_02.txt line: 1148
+[15:31:00][eventscope.cpp:2593]: Script error, is_same_species/is_exact_same_species: 'event_target:redrising_obsidian.species.species' is invalid at  file: events/society_events_02.txt line: 630
+icon = redrising_justiciar #todo fix also modifier icon broke
 
 testing
     weakening obsidians works properly (swaps trait)
@@ -10,6 +18,7 @@ testing
     make darrow a paragon, chainbreaker
     darrow dies notification?
     allow darrow renaming
+    try moving decadence effects into a stage?
 
 eventual goals
 add helldivers/browns/mid reds/gamma clan

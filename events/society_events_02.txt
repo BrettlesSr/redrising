@@ -780,7 +780,10 @@ situation_event = {
 	trigger = {
 		owner = {
 			has_valid_civic = civic_redrising_noble_lie
-		}
+			NOT = {
+				has_country_flag = redrising_no_rising
+			}
+		}		
 	}
 	situation = this
 	title = rising.25
@@ -2019,12 +2022,6 @@ country_event = {
 	trigger = {
 		has_country_flag = redrising_republic
 	}
-	immediate = {
-		add_modifier = {
-			modifier = redrising_red_risen
-			days = 1800
-		}
-	}
 	option = {
 		name = "redrising.37.a"
 		add_monthly_resource_mult = {
@@ -2033,11 +2030,9 @@ country_event = {
 			min = 2000
 			max = 6000
 		}
-		add_monthly_resource_mult = {
-			resource = influence
-			value = 120
-			min = 200
-			max = 600
+		add_modifier = {
+			modifier = redrising_red_risen
+			days = 1800
 		}
 	}
 }
@@ -2100,10 +2095,6 @@ country_event = {
 		redrising_grab_red_species = yes
 		remove_modifier = redrising_secret_red
 		set_country_flag = redrising_beat_republic
-		add_modifier = {
-			modifier = redrising_red_risen
-			days = 1800
-		}
 	}
 	option = {
 		name = "redrising.38.a"
@@ -2113,11 +2104,9 @@ country_event = {
 			min = 2000
 			max = 6000
 		}
-		add_monthly_resource_mult = {
-			resource = influence
-			value = 120
-			min = 200
-			max = 600
+		add_modifier = {
+			modifier = redrising_red_risen
+			days = 1800
 		}
 	}
 }
@@ -2232,6 +2221,9 @@ country_event = {
 	trigger = {
 		any_situation = {
 			is_situation_type = situation_redrising_the_rising
+		}
+		NOT = {
+				has_country_flag = redrising_no_rising
 		}
 	}
 	immediate = {

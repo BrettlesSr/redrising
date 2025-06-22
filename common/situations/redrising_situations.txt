@@ -38,19 +38,20 @@ situation_redrising_decadence = {
 		}
 	}
 
-	triggered_modifier = {
-		potential = {
-			situation_progress > 0
-		}
-		pop_category_rulers_consumer_goods_upkeep_mult = 0.0005
-		pop_cat_ruler_happiness = 0.00015
-		planet_stability_add = -0.01
-		multiplier = trigger:situation_progress
-	}
+	
 
 	stages = {
 		stage_1 = {
 			icon = GFX_situation_stage_1
+			triggered_modifier = {
+				potential = {
+					situation_progress > 0
+				}
+				pop_category_rulers_consumer_goods_upkeep_mult = 0.0005
+				pop_cat_ruler_happiness = 0.00015
+				planet_stability_add = -0.01
+				multiplier = trigger:situation_progress
+			}
 			icon_background = GFX_situation_stage_frame_red
 			end = 2400
 		}
@@ -219,6 +220,7 @@ situation_redrising_the_rising = {
 	start_value = 0
 	complete_icon_frame = GFX_situation_outcome_frame_red
 	complete_icon = GFX_situation_outcome_revolt
+	category = negative
 	
 	on_progress_complete = {
 		custom_tooltip = redrising_the_rising_open_war_end
