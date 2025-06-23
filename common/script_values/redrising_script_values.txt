@@ -1,0 +1,6 @@
+obsidian_armies_to_create = {
+	base = 0
+	add = $POP_AMOUNT$
+	divide = 83
+	floor = yes
+}

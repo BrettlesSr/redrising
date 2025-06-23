@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_job_redrising_justiciar_per_pop"
+		texturefile = "gfx/interface/icons/modifiers/mod_job_redrising_justiciar_add.dds"
+	}
+}
