@@ -552,32 +552,44 @@ country_event = {
 			who = event_target:obsidian_rebels
 			flag = redrising_dark_revolt_host_to_rebels
 		}
-		every_owned_pop_group = {
-			limit = {
-				species = {
-					has_species_flag = redrising_obsidian_pop
+
+		every_owned_planet = {
+			set_variable = {
+				which = redrising_obsidian_count
+				value = 0
+			}
+			every_owned_pop_group = {
+				limit = {
+					species = {
+						has_species_flag = redrising_obsidian_pop
+					}
+				}
+				planet = {
+					if = {
+						limit = {
+							NOT = {
+								has_planet_flag = redrising_dark_revolt
+							}
+						}
+						set_planet_flag = redrising_dark_revolt
+						add_planet_devastation = 30
+					}
+					change_variable = {
+						which = redrising_obsidian_count
+						value = pop_amount
+					}
 				}
 			}
-			planet = {
-				if = {
-					limit = {
-						NOT = {
-							has_planet_flag = redrising_dark_revolt
-						}
-					}
-					set_planet_flag = redrising_dark_revolt
-					add_planet_devastation = 30
-				}
-				while = {
-					count = value:obsidian_armies_to_create|POP_AMOUNT|pop_amount|
-					create_army = {
-						owner = event_target:obsidian_rebels
-						species = event_target:redrising_obsidian_species
-						type = "assault_army"
-					}
+			while = {
+				count = value:obsidian_armies_to_create|POP_AMOUNT|redrising_obsidian_count|
+				create_army = {
+					owner = event_target:obsidian_rebels
+					species = event_target:redrising_obsidian_species
+					type = "assault_army"
 				}
 			}
 		}
+		
 		if = {
 			limit = {
 				NOT = {
@@ -611,6 +623,16 @@ country_event = {
 	immediate = {
 		set_country_flag = redrising_dark_revolt_ended
 		remove_country_flag = redrising_dark_revolt_begun
+		every_war = {
+			limit = {
+				is_war_participant = root
+				using_war_goal = {
+					type = wg_redrising_the_rising
+					owner = root
+				} 
+			}
+			end_war_effect = yes
+		}
 	}
 	option = {
 		name = "redrising.18.a"
@@ -631,14 +653,16 @@ country_event = {
 					}
 				}
 			}
-			every_owned_species = {
+			every_owned_pop_group = {
 				limit = {
-					has_species_flag = redrising_obsidian_pop
+					species = {
+						has_species_flag = redrising_obsidian_pop
+					}
 				}
 				modify_species = {
 					species = this
-					remove_trait = trait_deviants
 					add_trait = trait_nonadaptive
+					remove_trait = trait_deviants					
 				}
 			}
 		}
@@ -1146,16 +1170,6 @@ country_event = {
 			}
 	}
 
-	#todo narrative
-	option = {
-		name = DISMISS
-		tag = dismiss_leader
-		hidden_effect = {
-			event_target:darrow_leader = {
-				kill_leader = { show_notification = no } 
-			}
-		}
-	}
 	option = {
 		name = "redrising.32.a"
 		tag = hire_leader
@@ -1194,6 +1208,25 @@ country_event = {
 				id = redrising.33
 				days = 2900
 				random = 100
+			}
+		}
+	}
+	option = {
+		name = redrising.32.b # Such promise, from such an unremarkable background
+		response_text = redrising.32.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = redrising.32.c # Did you really have to assault the referees?
+		response_text = redrising.32.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:darrow_leader = {
+				kill_leader = { show_notification = no } 
 			}
 		}
 	}
