@@ -2,9 +2,10 @@ namespace = redrising
 @tier2unityreward = 12
 @tier2unitymin = 150
 @tier2unitymax = 1000
+@darrownaturallifespan = 2900
 @timetodarrowafteraresdays = 7200
 @timebetweenunresteventsdays = 1500
-@timetodarkrevoltdays = 7800
+@timetodarkrevoltdays = 78#00
 @timetofreedomdays = 3600
 
 
@@ -576,7 +577,7 @@ country_event = {
 					}
 					change_variable = {
 						which = redrising_obsidian_count
-						value = pop_amount
+						value = pop_group_size
 					}
 				}
 			}
@@ -625,13 +626,11 @@ country_event = {
 		remove_country_flag = redrising_dark_revolt_begun
 		every_war = {
 			limit = {
-				is_war_participant = root
-				using_war_goal = {
-					type = wg_redrising_the_rising
-					owner = root
-				} 
+				any_war_participant = {
+					has_country_flag = redrising_obsidian_rebels
+				}
 			}
-			end_war_effect = yes
+			remove_war_participant = root
 		}
 	}
 	option = {
@@ -1064,7 +1063,6 @@ country_event = {
 
 #Darrow
 
-
 country_event = {
 	id = redrising.32
 	title = rising.32
@@ -1165,15 +1163,28 @@ country_event = {
 				set_leader_flag = redrising_darrow
 				set_leader_flag = immune_to_negative_traits
 				save_event_target_as = darrow_leader
-				save_event_target_as = darrow_leader_name
+				save_event_target_as = redrising_darrow_name
 				set_owner = event_target:leader_country
 			}
 	}
 
 	option = {
-		name = "redrising.32.a"
+		name = {
+			trigger = {
+				has_country_flag = redrising_institute_pscarred_built
+			}
+			text = redrising.32.a
+		} 
+		name = {
+			trigger = {
+				NOT = {
+					has_country_flag = redrising_institute_pscarred_built
+				}
+			}
+			text = redrising.32.a.2
+		} 
+		custom_tooltip = redrising.32.a.tooltip
 		tag = hire_leader
-		custom_tooltip = "redrising.32.a.tooltip"
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1206,7 +1217,7 @@ country_event = {
 			}
 			country_event = {
 				id = redrising.33
-				days = 2900
+				days = @darrownaturallifespan
 				random = 100
 			}
 		}
@@ -1218,6 +1229,9 @@ country_event = {
 	}
 	option = {
 		name = redrising.32.c # Did you really have to assault the referees?
+		trigger = {
+			has_country_flag = redrising_institute_pscarred_built
+		}
 		response_text = redrising.32.c.response
 		is_dialog_only = yes
 	}
