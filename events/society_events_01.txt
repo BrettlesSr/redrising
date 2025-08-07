@@ -2,7 +2,7 @@ namespace = redrising
 
 @boardtimetotriggerdays = 500
 @institutetimetotriggerdays = 7200
-@obsidiantimetotriggerdays = 144#00
+@obsidiantimetotriggerdays = 14400
 @arestimetotriggerdays = 28800
 
 #game start code, sets up racial stratocracy

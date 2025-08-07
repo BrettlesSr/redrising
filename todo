@@ -1,18 +1,5 @@
 update workshop
 
-testing
-    check trade crash works on all planets
-    darrow dies notification?
-    [15:25:47][effect_impl.cpp:16881]: set_leader at  file: events/society_events_02.txt line: 2667 is referencing an invalid leader.
-    phbos can fire without darrow???
-    
-    weakening obsidians works properly (swaps trait)
-    [22:04:47][variable_values.cpp:236]: Variable pop_amount is not set for scoped planet 'Alpha Centauri Prime' at  file: script value obsidian_armies_to_create at file: events/society_events_02.txt line: 572 line: 3
-    modify species still broken
-    dark revolt never ended lol
-    dark revolt still kaput
-
-
 eventual goals
 add helldivers/browns/mid reds/gamma clan
 art pass for soc icon

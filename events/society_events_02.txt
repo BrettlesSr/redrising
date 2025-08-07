@@ -5,7 +5,7 @@ namespace = redrising
 @darrownaturallifespan = 2900
 @timetodarrowafteraresdays = 7200
 @timebetweenunresteventsdays = 1500
-@timetodarkrevoltdays = 78#00
+@timetodarkrevoltdays = 7800
 @timetofreedomdays = 3600
 
 
@@ -558,31 +558,21 @@ country_event = {
 			set_variable = {
 				which = redrising_obsidian_count
 				value = 0
-			}
-			every_owned_pop_group = {
-				limit = {
-					species = {
-						has_species_flag = redrising_obsidian_pop
-					}
-				}
-				planet = {
-					if = {
-						limit = {
-							NOT = {
-								has_planet_flag = redrising_dark_revolt
-							}
+			}			
+			export_trigger_value_to_variable = {
+				trigger = count_owned_pop_amount
+				parameters = {
+					limit = {
+						species = {
+							has_species_flag = redrising_obsidian_pop
 						}
-						set_planet_flag = redrising_dark_revolt
-						add_planet_devastation = 30
-					}
-					change_variable = {
-						which = redrising_obsidian_count
-						value = pop_group_size
 					}
 				}
+				variable = redrising_obsidian_count
 			}
 			while = {
 				count = value:obsidian_armies_to_create|POP_AMOUNT|redrising_obsidian_count|
+				set_planet_flag = redrising_dark_revolt
 				create_army = {
 					owner = event_target:obsidian_rebels
 					species = event_target:redrising_obsidian_species
@@ -826,14 +816,9 @@ situation_event = {
 	}
 	option = {
 		name = "redrising.25.b"
-		custom_tooltip = redrising.25.b.tooltip
-		hidden_effect = {
-			owner = {
-				while = {
-					count = 3
-					random_owned_pop_group = {
+		owner = {
+				random_owned_planet = {
 						limit = {
-							is_enslaved = yes
 							NOT = {
 								has_modifier = redrising_enlightened
 							}
@@ -843,9 +828,7 @@ situation_event = {
 							days = 3600
 						}
 					}
-				}
 			}
-		}
 	}
 }
 
@@ -1307,6 +1290,7 @@ country_event = {
 					clone_leader = {
 						target = event_target:leader_darrow
 						effect = {
+							set_leader_flag = redrising_darrow
 							exile_leader_as = redrising_darrow
 						}
 					}
@@ -2686,19 +2670,21 @@ country_event = {
 				set_owner = root
 				create_ship = {
 					name = random
-					random_existing_design = science
+					random_existing_design = corvette
 				}
 				set_leader = redrising_darrow
 				save_event_target_as = removeFleet
+			}
+		}
+		event_target:removeFleet = {
+			leader = {
+				set_leader_flag = redrising_darrow
 			}
 		}
 		destroy_fleet = {
 			target = event_target:removeFleet
 			kill_leader = no
 			destroy_template = yes
-		}
-		last_created_leader = {
-			set_leader_flag = redrising_darrow
 		}
 		create_fleet_from_naval_cap = 0.1
 		random_country = {
