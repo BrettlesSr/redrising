@@ -353,7 +353,7 @@
  FLAG_CATEGORY_redrising:0 "Red Rising"
 
 # character localizations
-SOCIETY1_CHR_Aburius:0 "au Aburius"
+ SOCIETY1_CHR_Aburius:0 "au Aburius"
  SOCIETY1_CHR_Accius:0 "au Accius"
  SOCIETY1_CHR_Accoleius:0 "au Accoleius"
  SOCIETY1_CHR_Acilius:0 "au Acilius"
@@ -831,6 +831,17 @@ SOCIETY1_CHR_Aburius:0 "au Aburius"
  SOCIETY1_CHR_San:0 "au San"
  SOCIETY1_CHR_Vardan:0 "au Vardan"
  SOCIETY1_CHR_Andromedus:0 "au Andromedus"
+
+ #planets
+ SOCIETY1_Lucina:0 "Lucina"
+ SOCIETY1_Apollo:0 "Lucina"
+ SOCIETY1_Minerva:0 "Minerva"
+ SOCIETY1_Juno:0 "Juno"
+ SOCIETY1_Liberia:0 "Liberia"
+ SOCIETY1_Janus:0 "Janus"
+ SOCIETY1_Vulcan:0 "Vulcan"
+ SOCIETY1_Feronia:0 "Feronia"
+ SOCIETY1_Tellus:0 "Tellus"
 
 
  council_agenda_agenda_redrising_slave_output_program_name:0 "Exploit the Low Colors"
