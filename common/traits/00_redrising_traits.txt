@@ -70,14 +70,14 @@ leader_trait_redrising_peerless_scarred = {
 			is_ruler = no
 			leader_class = official
 		}
-		planet_jobs_slave_produces_mult = 0.1
+		pop_slave_bonus_workforce_mult = 0.1
 	}
 	triggered_sector_modifier = {
 		potential = {
 			is_ruler = no
 			leader_class = official
 		}
-		planet_jobs_slave_produces_mult = 0.05
+		pop_slave_bonus_workforce_mult = 0.05
 	}
 	triggered_councilor_modifier = {
 		potential = {
@@ -138,7 +138,7 @@ leader_trait_redrising_iron_gold = {
 		potential = {
 			leader_class = official
 		}
-		planet_jobs_slave_produces_mult = 0.25
+		pop_slave_bonus_workforce_mult = 0.25
 	}
 
 	leader_class = { commander scientist official }
