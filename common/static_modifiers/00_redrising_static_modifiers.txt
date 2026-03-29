@@ -52,7 +52,7 @@ redrising_unrest_prison = {
 }
 
 redrising_unrest_crash = {
-	planet_jobs_trade_produces_mult = -0.1
+	planet_jobs_trade_produces_mult = -0.2
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
 }
 

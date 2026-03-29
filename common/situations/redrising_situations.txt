@@ -80,6 +80,7 @@ situation_redrising_decadence = {
 			mult = 1
 			desc = redrising_iron_gold_leader_trait_decadence_situation
 		}
+		#todo add modifer for a) elite consumer goods use b) pleasure seekers hedonists
 		modifier = {
 			desc = redrising_situation_war_reduces_decadence
 			subtract = 1
@@ -198,6 +199,7 @@ situation_redrising_decadence = {
 		icon = GFX_situation_approach_fist
 		icon_background = GFX_situation_approach_bg_red
 		modifier = {
+			#todo elite happiness?
 			pop_citizen_happiness = -0.1
 		}
 		on_select = {

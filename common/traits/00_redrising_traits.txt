@@ -126,7 +126,7 @@ leader_trait_redrising_iron_gold = {
 		potential = {
 			leader_class = scientist
 		}
-		modify_species_cost_mult = -0.25
+		modify_species_cost_mult = -0.20
 	}
 	triggered_councilor_modifier = {
 		potential = {
@@ -138,7 +138,7 @@ leader_trait_redrising_iron_gold = {
 		potential = {
 			leader_class = official
 		}
-		pop_slave_bonus_workforce_mult = 0.25
+		pop_slave_bonus_workforce_mult = 0.20
 	}
 
 	leader_class = { commander scientist official }

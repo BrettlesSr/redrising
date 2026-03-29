@@ -29,15 +29,17 @@ redrising_justiciar = {
 			}
 			unity = 1
 		}
-		upkeep = {
+		produces = {
 			trigger = {
-				exists = planet
-				planet = { has_modifier = anticrime_campaign }
+				exists = owner
+				owner = {
+					has_country_flag = maverick_citizens_flag
+				}
 			}
-			energy = 2
+			unity = 1
 		}
 		upkeep = {
-			consumer_goods = 2
+			consumer_goods = 1.5
 		}
 	}
 
@@ -48,14 +50,14 @@ redrising_justiciar = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 500
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	planet_modifier = {
 		planet_defense_armies_add = 3
 		planet_crime_add = -45
-		planet_stability_add = 2
+		planet_stability_add = 0.5
 	}
 
 	weight = {
