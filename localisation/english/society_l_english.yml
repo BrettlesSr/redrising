@@ -862,7 +862,7 @@
  SOCIETY1_CHR_Mettius:0 "Mettius"
  SOCIETY1_CHR_Lucius:0 "Lucius"
  job_redrising_justiciar:0 "Justiciar"
- job_redrising_justiciar_plural:0 "Justiciar"
+ job_redrising_justiciar_plural:0 "Justiciars"
  job_redrising_justiciar_desc:0 "Justiciars are exemplars of justice, sworn to uphold the law, blind to prejustice and privilige."
  mod_job_redrising_justiciar_add:0 "Justiciar Jobs"
  situation_redrising_decadence:0 "Decadence"
@@ -926,7 +926,7 @@
  redrising_board_white_deployed_sit_desc:0 "White Deployed"
  redrising_decadence_capped:0 "Decadence At Maximum"
  mod_redrising_monthly_decadence:0 "Monthly Decadence"
- redrising_hierarchy_increases_decadence:0 "Filling out all Colors increases ['concept_redrising_decadence']"# todoshorten
+ redrising_hierarchy_increases_decadence:0 "Filling out all Colors increases ['concept_redrising_decadence']"
  redrising_from_decadence:0 "High Decadence accelerates the Rising"
  situation_cannot_complete_decadence:0 "This Situation can only be completed by eliminating Decadence, or though event."
  redrising_the_rising_open_war_end:0 "The culmination of insurrection: rebellion."
