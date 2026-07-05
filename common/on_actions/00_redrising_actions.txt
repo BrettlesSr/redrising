@@ -1,5 +1,5 @@
 #triggers initialisation for racial stratocracy
-empire_init_capital_planet = {
+empire_init_capital_colony = {
 	events = {
 		redrising.128 # starting buildings, districts & pops
 		# at this point the species might have changed (because we added traits), so FROMFROM might not be the secondary species anymore
@@ -7,10 +7,10 @@ empire_init_capital_planet = {
 }
 
 # Triggers country_event for the defender upon victory
-# Root = country, planet owner
+# Root = country, colony owner
 # From = country, attack leader
-# FromFrom = planet
-on_planet_defenders_win = {
+# FromFrom = colony
+on_colony_defenders_win = {
 	events = {
 		redrising.44
 	}
@@ -64,8 +64,6 @@ on_game_start_country = {
 	}
 }
 
-# A planet has been colonized.
-# Scope = Planet
 on_colonized = {
 	events = {
 		redrising.404
