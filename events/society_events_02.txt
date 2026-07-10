@@ -208,7 +208,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					any_owned_planet = {
+					any_owned_colony = {
 						is_colony = yes
 						pop_amount >= 200
 					}
@@ -221,12 +221,12 @@ country_event = {
 		}
 		if = {
 			limit = {
-				any_owned_planet = {
+				any_owned_colony = {
 					is_colony = yes
 					pop_amount >= 200
 				}
 			}
-			random_owned_planet = {
+			random_owned_colony = {
 				limit = {
 					is_colony = yes
 					pop_amount >= 200
@@ -324,7 +324,7 @@ country_event = {
 		name = "redrising.11.c"
 		custom_tooltip = redrising.11.c.tooltip
 		hidden_effect = {
-			every_owned_planet = {
+			every_owned_colony = {
 				add_modifier = {
 					modifier = redrising_overstretched_grey_legions
 					days = 3600
@@ -349,7 +349,7 @@ country_event = {
 	option = {
 		name = "redrising.12.a"
 		custom_tooltip = redrising.12.a.tooltip
-		random_owned_planet = {
+		random_owned_colony = {
 			add_modifier = {
 				modifier = redrising_displace_reds
 				days = 1800
@@ -373,7 +373,7 @@ country_event = {
 	}
 	option = {
 		name = "redrising.13.a"
-		random_owned_planet = {
+		random_owned_colony = {
 			add_modifier = {
 				modifier = redrising_displace_reds
 				days = 1800
@@ -391,7 +391,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					any_owned_planet = {
+					any_owned_colony = {
 						is_colony = yes
 						pop_amount >= 200
 					}
@@ -404,7 +404,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				any_owned_planet = {
+				any_owned_colony = {
 					is_colony = yes
 					pop_amount >= 200
 				}
@@ -554,7 +554,7 @@ country_event = {
 			flag = redrising_dark_revolt_host_to_rebels
 		}
 
-		every_owned_planet = {
+		every_owned_colony = {
 			set_variable = {
 				which = redrising_obsidian_count
 				value = 0
@@ -584,7 +584,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					any_owned_planet = {
+					any_owned_colony = {
 						has_planet_flag = redrising_dark_revolt
 					}
 				}
@@ -817,7 +817,7 @@ situation_event = {
 	option = {
 		name = "redrising.25.b"
 		owner = {
-				random_owned_planet = {
+				random_owned_colony = {
 						limit = {
 							NOT = {
 								has_modifier = redrising_enlightened
@@ -853,7 +853,7 @@ situation_event = {
 		custom_tooltip = "redrising.26.a.tooltip"
 		hidden_effect = {
 			owner = {
-				every_owned_planet = {
+				every_owned_colony = {
 					add_modifier = {
 						modifier = redrising_unrest_bombing
 						days = 1800
@@ -931,7 +931,7 @@ situation_event = {
 						}
 					}
 					else = {
-						random_system_planet = {
+						random_system_colony = {
 							limit = {
 								is_capital = no
 								is_colony = no
@@ -949,7 +949,7 @@ situation_event = {
 		custom_tooltip = "redrising.28.a.tooltip"
 		hidden_effect = {
 			owner = {
-				every_owned_planet = {
+				every_owned_colony = {
 					add_modifier = {
 						modifier = redrising_unrest_prison
 						days = 2400
@@ -1344,7 +1344,7 @@ situation_event = {
 				limit = {
 					NOT = {
 						is_country_type = default
-						num_owned_planets > 2
+						num_owned_colonies > 2
 						NOT = {
 							has_country_flag = redrising_no_rising
 						}
@@ -1390,7 +1390,7 @@ situation_event = {
 			save_event_target_as = redrising_current_pre_rising_society
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						any_owned_pop_group = {
 							is_enslaved = yes
 						}
@@ -1398,7 +1398,7 @@ situation_event = {
 						exists = sector
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						any_owned_pop_group = {
 							is_enslaved = yes
@@ -1414,14 +1414,14 @@ situation_event = {
 			else = {
 				if = {
 					limit = {
-						any_owned_planet = {
+						any_owned_colony = {
 							any_owned_pop_group = {
 								is_enslaved = yes
 							}
 							is_capital = no
 						}
 					}
-					random_owned_planet = {
+					random_owned_colony = {
 						limit = {
 							any_owned_pop_group = {
 								is_enslaved = yes
@@ -1437,12 +1437,12 @@ situation_event = {
 					# random sector
 					if = {
 						limit = {
-							any_owned_planet = {
+							any_owned_colony = {
 								is_capital = no
 								exists = sector
 							}
 						}
-						random_owned_planet = {
+						random_owned_colony = {
 							limit = {
 								is_capital = no
 								exists = sector
@@ -1454,7 +1454,7 @@ situation_event = {
 					}
 					else = {
 						# random core
-						random_owned_planet = {
+						random_owned_colony = {
 							limit = {
 								is_capital = no
 							}
@@ -1894,19 +1894,19 @@ country_event = {
 			}
 			# conspiracy fleets, 70% naval cap
 			create_fleet_from_naval_cap = 0.1
-			random_owned_planet = {
+			random_owned_colony = {
 				last_created_fleet = {
 					set_location = prev
 				}
 			}
 			create_fleet_from_naval_cap = 0.2
-			random_owned_planet = {
+			random_owned_colony = {
 				last_created_fleet = {
 					set_location = prev
 				}
 			}
 			create_fleet_from_naval_cap = 0.4
-			random_owned_planet = {
+			random_owned_colony = {
 				last_created_fleet = {
 					set_location = root.capital_scope
 				}
@@ -1915,13 +1915,13 @@ country_event = {
 		# regular fleets, 40% naval cap
 		else = {
 			create_fleet_from_naval_cap = 0.1
-			random_owned_planet = {
+			random_owned_colony = {
 				last_created_fleet = {
 					set_location = prev
 				}
 			}
 			create_fleet_from_naval_cap = 0.3
-			random_owned_planet = {
+			random_owned_colony = {
 				last_created_fleet = {
 					set_location = prev
 				}
@@ -2526,7 +2526,7 @@ country_event = {
 				if = {
 					limit = {
 						NOT = {
-							any_owned_planet = {
+							any_owned_colony = {
 								has_planet_flag = redrising_dark_revolt
 							}
 						}
