@@ -1334,7 +1334,18 @@ situation_event = {
 	hide_window = no
 	is_triggered_only = yes
 	title = rising.35
-	desc = rising.35.desc
+	desc = {
+		trigger = {
+			owner = { any_owned_leader = { has_leader_flag = redrising_darrow } }
+		}
+		text = rising.35.desc
+	}
+	desc = {	# Darrow never appears for civic-only empires, and can be dismissed or killed
+		trigger = {
+			owner = { NOT = { any_owned_leader = { has_leader_flag = redrising_darrow } } }
+		}
+		text = rising.35.2.desc
+	}
 	picture = GFX_evt_redrising_phobos_address
 	location = target
 	situation = this

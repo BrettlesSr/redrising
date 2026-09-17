@@ -2,7 +2,9 @@ trait_redrising_warlike = {
 	cost = 0
 	category = normal
 	icon = "gfx/interface/icons/traits/trait_survivor.dds"
-	species_possible_add = {
+	initial = no		# event-granted to Obsidians only; not pickable at empire creation
+	randomized = no
+	species_potential_add = {
 		always = no
 	}
 	species_possible_remove = {
