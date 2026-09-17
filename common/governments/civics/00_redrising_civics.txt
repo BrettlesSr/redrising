@@ -20,6 +20,7 @@ civic_redrising_noble_lie = {
 				value = ethic_authoritarian
 			}
 		}
+		is_nomadic = no
 	}
 	
 	random_weight = {
@@ -45,6 +46,7 @@ origin_redrising_society = {
 			}
 		}
 		civics = { NOT = { value = civic_fanatic_purifiers } }
+		is_nomadic = no
 	}
 
 	description = civic_tooltip_redrising_evolution_effects
