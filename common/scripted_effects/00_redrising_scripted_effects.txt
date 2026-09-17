@@ -64,9 +64,12 @@ redrising_grab_red = {
 		}
 	}
 
-	event_target:redrising_red = {
-		species = {
-			save_event_target_as = redrising_red_species
+	if = {
+		limit = { exists = event_target:redrising_red }
+		event_target:redrising_red = {
+			species = {
+				save_event_target_as = redrising_red_species
+			}
 		}
 	}
 }
@@ -134,9 +137,12 @@ redrising_grab_obsidian = {
 		}
 	}
 
-	event_target:redrising_obsidian = {
-		species = {
-			save_event_target_as = redrising_obsidian_species
+	if = {
+		limit = { exists = event_target:redrising_obsidian }
+		event_target:redrising_obsidian = {
+			species = {
+				save_event_target_as = redrising_obsidian_species
+			}
 		}
 	}
 }

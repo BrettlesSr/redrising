@@ -911,7 +911,7 @@
  concept_redrising_decadence:0 "Decadence"
  concept_redrising_decadence_desc:0 "As your society grows more decadent, elite £consumer_goods£ upkeep and happiness increases, while colony stability falls."
  redrising_board_control_chain_poi.1:0 "Establish A New Colony"
- redrising_board_control_chain_poi.1.desc:0 "The Board of Quality Control have asked us to establish a new colony."
+ redrising_board_control_chain_poi.1.desc:0 "The Board of Quality Control have asked us to establish a new colony. Any world will serve, anywhere in the galaxy - their interest is in the settling, not the site."
  redrising_board_control_chain_poi.2:0 "Build A Metropolis"
  redrising_board_control_chain_poi.2.desc:0 "The Board of Quality Control have asked us a develop one of our colonies to have more than 7000 £pops£."
  redrising_situation_institute_pscarred_built_desc:0 "Institute of Empire Founded"

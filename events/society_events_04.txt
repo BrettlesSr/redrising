@@ -214,6 +214,7 @@ country_event = {
 				random_system_planet = {
 					limit = {
 						is_capital = no
+						is_star = no
 					}
 					save_event_target_as = redrising_fleet_study_location
 				}

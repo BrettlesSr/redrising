@@ -935,6 +935,7 @@ situation_event = {
 							limit = {
 								is_capital = no
 								is_colony = no
+								is_star = no
 							}
 							save_event_target_as = redrising_earth
 						}
@@ -2365,6 +2366,7 @@ country_event = {
 	desc = rising.41.desc
 	picture = GFX_evt_galactic_senate
 	immediate = {
+		redrising_grab_red = yes	# the description needs this target however the event is reached
 		if = {
 			limit = {
 				NOR = {
@@ -2372,7 +2374,6 @@ country_event = {
 					has_ethic = ethic_fanatic_authoritarian
 				}
 			}
-			redrising_grab_red = yes
 			remove_country_flag = redrising_society
 			remove_modifier = redrising_institute_pscarred_built
 			remove_modifier = redrising_something_wicked

@@ -1,4 +1,5 @@
 redrising_board_control_chain = {
 	picture = GFX_evt_cybernetics
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	situation_log_category = empire_concerns
 }
