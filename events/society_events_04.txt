@@ -55,18 +55,6 @@ country_event = {
 		days = 360
 	}
 
-	immediate = {
-		hidden_effect = {
-			create_point_of_interest = {
-				id = redrising_board_control_chain_poi.1
-				name = "redrising_board_control_chain_poi.1"
-				desc = "redrising_board_control_chain_poi.1.desc"
-				event_chain = "redrising_board_control_chain"
-				location = root.capital_scope
-			}
-		}
-	}
-
 	option = {
 		name = UNDERSTOOD
 		set_country_flag = redrising_board_colony_quest_0
@@ -91,11 +79,6 @@ carrier_event = {
 	}
 
 	immediate = {
-		hidden_effect = {
-			owner = {
-				remove_point_of_interest = redrising_board_control_chain_poi.1
-			}
-		}
 		owner = {
 			set_country_flag = redrising_board_colony_quest_1
 		}	
