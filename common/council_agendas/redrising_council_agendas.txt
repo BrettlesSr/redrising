@@ -14,8 +14,8 @@ agenda_redrising_slave_output_program = {
 	}
 	modifier = {
 		pop_slave_bonus_workforce_mult = 0.05
-		pop_cat_slave_political_power = -0.05
-		pop_category_slave_upkeep_mult = -0.05
+		pop_slave_political_power = -0.05
+		planet_pops_enslaved_upkeep_mult = -0.05
 	}
 	finish_modifier = agenda_redrising_slave_output_program_finish
 }

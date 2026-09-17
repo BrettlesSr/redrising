@@ -254,7 +254,7 @@ country_event = {
 			event_target:obsidian_planet = {
 				while = {
 					count = 2
-					create_pop = {
+					create_pop_group = {
 						species = event_target:obsidian_redrising
 						ethos = {
 							ethic = "ethic_militarist"
@@ -434,7 +434,7 @@ country_event = {
 			event_target:grey_planet = {
 				while = {
 					count = 2
-					create_pop = {
+					create_pop_group = {
 						species = event_target:grey_redrising
 						ethos = {
 							ethic = "ethic_authoritarian"
@@ -572,7 +572,7 @@ country_event = {
 			}
 			while = {
 				count = value:obsidian_armies_to_create|POP_AMOUNT|redrising_obsidian_count|
-				set_planet_flag = redrising_dark_revolt
+				set_carrier_flag = redrising_dark_revolt
 				create_army = {
 					owner = event_target:obsidian_rebels
 					species = event_target:redrising_obsidian_species
@@ -585,7 +585,7 @@ country_event = {
 			limit = {
 				NOT = {
 					any_owned_colony = {
-						has_planet_flag = redrising_dark_revolt
+						has_carrier_flag = redrising_dark_revolt
 					}
 				}
 			}
@@ -931,7 +931,7 @@ situation_event = {
 						}
 					}
 					else = {
-						random_system_colony = {
+						random_system_planet = {
 							limit = {
 								is_capital = no
 								is_colony = no
@@ -1406,7 +1406,7 @@ situation_event = {
 						is_capital = no
 						exists = sector
 					}
-					planet_event = {
+					colony_event = {
 						id = redrising.361
 					}
 				}
@@ -1428,7 +1428,7 @@ situation_event = {
 							}
 							is_capital = no
 						}
-						planet_event = {
+						colony_event = {
 							id = redrising.361
 						}
 					}
@@ -1447,7 +1447,7 @@ situation_event = {
 								is_capital = no
 								exists = sector
 							}
-							planet_event = {
+							colony_event = {
 								id = redrising.361
 							}
 						}
@@ -1458,7 +1458,7 @@ situation_event = {
 							limit = {
 								is_capital = no
 							}
-							planet_event = {
+							colony_event = {
 								id = redrising.361
 							}
 						}
@@ -1486,7 +1486,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	#rising
 	id = redrising.361
 	title = rising.36
@@ -1534,7 +1534,7 @@ planet_event = {
 			}
 			save_event_target_as = redrising_the_rising_originator
 		}
-		set_planet_flag = redrising_rising_capital@root.owner
+		set_carrier_flag = redrising_rising_capital@root.owner
 		# find and flag planets
 		owner = {
 			effect_on_blob = {
@@ -1820,7 +1820,7 @@ country_event = {
 							set_owner = root
 						}
 					}
-					set_planet_flag = been_flipped
+					set_carrier_flag = been_flipped
 					set_owner = root
 					set_controller = root
 					# create armies
@@ -2516,18 +2516,18 @@ country_event = {
 		if = {
 			limit = {
 				fromfrom = {
-					has_planet_flag = redrising_dark_revolt
+					has_carrier_flag = redrising_dark_revolt
 				}
 			}
 			fromfrom = {
-				remove_planet_flag = redrising_dark_revolt
+				remove_carrier_flag = redrising_dark_revolt
 			}
 			root = {
 				if = {
 					limit = {
 						NOT = {
 							any_owned_colony = {
-								has_planet_flag = redrising_dark_revolt
+								has_carrier_flag = redrising_dark_revolt
 							}
 						}
 					}

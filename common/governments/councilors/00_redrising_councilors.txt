@@ -8,7 +8,7 @@ councilor_redrising_noble_lie = {
 	}
 	civic = civic_redrising_noble_lie
 	modifier = {
-		pop_category_slave_unity_upkeep_mult = -0.1
+		planet_pops_enslaved_unity_upkeep_mult = -0.1
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

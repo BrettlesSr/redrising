@@ -74,7 +74,7 @@ country_event = {
 }
 
 #called on action when a colony is finished
-planet_event = {
+carrier_event = {
 	id = redrising.404
 	title = "redrising.404.name"
 	desc = "redrising.404.desc"
@@ -328,7 +328,7 @@ country_event = {
 				limit = {
 					pop_amount > @bigplanet
 				}
-				planet_event = {
+				colony_event = {
 					id = redrising.413
 				}
 			}
@@ -388,7 +388,7 @@ country_event = {
 				limit = {
 					pop_amount > @bigplanet
 				}
-				planet_event = {
+				colony_event = {
 					id = redrising.413
 				}
 			}
@@ -403,7 +403,7 @@ country_event = {
 }
 
 #puts large planet project on large planet
-planet_event = {
+colony_event = {
 	id = redrising.413
 	title = "redrising.413.name"
 	desc = "redrising.413.desc"
@@ -425,7 +425,7 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					owner.capital_scope = {
+					owner.capital_scope.planet? = {
 						is_point_of_interest = {
 							id = redrising_board_control_chain_poi.2
 							event_chain = redrising_board_control_chain

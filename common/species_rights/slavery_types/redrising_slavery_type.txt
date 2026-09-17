@@ -1,7 +1,7 @@
 slavery_noble_lie = {
 	pop_group_modifier = {
 		pop_bonus_workforce_mult = 0.10
-		pop_category_slave_unity_upkeep_add = 0.25
+		pop_category_workers_unity_upkeep_add = 0.25
 	}
 
 	in_breach_of = {

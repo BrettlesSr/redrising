@@ -6,7 +6,7 @@ namespace = redrising
 @arestimetotriggerdays = 28800
 
 #game start code, sets up racial stratocracy
-planet_event = {
+colony_event = {
 	id = redrising.128
 	hide_window = yes
 	is_triggered_only = yes
@@ -27,7 +27,7 @@ planet_event = {
 			
 			while = {
 				count = 12
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 					ethos = random
 				}
@@ -49,7 +49,7 @@ planet_event = {
 				}
 			}
 			
-			planet_event = {
+			colony_event = {
 				id = redrising.129
 				days = 1 
 			}		
@@ -58,7 +58,7 @@ planet_event = {
 }
 
 #sets proper slavery on day one of the setup
-planet_event = {
+colony_event = {
 	id = redrising.129
 	hide_window = yes
 	is_triggered_only = yes
@@ -154,7 +154,7 @@ country_event = {
 
 	trigger = {
 		any_owned_planet = {
-			has_planet_flag = redrising_moon_luna
+			has_carrier_flag = redrising_moon_luna
 			NOT = { has_modifier = low_gravity }
 		}		
 	}
@@ -162,7 +162,7 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			limit = {
-				has_planet_flag = redrising_moon_luna
+				has_carrier_flag = redrising_moon_luna
 				NOT = { has_modifier = low_gravity }
 			}
 			add_modifier = {
