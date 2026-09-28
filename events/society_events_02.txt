@@ -635,10 +635,9 @@ country_event = {
 							has_species_flag = redrising_obsidian_pop
 						}
 					}
-					pop_group_transfer_ethic = {
-						POP_GROUP = this
-						ETHOS = ethic_spiritualist
-						PERCENTAGE = 1
+					pop_force_add_ethic = {
+						ethic = ethic_spiritualist
+						percentage = 1
 					}
 				}
 			}
