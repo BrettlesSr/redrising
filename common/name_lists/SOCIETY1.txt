@@ -1,4 +1,4 @@
-﻿### Society
+### Society
 ### Mostly cribbed from work by by Henrik Eklund
 
 SOCIETY1 = {
